@@ -1,14 +1,10 @@
-// Harriet Lane Formulary PWA Core Engine
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdf.worker.min.js';
+// Harriet Lane Formulary PWA Core Engine (High-Fidelity Engine)
 
-let pdfDoc = null;
+const TOTAL_PAGES = 444;
 let drugsData = [];
 let pagesTextData = {};
 let currentPageIndex = 0; // 0-indexed (0 = Book page 840)
 let currentDrug = null;
-let currentScale = 1.0;
-let isRendering = false;
-let renderPendingIndex = null;
 
 // DOM Elements
 const searchScreen = document.getElementById('search-screen');
@@ -32,7 +28,7 @@ const pageJumpPill = document.getElementById('page-jump-pill');
 const searchJumpBtn = document.getElementById('search-jump-btn');
 
 const canvasWrapper = document.getElementById('canvas-wrapper');
-const pdfCanvas = document.getElementById('pdf-canvas');
+const pageImage = document.getElementById('page-image');
 const spinner = document.getElementById('spinner');
 const toast = document.getElementById('toast');
 
@@ -52,6 +48,7 @@ const btnConfirmJump = document.getElementById('btn-confirm-jump');
 
 // Show Toast
 function showToast(msg) {
+  if (!toast) return;
   toast.textContent = msg;
   toast.classList.add('show');
   setTimeout(() => {
@@ -62,7 +59,7 @@ function showToast(msg) {
 // Initialize Application
 async function init() {
   try {
-    // 1. Load Data
+    // Load Data
     const [drugsRes, textRes] = await Promise.all([
       fetch('drugs_index.json').then(r => r.json()),
       fetch('pages_text.json').then(r => r.json())
@@ -72,11 +69,7 @@ async function init() {
 
     // Render initial drug list
     renderDrugList(drugsData);
-
-    // 2. Load PDF
-    const loadingTask = pdfjsLib.getDocument('harriet_lane_doses.pdf');
-    pdfDoc = await loadingTask.promise;
-    console.log('PDF loaded successfully, pages:', pdfDoc.numPages);
+    console.log('Indexed drugs loaded:', drugsData.length);
 
   } catch (err) {
     console.error('Initialization error:', err);
@@ -178,19 +171,18 @@ function openDrugPage(drug) {
   currentDrug = drug;
   currentPageIndex = drug.page_index;
   showScreen('page');
-  renderPdfPage(currentPageIndex);
+  loadPageImage(currentPageIndex);
   window.history.pushState({ screen: 'page', pageIndex: currentPageIndex }, '');
 }
 
 function goToPage(pageIdx) {
-  const total = pdfDoc ? pdfDoc.numPages : 444;
-  pageIdx = Math.max(0, Math.min(pageIdx, total - 1));
+  pageIdx = Math.max(0, Math.min(pageIdx, TOTAL_PAGES - 1));
   currentPageIndex = pageIdx;
 
   // Match drug for page
   currentDrug = drugsData.find(d => d.page_index === pageIdx) || currentDrug;
 
-  renderPdfPage(pageIdx);
+  loadPageImage(pageIdx);
 }
 
 function showScreen(screen) {
@@ -203,81 +195,49 @@ function showScreen(screen) {
   }
 }
 
-// PDF Page Rendering using Canvas
-async function renderPdfPage(pageIdx) {
-  if (!pdfDoc) return;
-  if (isRendering) {
-    renderPendingIndex = pageIdx;
-    return;
+// Page Rendering Engine
+function loadPageImage(pageIdx) {
+  currentPageIndex = Math.max(0, Math.min(pageIdx, TOTAL_PAGES - 1));
+  const bookPage = 840 + currentPageIndex;
+
+  // Find drug on page if not already matching
+  if (!currentDrug || currentDrug.page_index !== currentPageIndex) {
+    currentDrug = drugsData.find(d => d.page_index === currentPageIndex) || null;
   }
-  isRendering = true;
-  spinner.style.display = 'flex';
 
-  const bookPage = 840 + pageIdx;
-  const total = pdfDoc.numPages;
-
-  const title = currentDrug && currentDrug.page_index === pageIdx ? currentDrug.name : `Book Page ${bookPage}`;
+  const title = currentDrug ? currentDrug.name : `Book Page ${bookPage}`;
   viewerDrugTitle.textContent = title;
-  viewerPageSubtitle.textContent = `Book P. ${bookPage} (${pageIdx + 1}/${total})`;
-  navPageIndicator.textContent = `ص ${bookPage} (${pageIdx + 1}/${total})`;
+  viewerPageSubtitle.textContent = `Book P. ${bookPage} (${currentPageIndex + 1}/${TOTAL_PAGES})`;
+  navPageIndicator.textContent = `ص ${bookPage} (${currentPageIndex + 1}/${TOTAL_PAGES})`;
 
-  prevPageBtn.disabled = pageIdx <= 0;
-  nextPageBtn.disabled = pageIdx >= total - 1;
+  prevPageBtn.disabled = currentPageIndex <= 0;
+  nextPageBtn.disabled = currentPageIndex >= TOTAL_PAGES - 1;
 
-  try {
-    const page = await pdfDoc.getPage(pageIdx + 1); // PDF.js is 1-indexed
+  resetZoom();
+  canvasWrapper.scrollTop = 0;
+  canvasWrapper.scrollLeft = 0;
 
-    // Calculate high-DPI retina scale
-    const viewportRaw = page.getViewport({ scale: 1.0 });
-    const containerWidth = canvasWrapper.clientWidth - 16;
-    const baseScale = Math.max(containerWidth / viewportRaw.width, 1.0);
-    const pixelRatio = window.devicePixelRatio || 2;
-    const renderScale = baseScale * pixelRatio * 1.25;
+  // Display page image
+  pageImage.src = `pages/page_${currentPageIndex}.webp`;
 
-    const viewport = page.getViewport({ scale: renderScale });
-
-    pdfCanvas.width = viewport.width;
-    pdfCanvas.height = viewport.height;
-    pdfCanvas.style.width = `${viewport.width / pixelRatio / 1.25}px`;
-    pdfCanvas.style.height = `${viewport.height / pixelRatio / 1.25}px`;
-
-    const ctx = pdfCanvas.getContext('2d');
-    ctx.imageSmoothingEnabled = true;
-    ctx.imageSmoothingQuality = 'high';
-
-    const renderContext = {
-      canvasContext: ctx,
-      viewport: viewport
-    };
-
-    await page.render(renderContext).promise;
-
-    // Reset zoom and scroll to top
-    resetZoom();
-    canvasWrapper.scrollTop = 0;
-    canvasWrapper.scrollLeft = 0;
-
-  } catch (err) {
-    console.error('Page render error:', err);
-    showToast('خطأ في تصيير الصفحة');
-  } finally {
-    spinner.style.display = 'none';
-    isRendering = false;
-    if (renderPendingIndex !== null) {
-      const pending = renderPendingIndex;
-      renderPendingIndex = null;
-      renderPdfPage(pending);
-    }
+  // Preload next and previous pages for instant response
+  if (currentPageIndex + 1 < TOTAL_PAGES) {
+    const nextImg = new Image();
+    nextImg.src = `pages/page_${currentPageIndex + 1}.webp`;
+  }
+  if (currentPageIndex - 1 >= 0) {
+    const prevImg = new Image();
+    prevImg.src = `pages/page_${currentPageIndex - 1}.webp`;
   }
 }
 
-// Pinch to Zoom & Pan Engine for Canvas
+// Pinch to Zoom & Pan Engine for Image
 let zoomScale = 1.0;
 let initialDistance = 0;
 
 function resetZoom() {
   zoomScale = 1.0;
-  pdfCanvas.style.transform = `scale(1.0)`;
+  pageImage.style.transform = `scale(1.0)`;
 }
 
 canvasWrapper.addEventListener('touchstart', (e) => {
@@ -297,7 +257,7 @@ canvasWrapper.addEventListener('touchmove', (e) => {
     );
     const factor = currentDist / initialDistance;
     zoomScale = Math.min(Math.max(zoomScale * factor, 1.0), 4.0);
-    pdfCanvas.style.transform = `scale(${zoomScale})`;
+    pageImage.style.transform = `scale(${zoomScale})`;
     initialDistance = currentDist;
   }
 }, { passive: true });
@@ -314,7 +274,7 @@ canvasWrapper.addEventListener('click', (e) => {
   const now = Date.now();
   if (now - lastTap < 300) {
     zoomScale = zoomScale > 1.3 ? 1.0 : 2.2;
-    pdfCanvas.style.transform = `scale(${zoomScale})`;
+    pageImage.style.transform = `scale(${zoomScale})`;
   }
   lastTap = now;
 });
@@ -324,7 +284,7 @@ window.addEventListener('popstate', (e) => {
   if (e.state && e.state.screen === 'page') {
     showScreen('page');
     if (e.state.pageIndex !== undefined) {
-      renderPdfPage(e.state.pageIndex);
+      loadPageImage(e.state.pageIndex);
     }
   } else {
     showScreen('search');
@@ -347,7 +307,7 @@ prevPageBtn.addEventListener('click', () => {
 });
 
 nextPageBtn.addEventListener('click', () => {
-  if (pdfDoc && currentPageIndex < pdfDoc.numPages - 1) {
+  if (currentPageIndex < TOTAL_PAGES - 1) {
     goToPage(currentPageIndex + 1);
   }
 });
@@ -388,7 +348,14 @@ exportImageBtn.addEventListener('click', () => {
   const bookPage = 840 + currentPageIndex;
   const drugName = (viewerDrugTitle.textContent || 'Drug').replace(/[^a-zA-Z0-9]/g, '_');
 
-  pdfCanvas.toBlob(async (blob) => {
+  // Render high-res image to canvas for export
+  const canvas = document.createElement('canvas');
+  canvas.width = pageImage.naturalWidth || 819;
+  canvas.height = pageImage.naturalHeight || 1381;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(pageImage, 0, 0, canvas.width, canvas.height);
+
+  canvas.toBlob(async (blob) => {
     if (!blob) return;
     const file = new File([blob], `HarrietLane_P${bookPage}_${drugName}.png`, { type: 'image/png' });
 
@@ -403,7 +370,6 @@ exportImageBtn.addEventListener('click', () => {
         if (err.name !== 'AbortError') console.error(err);
       }
     } else {
-      // Fallback: download image
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
       a.download = `HarrietLane_P${bookPage}_${drugName}.png`;

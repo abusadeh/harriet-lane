@@ -19,9 +19,6 @@
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
-  
-  <!-- Local Mozilla PDF.js -->
-  <script src="pdf.min.js"></script>
 </head>
 <body>
 
@@ -84,10 +81,10 @@
     </header>
 
     <div class="canvas-wrapper" id="canvas-wrapper">
-      <div id="spinner" class="spinner-overlay">
+      <div id="spinner" class="spinner-overlay" style="display: none;">
         <div class="spinner"></div>
       </div>
-      <canvas id="pdf-canvas"></canvas>
+      <img id="page-image" class="page-image" alt="Book Page" />
     </div>
 
     <footer class="bottom-nav">

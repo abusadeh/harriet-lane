@@ -255,7 +255,7 @@ body {
   padding: 8px;
 }
 
-#pdf-canvas {
+.page-image, #pdf-canvas {
   display: block;
   max-width: 100%;
   height: auto;
@@ -263,7 +263,9 @@ body {
   border-radius: 4px;
   background: white;
   transform-origin: top center;
-  transition: transform 0.1s ease-out;
+  transition: transform 0.12s ease-out;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 /* Bottom Bar */
