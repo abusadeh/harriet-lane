@@ -1,0 +1,25 @@
+{
+  "name": "The Harriet Lane Handbook",
+  "short_name": "Harriet Lane",
+  "description": "Harriet Lane Handbook 24th Edition - Pediatric Drug Formulary & Dosages",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#203E7A",
+  "theme_color": "#203E7A",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

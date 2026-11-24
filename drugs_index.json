@@ -1,0 +1,4218 @@
+[
+  {
+    "name": "ACETAMINOPHEN",
+    "brand_names": "Tylenol, Tempra, Panadol, FeverAll, Anacin Asprin Free,, Mapap, Paracetamol, and many others including",
+    "see": "",
+    "page_index": 0,
+    "page_number": 1,
+    "book_page": 840
+  },
+  {
+    "name": "ACETAZOLAMIDE",
+    "brand_names": "Various generics; previously available as Diamox, Carbonic anhydrase inhibitor, diuretic",
+    "see": "",
+    "page_index": 1,
+    "page_number": 2,
+    "book_page": 841
+  },
+  {
+    "name": "ACETYLCYSTEINE",
+    "brand_names": "Various generics, Acetadote; previously available as, Mucomyst",
+    "see": "",
+    "page_index": 2,
+    "page_number": 3,
+    "book_page": 842
+  },
+  {
+    "name": "ACTH",
+    "brand_names": "",
+    "see": "See Corticotropin",
+    "page_index": 3,
+    "page_number": 4,
+    "book_page": 843
+  },
+  {
+    "name": "ACYCLOVIR",
+    "brand_names": "Zovirax and generics, Antiviral",
+    "see": "",
+    "page_index": 3,
+    "page_number": 4,
+    "book_page": 843
+  },
+  {
+    "name": "ADAPALENE ± BENZOYL PEROXIDE",
+    "brand_names": "Differin and generics, In combination with benzoyl peroxide: Epiduo, Epiduo",
+    "see": "",
+    "page_index": 5,
+    "page_number": 6,
+    "book_page": 845
+  },
+  {
+    "name": "ADDERALL",
+    "brand_names": "",
+    "see": "See Dextroamphetamine ± Amphetamine",
+    "page_index": 6,
+    "page_number": 7,
+    "book_page": 846
+  },
+  {
+    "name": "ADENOSINE",
+    "brand_names": "Generics; previously available as Adenocard",
+    "see": "",
+    "page_index": 6,
+    "page_number": 7,
+    "book_page": 846
+  },
+  {
+    "name": "ALBUMIN, HUMAN",
+    "brand_names": "Albuked, Albumin-ZLB, Albuminex, AlbuRx, Albutein,, Kedbumin, and many others",
+    "see": "",
+    "page_index": 7,
+    "page_number": 8,
+    "book_page": 847
+  },
+  {
+    "name": "ALBUTEROL",
+    "brand_names": "Ventolin HFA (aerosol inhaler), ProAir RespiClick, (breath-activated inhaler), and many generics",
+    "see": "",
+    "page_index": 7,
+    "page_number": 8,
+    "book_page": 847
+  },
+  {
+    "name": "ALLOPURINOL",
+    "brand_names": "Aloprim and generics; previously available as Zyloprim, Uric acid lowering agent, xanthine oxidase inhibitor",
+    "see": "",
+    "page_index": 8,
+    "page_number": 9,
+    "book_page": 848
+  },
+  {
+    "name": "ALMOTRIPTAN MALATE",
+    "brand_names": "Generics; previously available as Axert",
+    "see": "",
+    "page_index": 9,
+    "page_number": 10,
+    "book_page": 849
+  },
+  {
+    "name": "ALPROSTADIL",
+    "brand_names": "Prostin VR Pediatric, prostaglandin E 1 , PGE 1, Prostaglandin E 1 , vasodilator",
+    "see": "",
+    "page_index": 10,
+    "page_number": 11,
+    "book_page": 850
+  },
+  {
+    "name": "ALTEPLASE",
+    "brand_names": "Activase, Cathflo Activase, tPA, Thrombolytic agent, tissue plasminogen activator",
+    "see": "",
+    "page_index": 10,
+    "page_number": 11,
+    "book_page": 850
+  },
+  {
+    "name": "ALUMINUM HYDROXIDE",
+    "brand_names": "Various generics; previously available as Amphojel, Antacid, phosphate binder",
+    "see": "",
+    "page_index": 11,
+    "page_number": 12,
+    "book_page": 851
+  },
+  {
+    "name": "ALUMINUM HYDROXIDE WITH MAGNESIUM HYDROXIDE ± SIMETHICONE",
+    "brand_names": "Mag-Al; previously available as Maalox",
+    "see": "",
+    "page_index": 12,
+    "page_number": 13,
+    "book_page": 852
+  },
+  {
+    "name": "ALYFTREK",
+    "brand_names": "",
+    "see": "See Vanzacaftor/Tezacaftor/Deutivacaftor",
+    "page_index": 12,
+    "page_number": 13,
+    "book_page": 852
+  },
+  {
+    "name": "AMANTADINE HYDROCHLORIDE",
+    "brand_names": "Immediate release dosage forms: generics; previously, available as Symmetrel",
+    "see": "",
+    "page_index": 12,
+    "page_number": 13,
+    "book_page": 852
+  },
+  {
+    "name": "AMIKACIN SULFATE",
+    "brand_names": "Various generics; previously available as Amikin, Antibiotic, aminoglycoside",
+    "see": "",
+    "page_index": 13,
+    "page_number": 14,
+    "book_page": 853
+  },
+  {
+    "name": "AMINOCAPROIC ACID",
+    "brand_names": "Generics; previously available as Amicar",
+    "see": "",
+    "page_index": 14,
+    "page_number": 15,
+    "book_page": 854
+  },
+  {
+    "name": "AMINOPHYLLINE",
+    "brand_names": "Various generics, Bronchodilator, methylxanthine",
+    "see": "",
+    "page_index": 15,
+    "page_number": 16,
+    "book_page": 855
+  },
+  {
+    "name": "AMIODARONE HCL",
+    "brand_names": "Pacerone, Nexterone, and generics, Antiarrhythmic, Class III",
+    "see": "",
+    "page_index": 16,
+    "page_number": 17,
+    "book_page": 856
+  },
+  {
+    "name": "AMITRIPTYLINE",
+    "brand_names": "Generics; previously available as Elavil",
+    "see": "",
+    "page_index": 17,
+    "page_number": 18,
+    "book_page": 857
+  },
+  {
+    "name": "CYP2D6",
+    "brand_names": "Intermediate",
+    "see": "",
+    "page_index": 18,
+    "page_number": 19,
+    "book_page": 858
+  },
+  {
+    "name": "CYP2C19",
+    "brand_names": "Consider alternative",
+    "see": "",
+    "page_index": 18,
+    "page_number": 19,
+    "book_page": 858
+  },
+  {
+    "name": "AMLODIPINE",
+    "brand_names": "Norvasc, Norliqva, Katerzia, and generics, Calcium channel blocker, antihypertensive",
+    "see": "",
+    "page_index": 19,
+    "page_number": 20,
+    "book_page": 859
+  },
+  {
+    "name": "AMMONUL",
+    "brand_names": "",
+    "see": "See Sodium Phenylacetate + Sodium Benzoate",
+    "page_index": 19,
+    "page_number": 20,
+    "book_page": 859
+  },
+  {
+    "name": "AMOXICILLIN",
+    "brand_names": "Various generics; previously available as Amoxil and, Trimox",
+    "see": "",
+    "page_index": 20,
+    "page_number": 21,
+    "book_page": 860
+  },
+  {
+    "name": "AMOXICILLIN-CLAVULANIC ACID",
+    "brand_names": "Augmentin, Augmentin ES-600, and generics; previously, available as Augmentin XR",
+    "see": "",
+    "page_index": 20,
+    "page_number": 21,
+    "book_page": 860
+  },
+  {
+    "name": "AMPHETAMINE",
+    "brand_names": "Evekeo, Adzenys XR-ODT, Dyanavel XR, and generics, CNS stimulant",
+    "see": "",
+    "page_index": 22,
+    "page_number": 23,
+    "book_page": 862
+  },
+  {
+    "name": "AMPHOTERICIN B DEOXYCHOLATE (CONVENTIONAL)",
+    "brand_names": "Various generics; previously available as Fungizone, Antifungal, polyene",
+    "see": "",
+    "page_index": 23,
+    "page_number": 24,
+    "book_page": 863
+  },
+  {
+    "name": "AMPHOTERICIN B LIPID COMPLEX",
+    "brand_names": "Abelcet, ABLC, Antifungal, polyene",
+    "see": "",
+    "page_index": 24,
+    "page_number": 25,
+    "book_page": 864
+  },
+  {
+    "name": "AMPHOTERICIN B, LIPOSOMAL",
+    "brand_names": "AmBisome and generics, Antifungal, polyene",
+    "see": "",
+    "page_index": 25,
+    "page_number": 26,
+    "book_page": 865
+  },
+  {
+    "name": "AMPICILLIN",
+    "brand_names": "Many generics, Antibiotic, aminopenicillin",
+    "see": "",
+    "page_index": 26,
+    "page_number": 27,
+    "book_page": 866
+  },
+  {
+    "name": "AMPICILLIN/SULBACTAM",
+    "brand_names": "Unasyn and generics, Antibiotic, aminopenicillin with β-lactamase inhibitor",
+    "see": "",
+    "page_index": 27,
+    "page_number": 28,
+    "book_page": 867
+  },
+  {
+    "name": "ANAKINRA",
+    "brand_names": "Kineret",
+    "see": "",
+    "page_index": 27,
+    "page_number": 28,
+    "book_page": 867
+  },
+  {
+    "name": "ARGININE HYDROCHLORIDE―INJECTABLE",
+    "brand_names": "",
+    "see": "",
+    "page_index": 29,
+    "page_number": 30,
+    "book_page": 869
+  },
+  {
+    "name": "PREPARATION",
+    "brand_names": "R-Gene 10",
+    "see": "",
+    "page_index": 29,
+    "page_number": 30,
+    "book_page": 869
+  },
+  {
+    "name": "ARIPIPRAZOLE",
+    "brand_names": "Abilify, Abilify Asimtufil, Abilify Maintena, Abilify, MyCite Starter Kit, Abilify MyCite Maintenance Kit, and",
+    "see": "",
+    "page_index": 29,
+    "page_number": 30,
+    "book_page": 869
+  },
+  {
+    "name": "ARNUITY ELLIPTA",
+    "brand_names": "",
+    "see": "See Fluticasone Preparations",
+    "page_index": 31,
+    "page_number": 32,
+    "book_page": 871
+  },
+  {
+    "name": "ASCORBIC ACID",
+    "brand_names": "Vitamin C; many brands and generics, Water-soluble vitamin",
+    "see": "",
+    "page_index": 31,
+    "page_number": 32,
+    "book_page": 871
+  },
+  {
+    "name": "ASPIRIN",
+    "brand_names": "ASA, various trade names and generics",
+    "see": "",
+    "page_index": 32,
+    "page_number": 33,
+    "book_page": 872
+  },
+  {
+    "name": "ATENOLOL",
+    "brand_names": "Tenormin and generics, β 1 -selective adrenergic blocker",
+    "see": "",
+    "page_index": 33,
+    "page_number": 34,
+    "book_page": 873
+  },
+  {
+    "name": "ATOMOXETINE",
+    "brand_names": "Strattera and generics",
+    "see": "",
+    "page_index": 33,
+    "page_number": 34,
+    "book_page": 873
+  },
+  {
+    "name": "ATOVAQUONE",
+    "brand_names": "Mepron and generics, Antiprotozoal",
+    "see": "",
+    "page_index": 34,
+    "page_number": 35,
+    "book_page": 874
+  },
+  {
+    "name": "ATROPINE SULFATE",
+    "brand_names": "Many generics; previously available as AtroPen and, Isopto Atropine",
+    "see": "",
+    "page_index": 35,
+    "page_number": 36,
+    "book_page": 875
+  },
+  {
+    "name": "AZATHIOPRINE",
+    "brand_names": "Imuran, Azasan, and generics, Immunosuppressant",
+    "see": "",
+    "page_index": 36,
+    "page_number": 37,
+    "book_page": 876
+  },
+  {
+    "name": "AZELASTINE",
+    "brand_names": "Astepro, Children's Astepro, and generics; previously, available as Opitvar",
+    "see": "",
+    "page_index": 37,
+    "page_number": 38,
+    "book_page": 877
+  },
+  {
+    "name": "AZELASTINE AND FLUTICASONE",
+    "brand_names": "Dymista and generics, Intranasal antihistamine and corticosteroid",
+    "see": "",
+    "page_index": 38,
+    "page_number": 39,
+    "book_page": 878
+  },
+  {
+    "name": "AZITHROMYCIN",
+    "brand_names": "Zithromax, Zithromax TRI-PAK, Zithromax Z-PAK,, AzaSite, and generics",
+    "see": "",
+    "page_index": 38,
+    "page_number": 39,
+    "book_page": 878
+  },
+  {
+    "name": "AZTREONAM",
+    "brand_names": "Azactam, Cayston, and generic intravenous products, Antibiotic, monobactam",
+    "see": "",
+    "page_index": 40,
+    "page_number": 41,
+    "book_page": 880
+  },
+  {
+    "name": "BACITRACIN ± POLYMYXIN B",
+    "brand_names": "Various ophthalmic and topical generic products",
+    "see": "",
+    "page_index": 41,
+    "page_number": 42,
+    "book_page": 881
+  },
+  {
+    "name": "BACITRACIN IN COMBINATION WITH POLYMYXIN B:",
+    "brand_names": "Ophthalmic ointment (Polycin and generics): 500 units bacitracin +10,000 units, polymyxin B/g (3.5 g)",
+    "see": "",
+    "page_index": 41,
+    "page_number": 42,
+    "book_page": 881
+  },
+  {
+    "name": "BACITRACIN + POLYMYXIN B:",
+    "brand_names": "",
+    "see": "",
+    "page_index": 41,
+    "page_number": 42,
+    "book_page": 881
+  },
+  {
+    "name": "BACLOFEN",
+    "brand_names": "Lioresal, Gablofen, Lyvispah, Ozobax DS, Fleqsuvy, and, generics",
+    "see": "",
+    "page_index": 41,
+    "page_number": 42,
+    "book_page": 881
+  },
+  {
+    "name": "BECLOMETHASONE DIPROPIONATE",
+    "brand_names": "QVAR Redihaler, Qnasl Children’s, Qnasl, Corticosteroid",
+    "see": "",
+    "page_index": 43,
+    "page_number": 44,
+    "book_page": 883
+  },
+  {
+    "name": "BENZOYL PEROXIDE",
+    "brand_names": "Acne Medication, Benzac, PanOxyl, and many other, products including generics",
+    "see": "",
+    "page_index": 44,
+    "page_number": 45,
+    "book_page": 884
+  },
+  {
+    "name": "BENZTROPINE MESYLATE",
+    "brand_names": "Generics; previously available as Cogentin",
+    "see": "",
+    "page_index": 45,
+    "page_number": 46,
+    "book_page": 885
+  },
+  {
+    "name": "BERACTANT",
+    "brand_names": "",
+    "see": "See Surfactant, pulmonary",
+    "page_index": 46,
+    "page_number": 47,
+    "book_page": 886
+  },
+  {
+    "name": "BETAMETHASONE",
+    "brand_names": "Injection: Celestone Soluspan and generics, Topical: Diprolene, Sernivo, and generics",
+    "see": "",
+    "page_index": 46,
+    "page_number": 47,
+    "book_page": 886
+  },
+  {
+    "name": "BICITRA",
+    "brand_names": "",
+    "see": "See Citrate Mixtures",
+    "page_index": 47,
+    "page_number": 48,
+    "book_page": 887
+  },
+  {
+    "name": "BISACODYL",
+    "brand_names": "Dulcolax, Bisacodyl EC, Fleet Bisacodyl, and various, other names including generics",
+    "see": "",
+    "page_index": 47,
+    "page_number": 48,
+    "book_page": 887
+  },
+  {
+    "name": "BISMUTH SUBSALICYLATE",
+    "brand_names": "Pepto-Bismol, Pink Bismuth, Stomach Relief, Stomach, Relief Extra Strength, and many others including",
+    "see": "",
+    "page_index": 48,
+    "page_number": 49,
+    "book_page": 888
+  },
+  {
+    "name": "BOSENTAN",
+    "brand_names": "Tracleer and generics, Endothelin receptor antagonist",
+    "see": "",
+    "page_index": 49,
+    "page_number": 50,
+    "book_page": 889
+  },
+  {
+    "name": "BREO ELLIPTA",
+    "brand_names": "",
+    "see": "See Fluticasone Furoate + Vilanterol",
+    "page_index": 50,
+    "page_number": 51,
+    "book_page": 890
+  },
+  {
+    "name": "BUDESONIDE",
+    "brand_names": "Pulmicort Respules, Pulmicort Flexhaler, Eohilia,, Tarpeyo, Uceris, and generics; previously available as",
+    "see": "",
+    "page_index": 50,
+    "page_number": 51,
+    "book_page": 890
+  },
+  {
+    "name": "BUDESONIDE AND FORMOTEROL",
+    "brand_names": "Symbicort, Breyna, and generics, Corticosteroid and long-acting β 2 -adrenergic agonist",
+    "see": "",
+    "page_index": 52,
+    "page_number": 53,
+    "book_page": 892
+  },
+  {
+    "name": "BUMETANIDE",
+    "brand_names": "Bumex and generics, Loop diuretic",
+    "see": "",
+    "page_index": 53,
+    "page_number": 54,
+    "book_page": 893
+  },
+  {
+    "name": "BUTORPHANOL",
+    "brand_names": "Generics; previously available as Stadol",
+    "see": "",
+    "page_index": 54,
+    "page_number": 55,
+    "book_page": 894
+  },
+  {
+    "name": "CAFFEINE CITRATE",
+    "brand_names": "Cafcit and generics, Methylxanthine, respiratory stimulant",
+    "see": "",
+    "page_index": 55,
+    "page_number": 56,
+    "book_page": 895
+  },
+  {
+    "name": "CALCITRIOL",
+    "brand_names": "1,25-dihydroxycholecalciferol, Rocaltrol, and generics, Active form vitamin D, fat soluble",
+    "see": "",
+    "page_index": 55,
+    "page_number": 56,
+    "book_page": 895
+  },
+  {
+    "name": "CALCIUM ACETATE",
+    "brand_names": "Calphron, and generics; previously available as PhosLo;",
+    "see": "",
+    "page_index": 56,
+    "page_number": 57,
+    "book_page": 896
+  },
+  {
+    "name": "CALCIUM CARBONATE",
+    "brand_names": "Tums, Children’s Pepto, Children's Mylicon, and many, others including generics; 40% elemental Ca",
+    "see": "",
+    "page_index": 56,
+    "page_number": 57,
+    "book_page": 896
+  },
+  {
+    "name": "CALCIUM CHLORIDE",
+    "brand_names": "Various generics; 27% elemental Ca, Calcium supplement",
+    "see": "",
+    "page_index": 57,
+    "page_number": 58,
+    "book_page": 897
+  },
+  {
+    "name": "CALCIUM CITRATE",
+    "brand_names": "Caltrate 600+D3, Citracal Petites, Citracal Maximum, Plus, Citracal Slow Release, Citracal Gummies, Viactiv",
+    "see": "",
+    "page_index": 58,
+    "page_number": 59,
+    "book_page": 898
+  },
+  {
+    "name": "CALCIUM GLUCONATE",
+    "brand_names": "Various generics, 9.3% elemental Ca, Calcium supplement",
+    "see": "",
+    "page_index": 58,
+    "page_number": 59,
+    "book_page": 898
+  },
+  {
+    "name": "CALFACTANT",
+    "brand_names": "",
+    "see": "See Surfactant, pulmonary",
+    "page_index": 59,
+    "page_number": 60,
+    "book_page": 899
+  },
+  {
+    "name": "CANNABIDIOL",
+    "brand_names": "Epidiolex",
+    "see": "",
+    "page_index": 60,
+    "page_number": 61,
+    "book_page": 900
+  },
+  {
+    "name": "CAPTOPRIL",
+    "brand_names": "Various generics; previously available as Capoten, Angiotensin-converting enzyme inhibitor,",
+    "see": "",
+    "page_index": 61,
+    "page_number": 62,
+    "book_page": 901
+  },
+  {
+    "name": "BID",
+    "brand_names": "Onset within 15–30 min of administration. Peak effect within 1–2 hr. Adjust dose with renal",
+    "see": "",
+    "page_index": 61,
+    "page_number": 62,
+    "book_page": 901
+  },
+  {
+    "name": "CARBAMAZEPINE",
+    "brand_names": "Epitol, Tegretol, Tegretol-XR, Carbatrol, Equetro, and, various generics",
+    "see": "",
+    "page_index": 61,
+    "page_number": 62,
+    "book_page": 901
+  },
+  {
+    "name": "CARBAMIDE PEROXIDE",
+    "brand_names": "Otic solution: Debrox, Clearcanal Earwax Softener,, GoodSense Ear Wax Removal, and many generic",
+    "see": "",
+    "page_index": 63,
+    "page_number": 64,
+    "book_page": 903
+  },
+  {
+    "name": "CARBINOXAMINE",
+    "brand_names": "Karbinal ER, RyVent, and many generics, Antihistamine",
+    "see": "",
+    "page_index": 63,
+    "page_number": 64,
+    "book_page": 903
+  },
+  {
+    "name": "CARNITINE",
+    "brand_names": "Levocarnitine, Carnitor, Carnitor SF, L-Carnitine, and, generics",
+    "see": "",
+    "page_index": 64,
+    "page_number": 65,
+    "book_page": 904
+  },
+  {
+    "name": "CARVEDILOL",
+    "brand_names": "Coreg, Coreg CR, and generics, Adrenergic antagonist (α and β), antihypertensive",
+    "see": "",
+    "page_index": 65,
+    "page_number": 66,
+    "book_page": 905
+  },
+  {
+    "name": "CASPOFUNGIN",
+    "brand_names": "Cancidas and generics, Antifungal, echinocandin",
+    "see": "",
+    "page_index": 66,
+    "page_number": 67,
+    "book_page": 906
+  },
+  {
+    "name": "CEFADROXIL",
+    "brand_names": "Generics; previously available as Duricef",
+    "see": "",
+    "page_index": 67,
+    "page_number": 68,
+    "book_page": 907
+  },
+  {
+    "name": "CEFAZOLIN",
+    "brand_names": "Generics; previously available as Ancef",
+    "see": "",
+    "page_index": 67,
+    "page_number": 68,
+    "book_page": 907
+  },
+  {
+    "name": "CEFDINIR",
+    "brand_names": "Generics; previously available as Omnicef",
+    "see": "",
+    "page_index": 68,
+    "page_number": 69,
+    "book_page": 908
+  },
+  {
+    "name": "CEFEPIME",
+    "brand_names": "Generics; previously available as Maxipime",
+    "see": "",
+    "page_index": 68,
+    "page_number": 69,
+    "book_page": 908
+  },
+  {
+    "name": "CEFIDEROCOL",
+    "brand_names": "Fetroja",
+    "see": "",
+    "page_index": 69,
+    "page_number": 70,
+    "book_page": 909
+  },
+  {
+    "name": "CEFIXIME",
+    "brand_names": "Generics; previously available as Suprax",
+    "see": "",
+    "page_index": 70,
+    "page_number": 71,
+    "book_page": 910
+  },
+  {
+    "name": "CEFOTAXIME",
+    "brand_names": "Generics; previously available as Claforan",
+    "see": "",
+    "page_index": 71,
+    "page_number": 72,
+    "book_page": 911
+  },
+  {
+    "name": "CEFOTETAN",
+    "brand_names": "Generics; previously available as Cefotan",
+    "see": "",
+    "page_index": 71,
+    "page_number": 72,
+    "book_page": 911
+  },
+  {
+    "name": "CEFOXITIN",
+    "brand_names": "Generics; previously available as Mefoxin",
+    "see": "",
+    "page_index": 72,
+    "page_number": 73,
+    "book_page": 912
+  },
+  {
+    "name": "CEFPODOXIME PROXETIL",
+    "brand_names": "Generics; previously available as Vantin",
+    "see": "",
+    "page_index": 73,
+    "page_number": 74,
+    "book_page": 913
+  },
+  {
+    "name": "CEFPROZIL",
+    "brand_names": "Generics; previously available as Cefzil",
+    "see": "",
+    "page_index": 73,
+    "page_number": 74,
+    "book_page": 913
+  },
+  {
+    "name": "CEFTAROLINE FOSAMIL",
+    "brand_names": "Teflaro",
+    "see": "",
+    "page_index": 74,
+    "page_number": 75,
+    "book_page": 914
+  },
+  {
+    "name": "CEFTAZIDIME",
+    "brand_names": "Tazicef and generics; previously available as Fortaz, Antibiotic, cephalosporin (third generation)",
+    "see": "",
+    "page_index": 75,
+    "page_number": 76,
+    "book_page": 915
+  },
+  {
+    "name": "CEFTAZIDIME WITH AVIBACTAM",
+    "brand_names": "Avycaz",
+    "see": "",
+    "page_index": 75,
+    "page_number": 76,
+    "book_page": 915
+  },
+  {
+    "name": "CEFTOLOZANE WITH TAZOBACTAM",
+    "brand_names": "Zerbaxa",
+    "see": "",
+    "page_index": 76,
+    "page_number": 77,
+    "book_page": 916
+  },
+  {
+    "name": "CEFTRIAXONE",
+    "brand_names": "Generics; previously available as Rocephin",
+    "see": "",
+    "page_index": 77,
+    "page_number": 78,
+    "book_page": 917
+  },
+  {
+    "name": "CEFUROXIME (IV, IM)/CEFUROXIME AXETIL (PO)",
+    "brand_names": "IV: Generics; previously available as Zinacef",
+    "see": "",
+    "page_index": 78,
+    "page_number": 79,
+    "book_page": 918
+  },
+  {
+    "name": "CELECOXIB",
+    "brand_names": "Celebrex, Elyxyb, and generics",
+    "see": "",
+    "page_index": 79,
+    "page_number": 80,
+    "book_page": 919
+  },
+  {
+    "name": "CEPHALEXIN",
+    "brand_names": "Generics; previously available as Keflex",
+    "see": "",
+    "page_index": 80,
+    "page_number": 81,
+    "book_page": 920
+  },
+  {
+    "name": "CETIRIZINE ± PSEUDOEPHEDRINE",
+    "brand_names": "Zyrtec, Zyrtec Allergy, Zyrtec Children’s Allergy, Quzyttir,, Zerviate, and many generics",
+    "see": "",
+    "page_index": 81,
+    "page_number": 82,
+    "book_page": 921
+  },
+  {
+    "name": "CHARCOAL, ACTIVATED",
+    "brand_names": "",
+    "see": "See Chapter 3.",
+    "page_index": 82,
+    "page_number": 83,
+    "book_page": 922
+  },
+  {
+    "name": "CHLORAMPHENICOL",
+    "brand_names": "Generics",
+    "see": "",
+    "page_index": 82,
+    "page_number": 83,
+    "book_page": 922
+  },
+  {
+    "name": "CHLOROQUINE PHOSPHATE",
+    "brand_names": "Generics; previously available as Aralen",
+    "see": "",
+    "page_index": 83,
+    "page_number": 84,
+    "book_page": 923
+  },
+  {
+    "name": "CHLOROTHIAZIDE",
+    "brand_names": "Diuril and generics, Thiazide diuretic",
+    "see": "",
+    "page_index": 83,
+    "page_number": 84,
+    "book_page": 923
+  },
+  {
+    "name": "CHLORPHENIRAMINE MALEATE",
+    "brand_names": "Generics; previously available as Chlor-Trimeton",
+    "see": "",
+    "page_index": 84,
+    "page_number": 85,
+    "book_page": 924
+  },
+  {
+    "name": "CHLORPROMAZINE",
+    "brand_names": "Generics; previously available as Thorazine",
+    "see": "",
+    "page_index": 85,
+    "page_number": 86,
+    "book_page": 925
+  },
+  {
+    "name": "CHOLECALCIFEROL",
+    "brand_names": "D–3, D3–5, D3–50, Decara, D Drops, Enfamil, D-Vi-Sol, Replesta, and many others including generics",
+    "see": "",
+    "page_index": 85,
+    "page_number": 86,
+    "book_page": 925
+  },
+  {
+    "name": "D3–5: 5000 IU",
+    "brand_names": "Decara: 5,000, 25,000 IU",
+    "see": "",
+    "page_index": 85,
+    "page_number": 86,
+    "book_page": 925
+  },
+  {
+    "name": "D3–50: 50,000 IU",
+    "brand_names": "Chewable tab (OTC): 400, 1000, 2000 IU, Continued",
+    "see": "",
+    "page_index": 85,
+    "page_number": 86,
+    "book_page": 925
+  },
+  {
+    "name": "CHOLESTYRAMINE",
+    "brand_names": "Questran, Questran Light, Cholestyramine Light,, Prevalite, and generics",
+    "see": "",
+    "page_index": 87,
+    "page_number": 88,
+    "book_page": 927
+  },
+  {
+    "name": "CICLESONIDE",
+    "brand_names": "Alvesco, Omnaris, Corticosteroid",
+    "see": "",
+    "page_index": 88,
+    "page_number": 89,
+    "book_page": 928
+  },
+  {
+    "name": "EDTA",
+    "brand_names": "Intranasal (allergic rhinitis):",
+    "see": "",
+    "page_index": 88,
+    "page_number": 89,
+    "book_page": 928
+  },
+  {
+    "name": "CIDOFOVIR",
+    "brand_names": "Generics; previously available as Vistide",
+    "see": "",
+    "page_index": 89,
+    "page_number": 90,
+    "book_page": 929
+  },
+  {
+    "name": "CIPROFLOXACIN",
+    "brand_names": "Cipro, Ciloxan ophthalmic, Cetraxal, and generics, In combination with corticosteroid: Cipro HC Otic, Otovel",
+    "see": "",
+    "page_index": 90,
+    "page_number": 91,
+    "book_page": 930
+  },
+  {
+    "name": "CITRATE MIXTURES",
+    "brand_names": "Alkalinizing agent, electrolyte supplement, ?",
+    "see": "",
+    "page_index": 92,
+    "page_number": 93,
+    "book_page": 932
+  },
+  {
+    "name": "CLARITHROMYCIN",
+    "brand_names": "Generics; previously available as Biaxin and Biaxin XL",
+    "see": "",
+    "page_index": 92,
+    "page_number": 93,
+    "book_page": 932
+  },
+  {
+    "name": "CLINDAMYCIN",
+    "brand_names": "Cleocin, Cleocin-T, Clindagel, Clindesse, Clindacin,, Xaciato, and generics",
+    "see": "",
+    "page_index": 93,
+    "page_number": 94,
+    "book_page": 933
+  },
+  {
+    "name": "CLOBAZAM",
+    "brand_names": "Onfi, Sympazan, and generics, Benzodiazepine, anticonvulsant",
+    "see": "",
+    "page_index": 95,
+    "page_number": 96,
+    "book_page": 935
+  },
+  {
+    "name": "CLONAZEPAM",
+    "brand_names": "Klonopin and generics, Benzodiazepine, anticonvulsant",
+    "see": "",
+    "page_index": 96,
+    "page_number": 97,
+    "book_page": 936
+  },
+  {
+    "name": "CLONIDINE",
+    "brand_names": "Onyda XR, Catapres TTS, Duraclon, and generics;, previously available as Catapres and Kapvay",
+    "see": "",
+    "page_index": 97,
+    "page_number": 98,
+    "book_page": 937
+  },
+  {
+    "name": "CLOTRIMAZOLE",
+    "brand_names": "Alevazol, Lotrimin AF, and generics; previously available, as Gyne-Lotrimin 3 and Gyne-Lotrimin 7",
+    "see": "",
+    "page_index": 98,
+    "page_number": 99,
+    "book_page": 938
+  },
+  {
+    "name": "CORTICOTROPIN",
+    "brand_names": "Acthar Gel, Cortrophin Gel; ACTH, Adrenocorticotropic hormone",
+    "see": "",
+    "page_index": 99,
+    "page_number": 100,
+    "book_page": 939
+  },
+  {
+    "name": "CORTISONE ACETATE",
+    "brand_names": "Various generics, Corticosteroid",
+    "see": "",
+    "page_index": 100,
+    "page_number": 101,
+    "book_page": 940
+  },
+  {
+    "name": "CO-TRIMOXAZOLE",
+    "brand_names": "",
+    "see": "See Sulfamethoxazole and Trimethoprim",
+    "page_index": 100,
+    "page_number": 101,
+    "book_page": 940
+  },
+  {
+    "name": "CROMOLYN",
+    "brand_names": "Nasalcrom, Gastrocrom, and generics; previously, available as Intal",
+    "see": "",
+    "page_index": 100,
+    "page_number": 101,
+    "book_page": 940
+  },
+  {
+    "name": "CYANOCOBALAMIN/VITAMIN B 12",
+    "brand_names": "Dodex, Physicians EZ Use B-12, Vitamin Deficiency, System B12, Nascobal, vitamin B 12 , and generics",
+    "see": "",
+    "page_index": 101,
+    "page_number": 102,
+    "book_page": 941
+  },
+  {
+    "name": "CYCLOPENTOLATE",
+    "brand_names": "Cyclogyl and generics, Anticholinergic, mydriatic agent",
+    "see": "",
+    "page_index": 102,
+    "page_number": 103,
+    "book_page": 942
+  },
+  {
+    "name": "CYCLOPENTOLATE WITH PHENYLEPHRINE",
+    "brand_names": "Cyclomydril",
+    "see": "",
+    "page_index": 102,
+    "page_number": 103,
+    "book_page": 942
+  },
+  {
+    "name": "CYCLOSPORINE, CYCLOSPORINE MICROEMULSION, CYCLOSPORINE MODIFIED",
+    "brand_names": "Sandimmune, Gengraf, Neoral, Restasis, Restasis, MultiDose, Verkazia, Vevye, Cequa, and generics",
+    "see": "",
+    "page_index": 102,
+    "page_number": 103,
+    "book_page": 942
+  },
+  {
+    "name": "CYCLOSPORINE, CYCLOSPORINE MICROEMULSION, CYCLOSPORINE",
+    "brand_names": "MODIFIED continued",
+    "see": "",
+    "page_index": 103,
+    "page_number": 104,
+    "book_page": 943
+  },
+  {
+    "name": "CYCLOSPORINE, CYCLOSPORINE MICROEMULSION, CYCLOSPORINE",
+    "brand_names": "MODIFIED continued",
+    "see": "",
+    "page_index": 104,
+    "page_number": 105,
+    "book_page": 944
+  },
+  {
+    "name": "CYPROHEPTADINE",
+    "brand_names": "Various generics; previously available as Periactin, Antihistamine",
+    "see": "",
+    "page_index": 104,
+    "page_number": 105,
+    "book_page": 944
+  },
+  {
+    "name": "DABIGATRAN ETEXILATE MESYLATE",
+    "brand_names": "Pradaxa and generics, Anticoagulant, direct thrombin inhibitor",
+    "see": "",
+    "page_index": 105,
+    "page_number": 106,
+    "book_page": 945
+  },
+  {
+    "name": "DANTROLENE",
+    "brand_names": "Dantrium, Revonto, Ryanodex, and generics, Skeletal muscle relaxant",
+    "see": "",
+    "page_index": 106,
+    "page_number": 107,
+    "book_page": 946
+  },
+  {
+    "name": "DAPSONE",
+    "brand_names": "Aczone, Diaminodiphenyl sulfone, DDS, and generics, Antibiotic, sulfone derivative",
+    "see": "",
+    "page_index": 107,
+    "page_number": 108,
+    "book_page": 947
+  },
+  {
+    "name": "DARBEPOETIN ALFA",
+    "brand_names": "Aranesp",
+    "see": "",
+    "page_index": 108,
+    "page_number": 109,
+    "book_page": 948
+  },
+  {
+    "name": "SC/IV.",
+    "brand_names": ">1 g/dL increase in hemoglobin in any 2-wk",
+    "see": "",
+    "page_index": 109,
+    "page_number": 110,
+    "book_page": 949
+  },
+  {
+    "name": "DEFEROXAMINE MESYLATE",
+    "brand_names": "Desferal and generics, Chelating agent",
+    "see": "",
+    "page_index": 111,
+    "page_number": 112,
+    "book_page": 951
+  },
+  {
+    "name": "(CRRT).",
+    "brand_names": "High doses and concomitant low ferritin levels have also been associated with growth",
+    "see": "",
+    "page_index": 111,
+    "page_number": 112,
+    "book_page": 951
+  },
+  {
+    "name": "DESMOPRESSIN ACETATE",
+    "brand_names": "DDAVP, Nocdurna, and generics; previously available as, Stimate",
+    "see": "",
+    "page_index": 112,
+    "page_number": 113,
+    "book_page": 952
+  },
+  {
+    "name": "DEXAMETHASONE",
+    "brand_names": "Dexabliss, Dexamethasone Intensol, HiDex, TaperDex,, Maxidex, and various generics; previously available as",
+    "see": "",
+    "page_index": 113,
+    "page_number": 114,
+    "book_page": 953
+  },
+  {
+    "name": "DEXMEDETOMIDINE",
+    "brand_names": "Precedex, Igalmi and generics, α-Adrenergic agonist, sedative",
+    "see": "",
+    "page_index": 114,
+    "page_number": 115,
+    "book_page": 954
+  },
+  {
+    "name": "DEXMETHYLPHENIDATE",
+    "brand_names": "Focalin, Focalin XR, and generics, CNS stimulant",
+    "see": "",
+    "page_index": 115,
+    "page_number": 116,
+    "book_page": 955
+  },
+  {
+    "name": "≥6 YR AND ADOLESCENT",
+    "brand_names": "Immediate-",
+    "see": "",
+    "page_index": 116,
+    "page_number": 117,
+    "book_page": 956
+  },
+  {
+    "name": "CONVERTING FROM METHYLPHENIDATE:",
+    "brand_names": "≥6 yr and adult: Start at 50% of the total daily dose of racemic methylphenidate with the",
+    "see": "",
+    "page_index": 116,
+    "page_number": 117,
+    "book_page": 956
+  },
+  {
+    "name": "CONVERTING FROM IMMEDIATE-RELEASE TABS (BID) TO EXTENDED-RELEASE CAPS (ONCE DAILY)",
+    "brand_names": "",
+    "see": "",
+    "page_index": 116,
+    "page_number": 117,
+    "book_page": 956
+  },
+  {
+    "name": "DEXTROAMPHETAMINE ± AMPHETAMINE",
+    "brand_names": "Dexedrine, ProCentra, Zenzedi, Xelstrym, and many, generics",
+    "see": "",
+    "page_index": 117,
+    "page_number": 118,
+    "book_page": 957
+  },
+  {
+    "name": "DIAZEPAM",
+    "brand_names": "Valium, Libervant, Valtoco, and generics; previously, available as Diastat",
+    "see": "",
+    "page_index": 119,
+    "page_number": 120,
+    "book_page": 959
+  },
+  {
+    "name": "DIAZOXIDE",
+    "brand_names": "Proglycem and generics, Antihypoglycemic agent",
+    "see": "",
+    "page_index": 121,
+    "page_number": 122,
+    "book_page": 961
+  },
+  {
+    "name": "DIGOXIN",
+    "brand_names": "Lanoxin, Lanoxin Pediatric, and generics, Antiarrhythmic agent, inotrope",
+    "see": "",
+    "page_index": 122,
+    "page_number": 123,
+    "book_page": 962
+  },
+  {
+    "name": "DIGOXIN IMMUNE FAB (OVINE)",
+    "brand_names": "DigiFab",
+    "see": "",
+    "page_index": 123,
+    "page_number": 124,
+    "book_page": 963
+  },
+  {
+    "name": "DILTIAZEM",
+    "brand_names": "Cardizem, Cardizem CD, Cardizem LA, Cartia XT, Dilt-, XR, Matzim LA, Tiadylt ER, Tiazac, and many others",
+    "see": "",
+    "page_index": 124,
+    "page_number": 125,
+    "book_page": 964
+  },
+  {
+    "name": "DIMENHYDRINATE",
+    "brand_names": "Dramamine, Driminate, and generics, Antiemetic, antihistamine",
+    "see": "",
+    "page_index": 125,
+    "page_number": 126,
+    "book_page": 965
+  },
+  {
+    "name": "DIPHENHYDRAMINE",
+    "brand_names": "Benadryl, many other brand names, and generics, Antihistamine",
+    "see": "",
+    "page_index": 125,
+    "page_number": 126,
+    "book_page": 965
+  },
+  {
+    "name": "DIVALPROEX SODIUM",
+    "brand_names": "Depakote, Depakote Sprinkles, Depakote ER, and, generics",
+    "see": "",
+    "page_index": 126,
+    "page_number": 127,
+    "book_page": 966
+  },
+  {
+    "name": "DOBUTAMINE",
+    "brand_names": "Various generics; previously available as Dobutrex, Sympathomimetic agent",
+    "see": "",
+    "page_index": 126,
+    "page_number": 127,
+    "book_page": 966
+  },
+  {
+    "name": "DOCUSATE",
+    "brand_names": "Colace, DocuSol Kids, Enemeez Mini, and many other, brands and generics",
+    "see": "",
+    "page_index": 127,
+    "page_number": 128,
+    "book_page": 967
+  },
+  {
+    "name": "DOLASETRON",
+    "brand_names": "Anzemet",
+    "see": "",
+    "page_index": 127,
+    "page_number": 128,
+    "book_page": 967
+  },
+  {
+    "name": "DOPAMINE",
+    "brand_names": "Various generics; previously available as Intropin, Sympathomimetic agent",
+    "see": "",
+    "page_index": 128,
+    "page_number": 129,
+    "book_page": 968
+  },
+  {
+    "name": "DORNASE ALFA/DNASE",
+    "brand_names": "Pulmozyme",
+    "see": "",
+    "page_index": 129,
+    "page_number": 130,
+    "book_page": 969
+  },
+  {
+    "name": "DOXYCYCLINE",
+    "brand_names": "Doxy, Doryx, Monodox, Oracea, many others, and, generics; previously available as Vibramycin",
+    "see": "",
+    "page_index": 129,
+    "page_number": 130,
+    "book_page": 969
+  },
+  {
+    "name": "DRONABINOL",
+    "brand_names": "Marinol, Syndros, tetrahydrocannabinol, THC, and, generics",
+    "see": "",
+    "page_index": 130,
+    "page_number": 131,
+    "book_page": 970
+  },
+  {
+    "name": "DROPERIDOL",
+    "brand_names": "Generics; previously available as Inapsine",
+    "see": "",
+    "page_index": 131,
+    "page_number": 132,
+    "book_page": 971
+  },
+  {
+    "name": "DYMISTA",
+    "brand_names": "",
+    "see": "See Azelastine and Fluticasone.",
+    "page_index": 132,
+    "page_number": 133,
+    "book_page": 972
+  },
+  {
+    "name": "ELEXACAFTOR/TEZACAFTOR/IVACAFTOR",
+    "brand_names": "Trikafta",
+    "see": "",
+    "page_index": 132,
+    "page_number": 133,
+    "book_page": 972
+  },
+  {
+    "name": "EMLA",
+    "brand_names": "",
+    "see": "See Lidocaine and Prilocaine",
+    "page_index": 135,
+    "page_number": 136,
+    "book_page": 975
+  },
+  {
+    "name": "ENALAPRIL MALEATE (PO), ENALAPRILAT (IV)",
+    "brand_names": "Enalapril: Vasotec, Epaned, and generics, Enalaprilat: generics; previously available as Vasotec IV",
+    "see": "",
+    "page_index": 135,
+    "page_number": 136,
+    "book_page": 975
+  },
+  {
+    "name": "ENOXAPARIN",
+    "brand_names": "Lovenox, Enoxiluv Kit, and generics, Anticoagulant, low-molecular-weight heparin",
+    "see": "",
+    "page_index": 136,
+    "page_number": 137,
+    "book_page": 976
+  },
+  {
+    "name": "EPINEPHRINE HCL",
+    "brand_names": "Adrenalin, EpiPen, Auvi-Q, Neffy, EpinephrineSNAP,, Primatene Mist, and generics",
+    "see": "",
+    "page_index": 138,
+    "page_number": 139,
+    "book_page": 978
+  },
+  {
+    "name": "RESPIRATORY BRONCHODILATOR USE:",
+    "brand_names": "SC Injection (use 1:1000 or 1 mg/mL aqueous injection):",
+    "see": "",
+    "page_index": 140,
+    "page_number": 141,
+    "book_page": 980
+  },
+  {
+    "name": "EPINEPHRINE, RACEMIC",
+    "brand_names": "Asthmanefrin and S-2",
+    "see": "",
+    "page_index": 141,
+    "page_number": 142,
+    "book_page": 981
+  },
+  {
+    "name": "EPOETIN ALFA",
+    "brand_names": "Epogen, Procrit, Retacrit, and Erythropoietin, Recombinant human erythropoietin",
+    "see": "",
+    "page_index": 141,
+    "page_number": 142,
+    "book_page": 981
+  },
+  {
+    "name": "DOSAGE ADJUSTMENT FOR ANEMIA IN CHRONIC RENAL FAILURE:",
+    "brand_names": "Reduce dose by ≥25%: When Hgb increases >1 g/dL in any 2-wk period. Dose reductions",
+    "see": "",
+    "page_index": 142,
+    "page_number": 143,
+    "book_page": 982
+  },
+  {
+    "name": "DOSAGE REDUCTION ADJUSTMENT/WITHHOLDING THERAPY FOR ANEMIA IN CANCER:",
+    "brand_names": "If Hgb exceeds a level needed to avoid blood transfusion: Withhold dose and resume",
+    "see": "",
+    "page_index": 142,
+    "page_number": 143,
+    "book_page": 982
+  },
+  {
+    "name": "EPOPROSTENOL",
+    "brand_names": "Flolan, Veletri, and generics, PGI 2 , PGX, prostacyclin, Prostaglandin I 2 , vasodilator",
+    "see": "",
+    "page_index": 142,
+    "page_number": 143,
+    "book_page": 982
+  },
+  {
+    "name": "ERGOCALCIFEROL",
+    "brand_names": "Drisdol and generics; previously available as calcidol, Vitamin D 2",
+    "see": "",
+    "page_index": 143,
+    "page_number": 144,
+    "book_page": 983
+  },
+  {
+    "name": "ERGOTAMINE TARTRATE ± CAFFEINE",
+    "brand_names": "Ergomar",
+    "see": "",
+    "page_index": 144,
+    "page_number": 145,
+    "book_page": 984
+  },
+  {
+    "name": "ERGOTAMINE PLUS CAFFEINE:",
+    "brand_names": "Doses based on mg of ergotamine",
+    "see": "",
+    "page_index": 145,
+    "page_number": 146,
+    "book_page": 985
+  },
+  {
+    "name": "ERTAPENEM",
+    "brand_names": "Invanz and generics, Antibiotic, carbapenem",
+    "see": "",
+    "page_index": 145,
+    "page_number": 146,
+    "book_page": 985
+  },
+  {
+    "name": "ERYTHROMYCIN PREPARATIONS",
+    "brand_names": "Erythromycin, EES, EryPed, Ery-Tab, Erythrocin, and, generics",
+    "see": "",
+    "page_index": 146,
+    "page_number": 147,
+    "book_page": 986
+  },
+  {
+    "name": "ERYTHROPOIETIN",
+    "brand_names": "",
+    "see": "See Epoetin Alfa",
+    "page_index": 147,
+    "page_number": 148,
+    "book_page": 987
+  },
+  {
+    "name": "ESCITALOPRAM",
+    "brand_names": "Lexapro and generics, Antidepressant, selective serotonin reuptake",
+    "see": "",
+    "page_index": 147,
+    "page_number": 148,
+    "book_page": 987
+  },
+  {
+    "name": "ESMOLOL HCL",
+    "brand_names": "Brevibloc and generics, β 1 -selective adrenergic blocking agent,",
+    "see": "",
+    "page_index": 148,
+    "page_number": 149,
+    "book_page": 988
+  },
+  {
+    "name": "ESOMEPRAZOLE",
+    "brand_names": "Nexium, Nexium 24HR, and generics, Gastric acid proton pump inhibitor",
+    "see": "",
+    "page_index": 149,
+    "page_number": 150,
+    "book_page": 989
+  },
+  {
+    "name": "ETANERCEPT",
+    "brand_names": "Enbrel, Enbrel SureClick, Enbrel Mini, Antirheumatic, immunomodulatory agent, tumor",
+    "see": "",
+    "page_index": 150,
+    "page_number": 151,
+    "book_page": 990
+  },
+  {
+    "name": "ETHAMBUTOL HCL",
+    "brand_names": "Generics; previously available as Myambutol",
+    "see": "",
+    "page_index": 152,
+    "page_number": 153,
+    "book_page": 992
+  },
+  {
+    "name": "ETHOSUXIMIDE",
+    "brand_names": "Zarontin and generics, Anticonvulsant",
+    "see": "",
+    "page_index": 152,
+    "page_number": 153,
+    "book_page": 992
+  },
+  {
+    "name": "ETOMIDATE",
+    "brand_names": "Amidate and generics, General anesthetic",
+    "see": "",
+    "page_index": 153,
+    "page_number": 154,
+    "book_page": 993
+  },
+  {
+    "name": "FAMCICLOVIR",
+    "brand_names": "Generics; previously available as Famvir",
+    "see": "",
+    "page_index": 153,
+    "page_number": 154,
+    "book_page": 993
+  },
+  {
+    "name": "FAMOTIDINE",
+    "brand_names": "Pepcid, Pepcid AC [OTC], Pepcid AC Maximum Strength, [OTC], Pepcid Complete [OTC], Zantac 360 [OTC],",
+    "see": "",
+    "page_index": 154,
+    "page_number": 155,
+    "book_page": 994
+  },
+  {
+    "name": "FELBAMATE",
+    "brand_names": "Felbatol and generics, Anticonvulsant",
+    "see": "",
+    "page_index": 155,
+    "page_number": 156,
+    "book_page": 995
+  },
+  {
+    "name": "FENTANYL",
+    "brand_names": "Fentora, Actiq, generics; previously available as, Sublimaze and Duragesic",
+    "see": "",
+    "page_index": 156,
+    "page_number": 157,
+    "book_page": 996
+  },
+  {
+    "name": "FERRIC GLUCONATE",
+    "brand_names": "",
+    "see": "See Iron―Injectable Preparations",
+    "page_index": 157,
+    "page_number": 158,
+    "book_page": 997
+  },
+  {
+    "name": "FERROUS SULFATE",
+    "brand_names": "",
+    "see": "See Iron―Oral Preparations",
+    "page_index": 157,
+    "page_number": 158,
+    "book_page": 997
+  },
+  {
+    "name": "FEXOFENADINE ± PSEUDOEPHEDRINE",
+    "brand_names": "Allegra [OTC], Children's Allegra Allergy [OTC], and, generics",
+    "see": "",
+    "page_index": 158,
+    "page_number": 159,
+    "book_page": 998
+  },
+  {
+    "name": "FIDAXOMICIN",
+    "brand_names": "Dificid",
+    "see": "",
+    "page_index": 158,
+    "page_number": 159,
+    "book_page": 998
+  },
+  {
+    "name": "FILGRASTIM",
+    "brand_names": "Neupogen, and G-CSF; biosimilar brands, include: Granix, Nivestym, Nypozi, Releuko, Zarxio",
+    "see": "",
+    "page_index": 159,
+    "page_number": 160,
+    "book_page": 999
+  },
+  {
+    "name": "FLUCONAZOLE",
+    "brand_names": "Diflucan and generics, Antifungal agent",
+    "see": "",
+    "page_index": 160,
+    "page_number": 161,
+    "book_page": 1000
+  },
+  {
+    "name": "FLUCYTOSINE",
+    "brand_names": "Ancobon, 5-FC, 5-Fluorocytosine, and generics, Antifungal agent",
+    "see": "",
+    "page_index": 161,
+    "page_number": 162,
+    "book_page": 1001
+  },
+  {
+    "name": "FLUDROCORTISONE ACETATE",
+    "brand_names": "Generics; 9-fluorohydrocortisone; previously available",
+    "see": "",
+    "page_index": 162,
+    "page_number": 163,
+    "book_page": 1002
+  },
+  {
+    "name": "FLUMAZENIL",
+    "brand_names": "Generics; previously available as Romazicon",
+    "see": "",
+    "page_index": 162,
+    "page_number": 163,
+    "book_page": 1002
+  },
+  {
+    "name": "FLUNISOLIDE",
+    "brand_names": "Generics; previously available as Nasarel or Nasalide",
+    "see": "",
+    "page_index": 163,
+    "page_number": 164,
+    "book_page": 1003
+  },
+  {
+    "name": "FLUORIDE",
+    "brand_names": "Fluoritab, many others, and generics, Mineral",
+    "see": "",
+    "page_index": 163,
+    "page_number": 164,
+    "book_page": 1003
+  },
+  {
+    "name": "FLUOXETINE HYDROCHLORIDE",
+    "brand_names": "Prozac and generics, Antidepressant, selective serotonin reuptake inhibitor",
+    "see": "",
+    "page_index": 164,
+    "page_number": 165,
+    "book_page": 1004
+  },
+  {
+    "name": "FLUTICASONE FUROATE + VILANTEROL",
+    "brand_names": "Breo Ellipta and generics, Corticosteroid and long-acting β 2 -adrenergic agonist",
+    "see": "",
+    "page_index": 165,
+    "page_number": 166,
+    "book_page": 1005
+  },
+  {
+    "name": "FLUTICASONE PREPARATIONS",
+    "brand_names": "Fluticasone propionate: Flonase and generics;, previously available as Flovent Diskus, Flovent HFA, and",
+    "see": "",
+    "page_index": 166,
+    "page_number": 167,
+    "book_page": 1006
+  },
+  {
+    "name": "FLUTICASONE PROPIONATE AND SALMETEROL",
+    "brand_names": "Advair Diskus, Advair HFA, AirDuo RespiClick,, and generics",
+    "see": "",
+    "page_index": 168,
+    "page_number": 169,
+    "book_page": 1008
+  },
+  {
+    "name": "FLUVOXAMINE",
+    "brand_names": "Generics; previously available as Luvox and Luvox CR",
+    "see": "",
+    "page_index": 171,
+    "page_number": 172,
+    "book_page": 1011
+  },
+  {
+    "name": "FOLIC ACID",
+    "brand_names": "FA-8 and many generics; previously available as Folvite, Water-soluble vitamin",
+    "see": "",
+    "page_index": 171,
+    "page_number": 172,
+    "book_page": 1011
+  },
+  {
+    "name": "FOMEPIZOLE",
+    "brand_names": "Generics; previously available as Antizol",
+    "see": "",
+    "page_index": 172,
+    "page_number": 173,
+    "book_page": 1012
+  },
+  {
+    "name": "FOSCARNET",
+    "brand_names": "Foscavir and generics, Antiviral agent",
+    "see": "",
+    "page_index": 173,
+    "page_number": 174,
+    "book_page": 1013
+  },
+  {
+    "name": "FOSPHENYTOIN",
+    "brand_names": "Cerebyx and generics, Anticonvulsant",
+    "see": "",
+    "page_index": 174,
+    "page_number": 175,
+    "book_page": 1014
+  },
+  {
+    "name": "FUROSEMIDE",
+    "brand_names": "Lasix and generics, Loop diuretic",
+    "see": "",
+    "page_index": 175,
+    "page_number": 176,
+    "book_page": 1015
+  },
+  {
+    "name": "GABAPENTIN",
+    "brand_names": "Neurontin, Gralise, Gabarone, and generics, Anticonvulsant",
+    "see": "",
+    "page_index": 176,
+    "page_number": 177,
+    "book_page": 1016
+  },
+  {
+    "name": "GANCICLOVIR",
+    "brand_names": "Generics, Zirgan; previously available as Cytovene, Antiviral agent",
+    "see": "",
+    "page_index": 177,
+    "page_number": 178,
+    "book_page": 1017
+  },
+  {
+    "name": "GATIFLOXACIN",
+    "brand_names": "Zymaxid and generics, Antibiotic, quinolone",
+    "see": "",
+    "page_index": 178,
+    "page_number": 179,
+    "book_page": 1018
+  },
+  {
+    "name": "GCSF",
+    "brand_names": "",
+    "see": "See Filgrastim",
+    "page_index": 178,
+    "page_number": 179,
+    "book_page": 1018
+  },
+  {
+    "name": "GENTAMICIN",
+    "brand_names": "Generics; previously available as Garamycin and Gentak",
+    "see": "",
+    "page_index": 178,
+    "page_number": 179,
+    "book_page": 1018
+  },
+  {
+    "name": "GLUCAGON HCL",
+    "brand_names": "Gvoke, Baqsimi, and generics, Antihypoglycemic agent",
+    "see": "",
+    "page_index": 180,
+    "page_number": 181,
+    "book_page": 1020
+  },
+  {
+    "name": "GLYCERIN",
+    "brand_names": "Pedia-Lax, Fleet Liquid Glycerin Supp, and others,, including generics",
+    "see": "",
+    "page_index": 181,
+    "page_number": 182,
+    "book_page": 1021
+  },
+  {
+    "name": "PRN",
+    "brand_names": "Onset of action: 15–30 min. May cause rectal irritation, abdominal pain, bloating, and, dizziness. Insert suppository high into rectum and retain for 15 min.",
+    "see": "",
+    "page_index": 181,
+    "page_number": 182,
+    "book_page": 1021
+  },
+  {
+    "name": "GLYCOPYRROLATE",
+    "brand_names": "Glycate, Glyrx-PF, Cuvposa, and generics; previously, available as Robinul",
+    "see": "",
+    "page_index": 181,
+    "page_number": 182,
+    "book_page": 1021
+  },
+  {
+    "name": "GRANISETRON",
+    "brand_names": "Sancuso, Sustol, and generics; previously available as, Kytril",
+    "see": "",
+    "page_index": 182,
+    "page_number": 183,
+    "book_page": 1022
+  },
+  {
+    "name": "GRISEOFULVIN",
+    "brand_names": "Microsize: Generics; previously available as Grifulvin V,, Griseofulvin Microsize",
+    "see": "",
+    "page_index": 183,
+    "page_number": 184,
+    "book_page": 1023
+  },
+  {
+    "name": "GUANFACINE",
+    "brand_names": "Intuniv and generics, α 2 -adrenergic agonist",
+    "see": "",
+    "page_index": 184,
+    "page_number": 185,
+    "book_page": 1024
+  },
+  {
+    "name": "CYP3A4",
+    "brand_names": "Characteristic",
+    "see": "",
+    "page_index": 184,
+    "page_number": 185,
+    "book_page": 1024
+  },
+  {
+    "name": "HALOPERIDOL",
+    "brand_names": "Generics; previously available as Haldol and Haldol",
+    "see": "",
+    "page_index": 185,
+    "page_number": 186,
+    "book_page": 1025
+  },
+  {
+    "name": "HEPARIN SODIUM",
+    "brand_names": "Various generics, Anticoagulant",
+    "see": "",
+    "page_index": 186,
+    "page_number": 187,
+    "book_page": 1026
+  },
+  {
+    "name": "HYALURONIDASE",
+    "brand_names": "Amphadase, Hylenex, and Vitrase, Antidote, extravasation",
+    "see": "",
+    "page_index": 187,
+    "page_number": 188,
+    "book_page": 1027
+  },
+  {
+    "name": "HYDRALAZINE HYDROCHLORIDE",
+    "brand_names": "Generics; previously available as Apresoline",
+    "see": "",
+    "page_index": 188,
+    "page_number": 189,
+    "book_page": 1028
+  },
+  {
+    "name": "HYDROCHLOROTHIAZIDE",
+    "brand_names": "Generics; previously available as HydroDiuril and",
+    "see": "",
+    "page_index": 188,
+    "page_number": 189,
+    "book_page": 1028
+  },
+  {
+    "name": "HYDROCORTISONE",
+    "brand_names": "Systemic dosage forms: Solu-Cortef, Cortef, Alkindi, Sprinkle, and generics",
+    "see": "",
+    "page_index": 189,
+    "page_number": 190,
+    "book_page": 1029
+  },
+  {
+    "name": "HYDROMORPHONE HCL",
+    "brand_names": "Dilaudid and generics, Narcotic, analgesic",
+    "see": "",
+    "page_index": 190,
+    "page_number": 191,
+    "book_page": 1030
+  },
+  {
+    "name": "HYDROXYCHLOROQUINE SULFATE",
+    "brand_names": "Plaquenil, Sovuna, and generics, Antimalarial, antirheumatic agent",
+    "see": "",
+    "page_index": 191,
+    "page_number": 192,
+    "book_page": 1031
+  },
+  {
+    "name": "HYDROXYZINE",
+    "brand_names": "Generics; previously available as Vistaril",
+    "see": "",
+    "page_index": 192,
+    "page_number": 193,
+    "book_page": 1032
+  },
+  {
+    "name": "IBUPROFEN",
+    "brand_names": "PO: Motrin, Advil, Children’s Advil, Children’s Motrin,, Infant's Ibuprofen, Motrin Infants' Drops, and generics",
+    "see": "",
+    "page_index": 192,
+    "page_number": 193,
+    "book_page": 1032
+  },
+  {
+    "name": "ILOPROST",
+    "brand_names": "Ventavis, Aurlumyn, synthetic PGI 2, Prostaglandin I 2 , vasodilator",
+    "see": "",
+    "page_index": 194,
+    "page_number": 195,
+    "book_page": 1034
+  },
+  {
+    "name": "IMIPENEM AND CILASTATIN",
+    "brand_names": "Primaxin IV and generics, Antibiotic, carbapenem",
+    "see": "",
+    "page_index": 194,
+    "page_number": 195,
+    "book_page": 1034
+  },
+  {
+    "name": "IMIPRAMINE",
+    "brand_names": "Generics; previously available as Tofranil",
+    "see": "",
+    "page_index": 195,
+    "page_number": 196,
+    "book_page": 1035
+  },
+  {
+    "name": "IMMUNE GLOBULIN",
+    "brand_names": "Immune globulins",
+    "see": "",
+    "page_index": 196,
+    "page_number": 197,
+    "book_page": 1036
+  },
+  {
+    "name": "INDOMETHACIN",
+    "brand_names": "Indocin and generics",
+    "see": "",
+    "page_index": 200,
+    "page_number": 201,
+    "book_page": 1040
+  },
+  {
+    "name": "INFLIXIMAB",
+    "brand_names": "Remicade, Remicade SC, Avsola, Infectra, Renflexis,, Zymfentra, and generics",
+    "see": "",
+    "page_index": 201,
+    "page_number": 202,
+    "book_page": 1041
+  },
+  {
+    "name": "INSULIN PREPARATIONS",
+    "brand_names": "Pancreatic hormone",
+    "see": "",
+    "page_index": 203,
+    "page_number": 204,
+    "book_page": 1043
+  },
+  {
+    "name": "IODIDE",
+    "brand_names": "",
+    "see": "See Potassium Iodide",
+    "page_index": 203,
+    "page_number": 204,
+    "book_page": 1043
+  },
+  {
+    "name": "IODIXANOL",
+    "brand_names": "Visipaque and generics, Radiopaque agent, contrast medium",
+    "see": "",
+    "page_index": 203,
+    "page_number": 204,
+    "book_page": 1043
+  },
+  {
+    "name": "IOHEXOL",
+    "brand_names": "Iohexol: Omnipaque 140, Omnipaque 180, Omnipaque",
+    "see": "",
+    "page_index": 204,
+    "page_number": 205,
+    "book_page": 1044
+  },
+  {
+    "name": "IPRATROPIUM BROMIDE ± ALBUTEROL",
+    "brand_names": "Atrovent HFA and generics, In combination with albuterol: Combivent Respimat and",
+    "see": "",
+    "page_index": 205,
+    "page_number": 206,
+    "book_page": 1045
+  },
+  {
+    "name": "IRON DEXTRAN",
+    "brand_names": "",
+    "see": "See Iron―Injectable Preparations",
+    "page_index": 207,
+    "page_number": 208,
+    "book_page": 1047
+  },
+  {
+    "name": "IRON SUCROSE",
+    "brand_names": "",
+    "see": "See Iron―Injectable Preparations",
+    "page_index": 207,
+    "page_number": 208,
+    "book_page": 1047
+  },
+  {
+    "name": "IRON―INJECTABLE PREPARATIONS",
+    "brand_names": "Ferric gluconate: Ferrlecit and generics, Iron dextran: INFeD",
+    "see": "",
+    "page_index": 207,
+    "page_number": 208,
+    "book_page": 1047
+  },
+  {
+    "name": "FERRIC GLUCONATE (IV):",
+    "brand_names": "Iron deficiency anemia in patients undergoing chronic hemodialysis who are receiving",
+    "see": "",
+    "page_index": 207,
+    "page_number": 208,
+    "book_page": 1047
+  },
+  {
+    "name": "IRON DEXTRAN (IV OR IM):",
+    "brand_names": "Iron deficiency anemia (≥4 mo, child, adolescent):, Test dose (IV over 5 min or IM; may initiate treatment dose 1 hr after test dose):",
+    "see": "",
+    "page_index": 207,
+    "page_number": 208,
+    "book_page": 1047
+  },
+  {
+    "name": "IRON SUCROSE (IV):",
+    "brand_names": "Test dose (optional): Infuse 25% of first day dose up to a max. of 25 mg undiluted over",
+    "see": "",
+    "page_index": 208,
+    "page_number": 209,
+    "book_page": 1048
+  },
+  {
+    "name": "FERRIC CARBOXYMALTOSE (IV):",
+    "brand_names": "Iron deficiency anemia:",
+    "see": "",
+    "page_index": 208,
+    "page_number": 209,
+    "book_page": 1048
+  },
+  {
+    "name": "IRON―ORAL PREPARATIONS",
+    "brand_names": "Ferrous sulfate: Fer-In-Sol, Slow FE, Slow Iron, and, many generics",
+    "see": "",
+    "page_index": 209,
+    "page_number": 210,
+    "book_page": 1049
+  },
+  {
+    "name": "ISAVUCONAZONIUM SULFATE",
+    "brand_names": "Cresemba, isavuconazole prodrug, Antifungal, triazole",
+    "see": "",
+    "page_index": 210,
+    "page_number": 211,
+    "book_page": 1050
+  },
+  {
+    "name": "ISONIAZID",
+    "brand_names": "Generics, INH; previously available as Nydrazid and, Laniazid",
+    "see": "",
+    "page_index": 211,
+    "page_number": 212,
+    "book_page": 1051
+  },
+  {
+    "name": "ISOPROTERENOL",
+    "brand_names": "Generics; previously available as Isuprel",
+    "see": "",
+    "page_index": 212,
+    "page_number": 213,
+    "book_page": 1052
+  },
+  {
+    "name": "EDTA",
+    "brand_names": "NOTE: The dosage units for adults are in mCg/min, compared to mCg/kg/min for children., IV infusion:",
+    "see": "",
+    "page_index": 212,
+    "page_number": 213,
+    "book_page": 1052
+  },
+  {
+    "name": "ISOTRETINOIN",
+    "brand_names": "Absorica, Absorica LD, Accutane, Amnesteem, Claravis,, Zenatane, and generics",
+    "see": "",
+    "page_index": 213,
+    "page_number": 214,
+    "book_page": 1053
+  },
+  {
+    "name": "ISRADIPINE",
+    "brand_names": "Generics; previously available as DynaCirc",
+    "see": "",
+    "page_index": 213,
+    "page_number": 214,
+    "book_page": 1053
+  },
+  {
+    "name": "ITRACONAZOLE",
+    "brand_names": "Sporanox, Tolsura, and generics, Antifungal agent",
+    "see": "",
+    "page_index": 214,
+    "page_number": 215,
+    "book_page": 1054
+  },
+  {
+    "name": "IVACAFTOR",
+    "brand_names": "Kalydeco",
+    "see": "",
+    "page_index": 215,
+    "page_number": 216,
+    "book_page": 1055
+  },
+  {
+    "name": "IVERMECTIN",
+    "brand_names": "Stromectol, Sklice, Soolantra, and generics, Anthelmintic",
+    "see": "",
+    "page_index": 217,
+    "page_number": 218,
+    "book_page": 1057
+  },
+  {
+    "name": "KALYDECO",
+    "brand_names": "",
+    "see": "See Ivacaftor.",
+    "page_index": 218,
+    "page_number": 219,
+    "book_page": 1058
+  },
+  {
+    "name": "KETAMINE",
+    "brand_names": "Ketalar and generics, General anesthetic",
+    "see": "",
+    "page_index": 218,
+    "page_number": 219,
+    "book_page": 1058
+  },
+  {
+    "name": "KETOCONAZOLE",
+    "brand_names": "Nizoral, Ketodan, and generics, Antifungal agent, imidazole",
+    "see": "",
+    "page_index": 219,
+    "page_number": 220,
+    "book_page": 1059
+  },
+  {
+    "name": "KETOROLAC",
+    "brand_names": "Many generics (previously available as Toradol), Acular,, Acular LS, Acuvail",
+    "see": "",
+    "page_index": 220,
+    "page_number": 221,
+    "book_page": 1060
+  },
+  {
+    "name": "(IM, IV, PO).",
+    "brand_names": "",
+    "see": "",
+    "page_index": 220,
+    "page_number": 221,
+    "book_page": 1060
+  },
+  {
+    "name": "LABETALOL",
+    "brand_names": "Generics; previously available as Normodyne and",
+    "see": "",
+    "page_index": 221,
+    "page_number": 222,
+    "book_page": 1061
+  },
+  {
+    "name": "LACOSAMIDE",
+    "brand_names": "Vimpat, Motpoly XR, and generics, Anticonvulsant",
+    "see": "",
+    "page_index": 222,
+    "page_number": 223,
+    "book_page": 1062
+  },
+  {
+    "name": "TID",
+    "brand_names": "PO: Increase by 1",
+    "see": "",
+    "page_index": 222,
+    "page_number": 223,
+    "book_page": 1062
+  },
+  {
+    "name": "BID",
+    "brand_names": "PO/IV: Increase by 1 mg/kg/",
+    "see": "",
+    "page_index": 222,
+    "page_number": 223,
+    "book_page": 1062
+  },
+  {
+    "name": "BID",
+    "brand_names": "Adjunctive therapy: 100–200",
+    "see": "",
+    "page_index": 223,
+    "page_number": 224,
+    "book_page": 1063
+  },
+  {
+    "name": "LACTULOSE",
+    "brand_names": "Constulose, Enulose, Generlac, Kristalose, and generics, Ammonium detoxicant, hyperosmotic laxative",
+    "see": "",
+    "page_index": 224,
+    "page_number": 225,
+    "book_page": 1064
+  },
+  {
+    "name": "LAMIVUDINE",
+    "brand_names": "Epivir, 3TC, and generics; previously available as, Epivir-HBV",
+    "see": "",
+    "page_index": 224,
+    "page_number": 225,
+    "book_page": 1064
+  },
+  {
+    "name": "LAMOTRIGINE",
+    "brand_names": "Lamictal, Subvenite, Lamictal ODT, Lamictal XR, and, generics",
+    "see": "",
+    "page_index": 225,
+    "page_number": 226,
+    "book_page": 1065
+  },
+  {
+    "name": "WITHOUT",
+    "brand_names": "valproic acid",
+    "see": "",
+    "page_index": 229,
+    "page_number": 230,
+    "book_page": 1069
+  },
+  {
+    "name": "LANSOPRAZOLE",
+    "brand_names": "Prevacid, Prevacid SoluTab, and generics, Gastric acid pump inhibitor",
+    "see": "",
+    "page_index": 230,
+    "page_number": 231,
+    "book_page": 1070
+  },
+  {
+    "name": "LETERMOVIR",
+    "brand_names": "Prevymis",
+    "see": "",
+    "page_index": 231,
+    "page_number": 232,
+    "book_page": 1071
+  },
+  {
+    "name": "LEVALBUTEROL",
+    "brand_names": "Xopenex HFA and generics; previously available as, Xopenex",
+    "see": "",
+    "page_index": 232,
+    "page_number": 233,
+    "book_page": 1072
+  },
+  {
+    "name": "LEVETIRACETAM",
+    "brand_names": "Keppra, Keppra XR, Elepsia XR, Roweepra, Spritam, and, generics",
+    "see": "",
+    "page_index": 233,
+    "page_number": 234,
+    "book_page": 1073
+  },
+  {
+    "name": "LEVOCARNITINE",
+    "brand_names": "",
+    "see": "See Carnitine.",
+    "page_index": 234,
+    "page_number": 235,
+    "book_page": 1074
+  },
+  {
+    "name": "LEVOFLOXACIN",
+    "brand_names": "Generics; previously available as Levaquin",
+    "see": "",
+    "page_index": 234,
+    "page_number": 235,
+    "book_page": 1074
+  },
+  {
+    "name": "LEVOTHYROXINE (T 4 )",
+    "brand_names": "Synthroid, Euthyrox, Ermeza, Levoxyl, Tirosint,, Thyquidity, Tirosint-Sol, Unithroid, and generics",
+    "see": "",
+    "page_index": 235,
+    "page_number": 236,
+    "book_page": 1075
+  },
+  {
+    "name": "LIDOCAINE",
+    "brand_names": "Xylocaine, L-M-X, Lidoderm, many different brands of, topical products, and generics",
+    "see": "",
+    "page_index": 237,
+    "page_number": 238,
+    "book_page": 1077
+  },
+  {
+    "name": "LIDOCAINE AND PRILOCAINE",
+    "brand_names": "Many brand names, Oraqix, Eutectic mixture of, lidocaine and prilocaine; previously available as EMLA",
+    "see": "",
+    "page_index": 238,
+    "page_number": 239,
+    "book_page": 1078
+  },
+  {
+    "name": "LINEZOLID",
+    "brand_names": "Zyvox and generics, Antibiotic, oxazolidinone",
+    "see": "",
+    "page_index": 239,
+    "page_number": 240,
+    "book_page": 1079
+  },
+  {
+    "name": "LIRAGLUTIDE",
+    "brand_names": "Saxenda, Victoza, and generics, Antidiabetic agent, glucagon-like peptide-1 (GLP-1)",
+    "see": "",
+    "page_index": 240,
+    "page_number": 241,
+    "book_page": 1080
+  },
+  {
+    "name": "LISDEXAMFETAMINE",
+    "brand_names": "Vyvanse and generics, CNS stimulant",
+    "see": "",
+    "page_index": 241,
+    "page_number": 242,
+    "book_page": 1081
+  },
+  {
+    "name": "LISINOPRIL",
+    "brand_names": "Qbrelis, Zestril, and generics; previously available as, Prinivil",
+    "see": "",
+    "page_index": 242,
+    "page_number": 243,
+    "book_page": 1082
+  },
+  {
+    "name": "LITHIUM",
+    "brand_names": "Lithobid and many generics; previously available as, Eskalith",
+    "see": "",
+    "page_index": 243,
+    "page_number": 244,
+    "book_page": 1083
+  },
+  {
+    "name": "LOPERAMIDE",
+    "brand_names": "Imodium, Imodium A–D, and generics, Antidiarrheal",
+    "see": "",
+    "page_index": 244,
+    "page_number": 245,
+    "book_page": 1084
+  },
+  {
+    "name": "LORATADINE ± PSEUDOEPHEDRINE",
+    "brand_names": "Alavert, Claritin, Claritin Childrens, Triaminic, Allerchews, many others and generics",
+    "see": "",
+    "page_index": 244,
+    "page_number": 245,
+    "book_page": 1084
+  },
+  {
+    "name": "LORAZEPAM",
+    "brand_names": "Ativan, Loreev XR, and generics, Benzodiazepine anticonvulsant",
+    "see": "",
+    "page_index": 245,
+    "page_number": 246,
+    "book_page": 1085
+  },
+  {
+    "name": "DOSAGES ARE FOR IMMEDIATE-RELEASE DOSAGE FORMS (TABS, INJECTION, AND ORAL",
+    "brand_names": "SOLUTION) (for extended-release capsules, see Remarks):, Status epilepticus (IV route is preferred but may use IM route if IV is not available):",
+    "see": "",
+    "page_index": 245,
+    "page_number": 246,
+    "book_page": 1085
+  },
+  {
+    "name": "LOSARTAN",
+    "brand_names": "Cozaar and generics, Angiotensin II receptor antagonist",
+    "see": "",
+    "page_index": 246,
+    "page_number": 247,
+    "book_page": 1086
+  },
+  {
+    "name": "LOW-MOLECULAR-WEIGHT HEPARIN",
+    "brand_names": "",
+    "see": "See Enoxaparin.",
+    "page_index": 247,
+    "page_number": 248,
+    "book_page": 1087
+  },
+  {
+    "name": "LUMACAFTOR AND IVACAFTOR",
+    "brand_names": "Orkambi",
+    "see": "",
+    "page_index": 247,
+    "page_number": 248,
+    "book_page": 1087
+  },
+  {
+    "name": "MAGNESIUM CITRATE",
+    "brand_names": "Slow Mag Mg Gummies, and various generics",
+    "see": "",
+    "page_index": 249,
+    "page_number": 250,
+    "book_page": 1089
+  },
+  {
+    "name": "MAGNESIUM HYDROXIDE",
+    "brand_names": "Milk of Magnesia, Pedia-Lax, and various generics, 41.69% Elemental Magnesium",
+    "see": "",
+    "page_index": 249,
+    "page_number": 250,
+    "book_page": 1089
+  },
+  {
+    "name": "MAGNESIUM OXIDE",
+    "brand_names": "Mag-200 and other generics, 60.32% Elemental Magnesium",
+    "see": "",
+    "page_index": 250,
+    "page_number": 251,
+    "book_page": 1090
+  },
+  {
+    "name": "MAGNESIUM SULFATE",
+    "brand_names": "Epsom salts, many others, and generics, 9.9% Elemental Magnesium",
+    "see": "",
+    "page_index": 250,
+    "page_number": 251,
+    "book_page": 1090
+  },
+  {
+    "name": "MANNITOL",
+    "brand_names": "Osmitrol, and generics, inhalation: Bronchitol and Aridol, Osmotic diuretic",
+    "see": "",
+    "page_index": 251,
+    "page_number": 252,
+    "book_page": 1091
+  },
+  {
+    "name": "MEBENDAZOLE",
+    "brand_names": "Emverm; previously available as Vermox",
+    "see": "",
+    "page_index": 252,
+    "page_number": 253,
+    "book_page": 1092
+  },
+  {
+    "name": "MEDROXYPROGESTERONE",
+    "brand_names": "Depo-Provera, Provera, Depo-Sub Q Provera 104, and, generics",
+    "see": "",
+    "page_index": 253,
+    "page_number": 254,
+    "book_page": 1093
+  },
+  {
+    "name": "MEFLOQUINE HCL",
+    "brand_names": "Generics; previously available as Lariam",
+    "see": "",
+    "page_index": 254,
+    "page_number": 255,
+    "book_page": 1094
+  },
+  {
+    "name": "MEROPENEM",
+    "brand_names": "Generics; previously available as Merrem",
+    "see": "",
+    "page_index": 255,
+    "page_number": 256,
+    "book_page": 1095
+  },
+  {
+    "name": "MESALAMINE",
+    "brand_names": "Apriso, Canasa, Delzicol, Lialda, Pentasa, Rowasa,, SfRowasa, and generics; 5-aminosalicylic acid, 5-ASA",
+    "see": "",
+    "page_index": 256,
+    "page_number": 257,
+    "book_page": 1096
+  },
+  {
+    "name": "METFORMIN",
+    "brand_names": "Riomet and generics; previously available as, Glucophage and Glucophage XR",
+    "see": "",
+    "page_index": 258,
+    "page_number": 259,
+    "book_page": 1098
+  },
+  {
+    "name": "METHADONE HCL",
+    "brand_names": "Methadose and generics; previously available as, Dolophine",
+    "see": "",
+    "page_index": 259,
+    "page_number": 260,
+    "book_page": 1099
+  },
+  {
+    "name": "CYP2D6.",
+    "brand_names": "",
+    "see": "See Chapter 6 for equianalgesic dosing and onset of action. Adjust dose in renal failure (see",
+    "page_index": 259,
+    "page_number": 260,
+    "book_page": 1099
+  },
+  {
+    "name": "METHIMAZOLE",
+    "brand_names": "Generics; previously available as Tapazole",
+    "see": "",
+    "page_index": 260,
+    "page_number": 261,
+    "book_page": 1100
+  },
+  {
+    "name": "METHYLENE BLUE",
+    "brand_names": "ProvayBlue and generics, Antidote, drug-induced methemoglobinemia, and",
+    "see": "",
+    "page_index": 260,
+    "page_number": 261,
+    "book_page": 1100
+  },
+  {
+    "name": "METHYLPHENIDATE HCL",
+    "brand_names": "Ritalin, Aptensio XR, Jornay PM, Methylin, Metadate CD,, Metadate ER, Methylin ER, Concerta, Relexxii,",
+    "see": "",
+    "page_index": 261,
+    "page_number": 262,
+    "book_page": 1101
+  },
+  {
+    "name": "PRN",
+    "brand_names": "60 mg/24 hr",
+    "see": "",
+    "page_index": 262,
+    "page_number": 263,
+    "book_page": 1102
+  },
+  {
+    "name": "9:30 PM; 8:00 PM",
+    "brand_names": "was the most",
+    "see": "",
+    "page_index": 262,
+    "page_number": 263,
+    "book_page": 1102
+  },
+  {
+    "name": "QHS",
+    "brand_names": "100 mg/24 hr",
+    "see": "",
+    "page_index": 262,
+    "page_number": 263,
+    "book_page": 1102
+  },
+  {
+    "name": "PRN",
+    "brand_names": "≤50 kg: 60 mg/24",
+    "see": "",
+    "page_index": 263,
+    "page_number": 264,
+    "book_page": 1103
+  },
+  {
+    "name": "METHYLPREDNISOLONE",
+    "brand_names": "Medrol, Medrol Dosepack, Solu-Medrol, Depo-Medrol,, and generics",
+    "see": "",
+    "page_index": 264,
+    "page_number": 265,
+    "book_page": 1104
+  },
+  {
+    "name": "METOCLOPRAMIDE",
+    "brand_names": "Reglan and generics, Antiemetic, prokinetic agent",
+    "see": "",
+    "page_index": 265,
+    "page_number": 266,
+    "book_page": 1105
+  },
+  {
+    "name": "METOLAZONE",
+    "brand_names": "Generics; previously available as Zaroxolyn",
+    "see": "",
+    "page_index": 265,
+    "page_number": 266,
+    "book_page": 1105
+  },
+  {
+    "name": "METRONIDAZOLE",
+    "brand_names": "Flagyl, Likmez, MetroGel, MetroLotion, MetroCream,",
+    "see": "",
+    "page_index": 266,
+    "page_number": 267,
+    "book_page": 1106
+  },
+  {
+    "name": "MICAFUNGIN SODIUM",
+    "brand_names": "Mycamine and generics, Antifungal, echinocandin",
+    "see": "",
+    "page_index": 268,
+    "page_number": 269,
+    "book_page": 1108
+  },
+  {
+    "name": "MICONAZOLE",
+    "brand_names": "Topical products: Micatin, Desenex, Lotrimin AF, and, other brands & generics",
+    "see": "",
+    "page_index": 269,
+    "page_number": 270,
+    "book_page": 1109
+  },
+  {
+    "name": "MIDAZOLAM",
+    "brand_names": "Generics; previously available as Versed; intranasal:",
+    "see": "",
+    "page_index": 270,
+    "page_number": 271,
+    "book_page": 1110
+  },
+  {
+    "name": "MILRINONE",
+    "brand_names": "Generics; previously available as Primacor",
+    "see": "",
+    "page_index": 271,
+    "page_number": 272,
+    "book_page": 1111
+  },
+  {
+    "name": "MINERAL OIL",
+    "brand_names": "Fleet Laxative Mineral Oil, GoodSense Mineral Oil,, Kondremul, and generics",
+    "see": "",
+    "page_index": 272,
+    "page_number": 273,
+    "book_page": 1112
+  },
+  {
+    "name": "MINOCYCLINE",
+    "brand_names": "Minocin, Emrosi, Amzeeq, and generics, Antibiotic, tetracycline derivative",
+    "see": "",
+    "page_index": 272,
+    "page_number": 273,
+    "book_page": 1112
+  },
+  {
+    "name": "MINOXIDIL",
+    "brand_names": "",
+    "see": "",
+    "page_index": 273,
+    "page_number": 274,
+    "book_page": 1113
+  },
+  {
+    "name": "MOMETASONE FUROATE ± FOMOTEROL FUMARATE",
+    "brand_names": "Asmanex, Nasonex, and other generic nasal and topical, products; previously available as Elocon (topical forms)",
+    "see": "",
+    "page_index": 274,
+    "page_number": 275,
+    "book_page": 1114
+  },
+  {
+    "name": "BID.",
+    "brand_names": "Previously treated with oral corticosteroids: Start with 440 mCg BID; max. dose: 880 mCg/24 hr.",
+    "see": "",
+    "page_index": 275,
+    "page_number": 276,
+    "book_page": 1115
+  },
+  {
+    "name": "MOMETASONE FUROATE + FOMOTEROL FUMARATE (DULERA):",
+    "brand_names": "",
+    "see": "",
+    "page_index": 275,
+    "page_number": 276,
+    "book_page": 1115
+  },
+  {
+    "name": "MONTELUKAST",
+    "brand_names": "Singulair and generics, Antiasthmatic, antiallergy, leukotriene receptor",
+    "see": "",
+    "page_index": 276,
+    "page_number": 277,
+    "book_page": 1116
+  },
+  {
+    "name": "MORPHINE SULFATE",
+    "brand_names": "Duramorph, MS Contin, Avinza, and many generics, Narcotic, analgesic",
+    "see": "",
+    "page_index": 277,
+    "page_number": 278,
+    "book_page": 1117
+  },
+  {
+    "name": "MUPIROCIN",
+    "brand_names": "Generics; previously available as Bactroban",
+    "see": "",
+    "page_index": 278,
+    "page_number": 279,
+    "book_page": 1118
+  },
+  {
+    "name": "MYCOPHENOLATE",
+    "brand_names": "Mycophenolate mofetil: CellCept, Myhibbin, and generics, Mycophenolic acid: Myfortic and generics",
+    "see": "",
+    "page_index": 279,
+    "page_number": 280,
+    "book_page": 1119
+  },
+  {
+    "name": "NAFCILLIN",
+    "brand_names": "Generics; previously available as Nallpen",
+    "see": "",
+    "page_index": 281,
+    "page_number": 282,
+    "book_page": 1121
+  },
+  {
+    "name": "NALOXONE",
+    "brand_names": "Narcan, Kloxxado, RiVive, Rextovy, Zimhi, and generics, Narcotic antagonist",
+    "see": "",
+    "page_index": 281,
+    "page_number": 282,
+    "book_page": 1121
+  },
+  {
+    "name": "NAPROXEN/NAPROXEN SODIUM",
+    "brand_names": "Naprosyn, EC-Naprosyn, Naprelan, Aleve [OTC], and, many others, including generics",
+    "see": "",
+    "page_index": 283,
+    "page_number": 284,
+    "book_page": 1123
+  },
+  {
+    "name": "NEO-POLYCIN HC",
+    "brand_names": "",
+    "see": "See Neomycin/polymyxin B Ophthalmic Products.",
+    "page_index": 284,
+    "page_number": 285,
+    "book_page": 1124
+  },
+  {
+    "name": "NEO-POLYMYCIN OPHTHALMIC OINTMENT",
+    "brand_names": "",
+    "see": "See Neomycin/polymyxin B Ophthalmic Products.",
+    "page_index": 284,
+    "page_number": 285,
+    "book_page": 1124
+  },
+  {
+    "name": "NEOMYCIN SULFATE",
+    "brand_names": "Generics",
+    "see": "",
+    "page_index": 284,
+    "page_number": 285,
+    "book_page": 1124
+  },
+  {
+    "name": "NEOMYCIN/POLYMYXIN B OPHTHALMIC PRODUCTS",
+    "brand_names": "Neomycin/Polymyxin B + Bacitracin:",
+    "see": "",
+    "page_index": 285,
+    "page_number": 286,
+    "book_page": 1125
+  },
+  {
+    "name": "NEOMYCIN/POLYMYXIN B/BACITRACIN",
+    "brand_names": "Neosporin Original, Triple Antibiotic, and various, generics",
+    "see": "",
+    "page_index": 286,
+    "page_number": 287,
+    "book_page": 1126
+  },
+  {
+    "name": "NEOSTIGMINE",
+    "brand_names": "Bloxiverz and generics, Anticholinesterase (cholinergic) agent",
+    "see": "",
+    "page_index": 286,
+    "page_number": 287,
+    "book_page": 1126
+  },
+  {
+    "name": "NEVIRAPINE",
+    "brand_names": "Generics; previously available as Viramune; NVP",
+    "see": "",
+    "page_index": 287,
+    "page_number": 288,
+    "book_page": 1127
+  },
+  {
+    "name": "NIACIN/VITAMIN B3",
+    "brand_names": "Niacor, Slo-Niacin, Nicotinic acid, Vitamin B3, and many, generics",
+    "see": "",
+    "page_index": 288,
+    "page_number": 289,
+    "book_page": 1128
+  },
+  {
+    "name": "NICARDIPINE",
+    "brand_names": "Cardene IV and generics, Calcium channel blocker, antihypertensive",
+    "see": "",
+    "page_index": 289,
+    "page_number": 290,
+    "book_page": 1129
+  },
+  {
+    "name": "NIFEDIPINE",
+    "brand_names": "Procardia XL and many generics; previously available as, Procardia and Adalat CC",
+    "see": "",
+    "page_index": 290,
+    "page_number": 291,
+    "book_page": 1130
+  },
+  {
+    "name": "NIRSEVIMAB",
+    "brand_names": "Beyfortus",
+    "see": "",
+    "page_index": 291,
+    "page_number": 292,
+    "book_page": 1131
+  },
+  {
+    "name": "NITROFURANTOIN",
+    "brand_names": "Macrodantin, Macrobid, and generics; previously, available as Furadantin",
+    "see": "",
+    "page_index": 292,
+    "page_number": 293,
+    "book_page": 1132
+  },
+  {
+    "name": "NITROGLYCERIN",
+    "brand_names": "Nitro-Bid, Nitrostat, Nitro-Time, Nitro-Dur, Nitrolingual,, Rectiv, and generics",
+    "see": "",
+    "page_index": 292,
+    "page_number": 293,
+    "book_page": 1132
+  },
+  {
+    "name": "NITROPRUSSIDE",
+    "brand_names": "Nipride RTU and generics, Vasodilator, antihypertensive",
+    "see": "",
+    "page_index": 294,
+    "page_number": 295,
+    "book_page": 1134
+  },
+  {
+    "name": "NOREPINEPHRINE BITARTRATE",
+    "brand_names": "Levophed and generics, Adrenergic agonist",
+    "see": "",
+    "page_index": 294,
+    "page_number": 295,
+    "book_page": 1134
+  },
+  {
+    "name": "NORTRIPTYLINE HYDROCHLORIDE",
+    "brand_names": "Pamelor and generics, Antidepressant, tricyclic",
+    "see": "",
+    "page_index": 295,
+    "page_number": 296,
+    "book_page": 1135
+  },
+  {
+    "name": "NYSTATIN",
+    "brand_names": "Klayesta, Nyamyc, Nystop, and generics; previously, available as Mycostatin and Nilstat",
+    "see": "",
+    "page_index": 295,
+    "page_number": 296,
+    "book_page": 1135
+  },
+  {
+    "name": "OCTREOTIDE ACETATE",
+    "brand_names": "Sandostatin, Sandostatin LAR Depot, and generics, Somatostatin analog, antisecretory agent",
+    "see": "",
+    "page_index": 296,
+    "page_number": 297,
+    "book_page": 1136
+  },
+  {
+    "name": "OFLOXACIN (OTIC AND OPHTHALMIC)",
+    "brand_names": "Ocuflox and generics; previously available as Floxin and, Floxin Otic",
+    "see": "",
+    "page_index": 297,
+    "page_number": 298,
+    "book_page": 1137
+  },
+  {
+    "name": "OLANZAPINE",
+    "brand_names": "Zyprexa, Zyprexa Relprevv, and generics, Antipsychotic, atypical second generation",
+    "see": "",
+    "page_index": 298,
+    "page_number": 299,
+    "book_page": 1138
+  },
+  {
+    "name": "OLOPATADINE",
+    "brand_names": "Pataday and generics, Antihistamine",
+    "see": "",
+    "page_index": 300,
+    "page_number": 301,
+    "book_page": 1140
+  },
+  {
+    "name": "OMEPRAZOLE",
+    "brand_names": "Prilosec, Prilosec OTC, and generics, In combination with sodium bicarbonate: Zegerid,",
+    "see": "",
+    "page_index": 300,
+    "page_number": 301,
+    "book_page": 1140
+  },
+  {
+    "name": "OMNIPAQUE",
+    "brand_names": "",
+    "see": "See Iohexol.",
+    "page_index": 302,
+    "page_number": 303,
+    "book_page": 1142
+  },
+  {
+    "name": "ONDANSETRON",
+    "brand_names": "Generics; previously available as Zofran",
+    "see": "",
+    "page_index": 302,
+    "page_number": 303,
+    "book_page": 1142
+  },
+  {
+    "name": "ORKAMBI",
+    "brand_names": "",
+    "see": "See Lumacaftor and Ivacaftor.",
+    "page_index": 303,
+    "page_number": 304,
+    "book_page": 1143
+  },
+  {
+    "name": "OSELTAMIVIR PHOSPHATE",
+    "brand_names": "Tamiflu and generics, Antiviral, neuraminidase inhibitor",
+    "see": "",
+    "page_index": 303,
+    "page_number": 304,
+    "book_page": 1143
+  },
+  {
+    "name": "OXACILLIN",
+    "brand_names": "Various generics, Antibiotic, penicillin (penicillinase resistant)",
+    "see": "",
+    "page_index": 305,
+    "page_number": 306,
+    "book_page": 1145
+  },
+  {
+    "name": "OXCARBAZEPINE",
+    "brand_names": "Trileptal, Oxtellar XR, and generics, Anticonvulsant",
+    "see": "",
+    "page_index": 305,
+    "page_number": 306,
+    "book_page": 1145
+  },
+  {
+    "name": "EXTENDED RELEASE TABS (OXTELLAR XR; SEE REMARKS):",
+    "brand_names": "",
+    "see": "",
+    "page_index": 306,
+    "page_number": 307,
+    "book_page": 1146
+  },
+  {
+    "name": "OXYBUTYNIN CHLORIDE",
+    "brand_names": "Oxytrol, Oxytrol for Women, and generics; previously, available as Ditropan",
+    "see": "",
+    "page_index": 307,
+    "page_number": 308,
+    "book_page": 1147
+  },
+  {
+    "name": "OXYCODONE",
+    "brand_names": "OxyContin, Roxicodone, RoxyBond, Oxaydo, Xtampza ER,, and many others, including generics",
+    "see": "",
+    "page_index": 308,
+    "page_number": 309,
+    "book_page": 1148
+  },
+  {
+    "name": "OXYCODONE AND ACETAMINOPHEN",
+    "brand_names": "Endocet, Percocet, Prolate, and many others, including, generics",
+    "see": "",
+    "page_index": 309,
+    "page_number": 310,
+    "book_page": 1149
+  },
+  {
+    "name": "OXYCODONE AND ASPIRIN",
+    "brand_names": "Various generics; previously available as Percodan and, Endodan",
+    "see": "",
+    "page_index": 309,
+    "page_number": 310,
+    "book_page": 1149
+  },
+  {
+    "name": "OXYMETAZOLINE",
+    "brand_names": "Afrin, Vicks Sinex 12 Hour , Nostrilla, and many others,, including generics",
+    "see": "",
+    "page_index": 310,
+    "page_number": 311,
+    "book_page": 1150
+  },
+  {
+    "name": "PALIVIZUMAB",
+    "brand_names": "Synagis",
+    "see": "",
+    "page_index": 310,
+    "page_number": 311,
+    "book_page": 1150
+  },
+  {
+    "name": "PANCRELIPASE/PANCREATIC ENZYMES",
+    "brand_names": "Creon Pancreaze Pertzye Viokace and Zenpep",
+    "see": "",
+    "page_index": 311,
+    "page_number": 312,
+    "book_page": 1151
+  },
+  {
+    "name": "PANTOPRAZOLE",
+    "brand_names": "Protonix and generics, Gastric acid pump inhibitor",
+    "see": "",
+    "page_index": 313,
+    "page_number": 314,
+    "book_page": 1153
+  },
+  {
+    "name": "PAROMOMYCIN SULFATE",
+    "brand_names": "Humatin and generics, Amebicide, antibiotic (aminoglycoside)",
+    "see": "",
+    "page_index": 314,
+    "page_number": 315,
+    "book_page": 1154
+  },
+  {
+    "name": "PAROXETINE",
+    "brand_names": "Paxil, Paxil CR, and generics, Antidepressant, selective serotonin reuptake inhibitor",
+    "see": "",
+    "page_index": 315,
+    "page_number": 316,
+    "book_page": 1155
+  },
+  {
+    "name": "PENICILLIN G PREPARATIONS—AQUEOUS POTASSIUM",
+    "brand_names": "",
+    "see": "",
+    "page_index": 316,
+    "page_number": 317,
+    "book_page": 1156
+  },
+  {
+    "name": "AND SODIUM",
+    "brand_names": "Pfizerpen and generics, Antibiotic, aqueous penicillin",
+    "see": "",
+    "page_index": 316,
+    "page_number": 317,
+    "book_page": 1156
+  },
+  {
+    "name": "PENICILLIN G PREPARATIONS—AQUEOUS POTASSIUM AND SODIUM",
+    "brand_names": "continued",
+    "see": "",
+    "page_index": 317,
+    "page_number": 318,
+    "book_page": 1157
+  },
+  {
+    "name": "PENICILLIN G PREPARATIONS—BENZATHINE",
+    "brand_names": "Bicillin L-A, Extencilline, Lentocilin, Antibiotic, penicillin (very-long-acting IM)",
+    "see": "",
+    "page_index": 317,
+    "page_number": 318,
+    "book_page": 1157
+  },
+  {
+    "name": "PENICILLIN G PREPARATIONS—PENICILLIN G",
+    "brand_names": "",
+    "see": "",
+    "page_index": 318,
+    "page_number": 319,
+    "book_page": 1158
+  },
+  {
+    "name": "BENZATHINE AND PENICILLIN G PROCAINE",
+    "brand_names": "Bicillin C-R, Bicillin C-R 900/300, Antibiotic, penicillin (very-long-acting IM)",
+    "see": "",
+    "page_index": 318,
+    "page_number": 319,
+    "book_page": 1158
+  },
+  {
+    "name": "PENICILLIN G PREPARATIONS—PENICILLIN G BENZATHINE AND",
+    "brand_names": "PENICILLIN G PROCAINE continued",
+    "see": "",
+    "page_index": 319,
+    "page_number": 320,
+    "book_page": 1159
+  },
+  {
+    "name": "PENICILLIN V POTASSIUM",
+    "brand_names": "Generics; previously available as Veetids",
+    "see": "",
+    "page_index": 319,
+    "page_number": 320,
+    "book_page": 1159
+  },
+  {
+    "name": "PENTAMIDINE ISETHIONATE",
+    "brand_names": "Pentam 300, NebuPent, and generics, Antibiotic, antiprotozoal",
+    "see": "",
+    "page_index": 320,
+    "page_number": 321,
+    "book_page": 1160
+  },
+  {
+    "name": "PENTOBARBITAL",
+    "brand_names": "Generics; previously available as Nembutal",
+    "see": "",
+    "page_index": 320,
+    "page_number": 321,
+    "book_page": 1160
+  },
+  {
+    "name": "PERMETHRIN",
+    "brand_names": "Elimite, Nix and generics, Scabicidal agent",
+    "see": "",
+    "page_index": 321,
+    "page_number": 322,
+    "book_page": 1161
+  },
+  {
+    "name": "PHENAZOPYRIDINE HCL",
+    "brand_names": "Pyridium, Azo-Urinary Pain Relief Maximum Strength, [OTC], many other brands and generics",
+    "see": "",
+    "page_index": 322,
+    "page_number": 323,
+    "book_page": 1162
+  },
+  {
+    "name": "PHENOBARBITAL",
+    "brand_names": "Sezaby and generics; previously available as Luminal, Barbiturate",
+    "see": "",
+    "page_index": 322,
+    "page_number": 323,
+    "book_page": 1162
+  },
+  {
+    "name": "PHENTOLAMINE MESYLATE",
+    "brand_names": "OraVerse and generics; previously available as Regitine, α-Adrenergic blocking agent; antidote, extravasation",
+    "see": "",
+    "page_index": 323,
+    "page_number": 324,
+    "book_page": 1163
+  },
+  {
+    "name": "PHENYLEPHRINE HCL",
+    "brand_names": "Vazculep, Biorphen, Immphentiv, Neo-Synephrine, many, others, and generics",
+    "see": "",
+    "page_index": 324,
+    "page_number": 325,
+    "book_page": 1164
+  },
+  {
+    "name": "PHENYTOIN",
+    "brand_names": "Dilantin, Dilantin Infatab, Phenytoin Infatab, Phenytek,, and generics",
+    "see": "",
+    "page_index": 325,
+    "page_number": 326,
+    "book_page": 1165
+  },
+  {
+    "name": "PHOSPHORUS SUPPLEMENTS",
+    "brand_names": "K-PHOS Neutral, K-PHOS No. 2, Av-Phos 250 Neutral,, Phospho-Trin 250 Neutral, Phospha 250 Neutral, PHOS-",
+    "see": "",
+    "page_index": 327,
+    "page_number": 328,
+    "book_page": 1167
+  },
+  {
+    "name": "PHYSOSTIGMINE SALICYLATE",
+    "brand_names": "Anticholium; previously available as Antilirium",
+    "see": "",
+    "page_index": 328,
+    "page_number": 329,
+    "book_page": 1168
+  },
+  {
+    "name": "PHYTONADIONE/VITAMIN K 1",
+    "brand_names": "Mephyton and generics, Vitamin, fat soluble",
+    "see": "",
+    "page_index": 328,
+    "page_number": 329,
+    "book_page": 1168
+  },
+  {
+    "name": "PILOCARPINE HCL",
+    "brand_names": "Vuity, Qlosi, Salagen, and generics; previously available, as Isopto Carpine",
+    "see": "",
+    "page_index": 329,
+    "page_number": 330,
+    "book_page": 1169
+  },
+  {
+    "name": "PIMECROLIMUS",
+    "brand_names": "Elidel and generics, Topical immunosuppressant, calcineurin inhibitor",
+    "see": "",
+    "page_index": 330,
+    "page_number": 331,
+    "book_page": 1170
+  },
+  {
+    "name": "PIPERACILLIN WITH TAZOBACTAM",
+    "brand_names": "Zosyn and generics, Antibiotic, penicillin (extended spectrum with",
+    "see": "",
+    "page_index": 330,
+    "page_number": 331,
+    "book_page": 1170
+  },
+  {
+    "name": "POLYCITRA",
+    "brand_names": "",
+    "see": "See Citrate Mixtures.",
+    "page_index": 332,
+    "page_number": 333,
+    "book_page": 1172
+  },
+  {
+    "name": "POLYETHYLENE GLYCOL—ELECTROLYTE SOLUTION",
+    "brand_names": "Bowel-cleansing products: GoLYTELY, Colyte, GaviLyte,, and generics",
+    "see": "",
+    "page_index": 332,
+    "page_number": 333,
+    "book_page": 1172
+  },
+  {
+    "name": "POLYMYXIN B SULFATE AND BACITRACIN",
+    "brand_names": "",
+    "see": "See Bacitracin ± Polymyxin B.",
+    "page_index": 333,
+    "page_number": 334,
+    "book_page": 1173
+  },
+  {
+    "name": "POLYMYXIN B SULFATE AND TRIMETHOPRIM SULFATE",
+    "brand_names": "Generics; previously available as Polytrim Ophthalmic",
+    "see": "",
+    "page_index": 333,
+    "page_number": 334,
+    "book_page": 1173
+  },
+  {
+    "name": "POLYMYXIN B SULFATE, NEOMYCIN SULFATE, HYDROCORTISONE OTIC",
+    "brand_names": "Generics; previously available as Cortisporin Otic",
+    "see": "",
+    "page_index": 334,
+    "page_number": 335,
+    "book_page": 1174
+  },
+  {
+    "name": "POLYSPORIN",
+    "brand_names": "",
+    "see": "See Bacitracin ± Polymyxin B.",
+    "page_index": 334,
+    "page_number": 335,
+    "book_page": 1174
+  },
+  {
+    "name": "POLYTRIM OPHTHALMIC SOLUTION",
+    "brand_names": "",
+    "see": "See Polymyxin B Sulfate and Trimethoprim Sulfate.",
+    "page_index": 334,
+    "page_number": 335,
+    "book_page": 1174
+  },
+  {
+    "name": "PORACTANT ALFA",
+    "brand_names": "",
+    "see": "See Surfactant, Pulmonary/Poractant Alfa.",
+    "page_index": 334,
+    "page_number": 335,
+    "book_page": 1174
+  },
+  {
+    "name": "POSACONAZOLE",
+    "brand_names": "Noxafil, Noxafil PowderMix, and generics, Antifungal agent",
+    "see": "",
+    "page_index": 334,
+    "page_number": 335,
+    "book_page": 1174
+  },
+  {
+    "name": "POTASSIUM IODIDE",
+    "brand_names": "Iosat, SSKI, ThyroShield, ThyroSafe, and others, Antithyroid agent",
+    "see": "",
+    "page_index": 336,
+    "page_number": 337,
+    "book_page": 1176
+  },
+  {
+    "name": "POTASSIUM SUPPLEMENTS",
+    "brand_names": "Many brand names and generics, Electrolyte",
+    "see": "",
+    "page_index": 337,
+    "page_number": 338,
+    "book_page": 1177
+  },
+  {
+    "name": "PRALIDOXIME CHLORIDE ± ATROPINE",
+    "brand_names": "Protopam, 2-PAM, and generics, In combination with atropine: ATNAA",
+    "see": "",
+    "page_index": 338,
+    "page_number": 339,
+    "book_page": 1178
+  },
+  {
+    "name": "PREDNISOLONE",
+    "brand_names": "Oral products:",
+    "see": "",
+    "page_index": 339,
+    "page_number": 340,
+    "book_page": 1179
+  },
+  {
+    "name": "TID–QID.",
+    "brand_names": "",
+    "see": "See Prednisone for remarks. See Chapter 10 for relative steroid potencies. Pregnancy category",
+    "page_index": 340,
+    "page_number": 341,
+    "book_page": 1180
+  },
+  {
+    "name": "PREDNISONE",
+    "brand_names": "Rayos, Prednisone Intensol, and generics, Corticosteroid",
+    "see": "",
+    "page_index": 340,
+    "page_number": 341,
+    "book_page": 1180
+  },
+  {
+    "name": "PRIMAQUINE PHOSPHATE",
+    "brand_names": "Various generics, Antimalarial",
+    "see": "",
+    "page_index": 341,
+    "page_number": 342,
+    "book_page": 1181
+  },
+  {
+    "name": "PRIMIDONE",
+    "brand_names": "Mysoline and generics, Anticonvulsant, barbiturate",
+    "see": "",
+    "page_index": 342,
+    "page_number": 343,
+    "book_page": 1182
+  },
+  {
+    "name": "PROBENECID",
+    "brand_names": "Various generics, Penicillin therapy adjuvant, uric acid–lowering agent",
+    "see": "",
+    "page_index": 343,
+    "page_number": 344,
+    "book_page": 1183
+  },
+  {
+    "name": "PROCHLORPERAZINE",
+    "brand_names": "Compro and generics; previously available as, Compazine",
+    "see": "",
+    "page_index": 343,
+    "page_number": 344,
+    "book_page": 1183
+  },
+  {
+    "name": "PROMETHAZINE",
+    "brand_names": "Phenergan, Promethegan, and generics, Antihistamine, antiemetic, phenothiazine derivative",
+    "see": "",
+    "page_index": 344,
+    "page_number": 345,
+    "book_page": 1184
+  },
+  {
+    "name": "PROPRANOLOL",
+    "brand_names": "Inderal LA, Hemangeol, and generics; previously, available as Inderal",
+    "see": "",
+    "page_index": 345,
+    "page_number": 346,
+    "book_page": 1185
+  },
+  {
+    "name": "PROPYLTHIOURACIL",
+    "brand_names": "PTU and generics, Antithyroid agent",
+    "see": "",
+    "page_index": 346,
+    "page_number": 347,
+    "book_page": 1186
+  },
+  {
+    "name": "PROSTAGLANDIN E 1 SEE ALPROSTADIL.",
+    "brand_names": "",
+    "see": "",
+    "page_index": 347,
+    "page_number": 348,
+    "book_page": 1187
+  },
+  {
+    "name": "PROTAMINE SULFATE",
+    "brand_names": "Various generics, Antidote, heparin",
+    "see": "",
+    "page_index": 347,
+    "page_number": 348,
+    "book_page": 1187
+  },
+  {
+    "name": "PSEUDOEPHEDRINE",
+    "brand_names": "Sudafed, Children's Sudafed, Sudafed 12 Hour, Sudafed",
+    "see": "",
+    "page_index": 348,
+    "page_number": 349,
+    "book_page": 1188
+  },
+  {
+    "name": "PSYLLIUM",
+    "brand_names": "Metamucil, Konsyl Original Formula, and many others,, including some generics",
+    "see": "",
+    "page_index": 349,
+    "page_number": 350,
+    "book_page": 1189
+  },
+  {
+    "name": "PYRANTEL PAMOATE",
+    "brand_names": "Reese’s Pinworm Medicine, Pin-Away, Pin Rid, and, many other generics",
+    "see": "",
+    "page_index": 349,
+    "page_number": 350,
+    "book_page": 1189
+  },
+  {
+    "name": "PYRAZINAMIDE",
+    "brand_names": "Pyrazinoic acid amide and generics, Antituberculous agent",
+    "see": "",
+    "page_index": 350,
+    "page_number": 351,
+    "book_page": 1190
+  },
+  {
+    "name": "PYRETHRINS WITH PIPERONYL BUTOXIDE",
+    "brand_names": "A-200, Pronto Plus, RID, and many others, Pediculicide",
+    "see": "",
+    "page_index": 350,
+    "page_number": 351,
+    "book_page": 1190
+  },
+  {
+    "name": "PYRIDOSTIGMINE BROMIDE",
+    "brand_names": "Mestinon, Regonol, and generics, Cholinergic agent",
+    "see": "",
+    "page_index": 351,
+    "page_number": 352,
+    "book_page": 1191
+  },
+  {
+    "name": "PYRIDOXINE",
+    "brand_names": "Vitamin B 6 and various names, including generics, Vitamin, water soluble",
+    "see": "",
+    "page_index": 351,
+    "page_number": 352,
+    "book_page": 1191
+  },
+  {
+    "name": "PYRIMETHAMINE",
+    "brand_names": "Daraprim and generics, Antiparasitic agent",
+    "see": "",
+    "page_index": 352,
+    "page_number": 353,
+    "book_page": 1192
+  },
+  {
+    "name": "QUETIAPINE",
+    "brand_names": "Seroquel, Seroquel XR, and generics, Antipsychotic, second generation",
+    "see": "",
+    "page_index": 353,
+    "page_number": 354,
+    "book_page": 1193
+  },
+  {
+    "name": "QUINIDINE",
+    "brand_names": "Various generics, Class IA antiarrhythmic, antimalarial agent",
+    "see": "",
+    "page_index": 356,
+    "page_number": 357,
+    "book_page": 1196
+  },
+  {
+    "name": "RALTEGRAVIR",
+    "brand_names": "Isentress and Isentress HD",
+    "see": "",
+    "page_index": 357,
+    "page_number": 358,
+    "book_page": 1197
+  },
+  {
+    "name": "RASBURICASE",
+    "brand_names": "Elitek",
+    "see": "",
+    "page_index": 358,
+    "page_number": 359,
+    "book_page": 1198
+  },
+  {
+    "name": "RH O (D) IMMUNE GLOBULIN INTRAVENOUS (HUMAN)",
+    "brand_names": "WinRho-SDF, Rhophylac, HyperRHO S/D Mini-Dose,, HyperRHO S/D Full Dose, RhoGAM Ultra-Filtered Plus",
+    "see": "",
+    "page_index": 359,
+    "page_number": 360,
+    "book_page": 1199
+  },
+  {
+    "name": "RIBAVIRIN",
+    "brand_names": "Oral: Generics; previously available as Rebetol",
+    "see": "",
+    "page_index": 360,
+    "page_number": 361,
+    "book_page": 1200
+  },
+  {
+    "name": "RIBOFLAVIN",
+    "brand_names": "Vitamin B 2 and various brands and generics, Water-soluble vitamin",
+    "see": "",
+    "page_index": 361,
+    "page_number": 362,
+    "book_page": 1201
+  },
+  {
+    "name": "RIFABUTIN",
+    "brand_names": "Generics; previously available as Mycobutin",
+    "see": "",
+    "page_index": 362,
+    "page_number": 363,
+    "book_page": 1202
+  },
+  {
+    "name": "RIFAMPIN",
+    "brand_names": "Rifadin and generics, Antibiotic, antituberculous agent, rifamycin",
+    "see": "",
+    "page_index": 363,
+    "page_number": 364,
+    "book_page": 1203
+  },
+  {
+    "name": "RIFAXIMIN",
+    "brand_names": "Xifaxan",
+    "see": "",
+    "page_index": 364,
+    "page_number": 365,
+    "book_page": 1204
+  },
+  {
+    "name": "RIMANTADINE",
+    "brand_names": "Generics; previously available as Flumadine",
+    "see": "",
+    "page_index": 365,
+    "page_number": 366,
+    "book_page": 1205
+  },
+  {
+    "name": "RISPERIDONE",
+    "brand_names": "Risperdal, Risperdal Consta, Rykindo, Uzedy, Perseris,, and generics",
+    "see": "",
+    "page_index": 366,
+    "page_number": 367,
+    "book_page": 1206
+  },
+  {
+    "name": "RIVAROXABAN",
+    "brand_names": "Xarelto, Xarelto Starter Pack, and generics, Anticoagulant, direct thrombin inhibitor",
+    "see": "",
+    "page_index": 368,
+    "page_number": 369,
+    "book_page": 1208
+  },
+  {
+    "name": "RIZATRIPTAN BENZOATE",
+    "brand_names": "Maxalt, Maxalt-MLT, and generics, Antimigraine agent, selective serotonin agonist",
+    "see": "",
+    "page_index": 370,
+    "page_number": 371,
+    "book_page": 1210
+  },
+  {
+    "name": "ROCURONIUM",
+    "brand_names": "Generics; previously available as Zemuron",
+    "see": "",
+    "page_index": 370,
+    "page_number": 371,
+    "book_page": 1210
+  },
+  {
+    "name": "RUFINAMIDE",
+    "brand_names": "Banzel and generics, Anticonvulsant, triazole derivative",
+    "see": "",
+    "page_index": 371,
+    "page_number": 372,
+    "book_page": 1211
+  },
+  {
+    "name": "SALMETEROL",
+    "brand_names": "Serevent Diskus",
+    "see": "",
+    "page_index": 372,
+    "page_number": 373,
+    "book_page": 1212
+  },
+  {
+    "name": "SCOPOLAMINE HYDROBROMIDE",
+    "brand_names": "Generics; previously available as Transderm Scop",
+    "see": "",
+    "page_index": 373,
+    "page_number": 374,
+    "book_page": 1213
+  },
+  {
+    "name": "SELENIUM SULFIDE",
+    "brand_names": "Selsun Blue and many other brands, including generics, Topical antiseborrheic agent",
+    "see": "",
+    "page_index": 374,
+    "page_number": 375,
+    "book_page": 1214
+  },
+  {
+    "name": "SENNA/SENNOSIDES",
+    "brand_names": "Senokot, Senna-Lax, Ex-Lax, Genexa Kids Senna, Laxative, and many others",
+    "see": "",
+    "page_index": 375,
+    "page_number": 376,
+    "book_page": 1215
+  },
+  {
+    "name": "SERTRALINE HCL",
+    "brand_names": "Zoloft and generics, Antidepressant (selective serotonin reuptake",
+    "see": "",
+    "page_index": 376,
+    "page_number": 377,
+    "book_page": 1216
+  },
+  {
+    "name": "SILDENAFIL",
+    "brand_names": "Revatio, Viagra, and generics, Phosphodiesterase type 5 (PDE5) inhibitor",
+    "see": "",
+    "page_index": 377,
+    "page_number": 378,
+    "book_page": 1217
+  },
+  {
+    "name": "SILVER SULFADIAZINE",
+    "brand_names": "Silvadene, SSD Cream, and generics, Topical antibiotic",
+    "see": "",
+    "page_index": 378,
+    "page_number": 379,
+    "book_page": 1218
+  },
+  {
+    "name": "SIMETHICONE",
+    "brand_names": "Mylicon, Children’s Mylicon, Phazyme, Mylanta Gas,, Gas-X, and many other brands, including generics",
+    "see": "",
+    "page_index": 378,
+    "page_number": 379,
+    "book_page": 1218
+  },
+  {
+    "name": "SIROLIMUS",
+    "brand_names": "Generics (previously available as Rapamune) and Hyftor",
+    "see": "",
+    "page_index": 379,
+    "page_number": 380,
+    "book_page": 1219
+  },
+  {
+    "name": "SODIUM BICARBONATE",
+    "brand_names": "Generics",
+    "see": "",
+    "page_index": 380,
+    "page_number": 381,
+    "book_page": 1220
+  },
+  {
+    "name": "SODIUM CHLORIDE—INHALED PREPARATIONS",
+    "brand_names": "Hypersal, Nebusal, PulmoSal, Simply Saline, Ocean, Ayr, Saline, Ayr Nasal Mist Allergy/Sinus, many other brands,",
+    "see": "",
+    "page_index": 381,
+    "page_number": 382,
+    "book_page": 1221
+  },
+  {
+    "name": "SODIUM PHENYLACETATE AND SODIUM BENZOATE",
+    "brand_names": "Generics; previously available as Ammonul",
+    "see": "",
+    "page_index": 382,
+    "page_number": 383,
+    "book_page": 1222
+  },
+  {
+    "name": "SODIUM PHOSPHATE",
+    "brand_names": "Fleet Enema, Fleet Pedia-Lax, Fleet Enema Extra,, GoodSense Enema, LaCrosse Complete, and generics",
+    "see": "",
+    "page_index": 383,
+    "page_number": 384,
+    "book_page": 1223
+  },
+  {
+    "name": "SODIUM POLYSTYRENE SULFONATE",
+    "brand_names": "SPS, Kionex, and generics; previously available as, Kayexalate",
+    "see": "",
+    "page_index": 383,
+    "page_number": 384,
+    "book_page": 1223
+  },
+  {
+    "name": "SPIRONOLACTONE",
+    "brand_names": "Aldactone, CaroSpir, and generics, Diuretic, potassium sparing",
+    "see": "",
+    "page_index": 384,
+    "page_number": 385,
+    "book_page": 1224
+  },
+  {
+    "name": "STREPTOMYCIN SULFATE",
+    "brand_names": "Generics",
+    "see": "",
+    "page_index": 385,
+    "page_number": 386,
+    "book_page": 1225
+  },
+  {
+    "name": "SUCCIMER",
+    "brand_names": "Chemet, DMSA [dimercaptosuccinic acid], Chelating agent",
+    "see": "",
+    "page_index": 386,
+    "page_number": 387,
+    "book_page": 1226
+  },
+  {
+    "name": "SUCCINYLCHOLINE",
+    "brand_names": "Anectine, Quelicin, and generics, Neuromuscular blocking agent",
+    "see": "",
+    "page_index": 386,
+    "page_number": 387,
+    "book_page": 1226
+  },
+  {
+    "name": "SUCRALFATE",
+    "brand_names": "Carafate and generics",
+    "see": "",
+    "page_index": 388,
+    "page_number": 389,
+    "book_page": 1228
+  },
+  {
+    "name": "SUGAMMADEX",
+    "brand_names": "Bridion and generics, Neuromuscular blockade reversal agent",
+    "see": "",
+    "page_index": 388,
+    "page_number": 389,
+    "book_page": 1228
+  },
+  {
+    "name": "SULFACETAMIDE SODIUM OPHTHALMIC",
+    "brand_names": "Generics; previously available as Bleph-10",
+    "see": "",
+    "page_index": 389,
+    "page_number": 390,
+    "book_page": 1229
+  },
+  {
+    "name": "SULFADIAZINE",
+    "brand_names": "Various generics, Antibiotic, sulfonamide derivative",
+    "see": "",
+    "page_index": 390,
+    "page_number": 391,
+    "book_page": 1230
+  },
+  {
+    "name": "SULFAMETHOXAZOLE AND TRIMETHOPRIM",
+    "brand_names": "Trimethoprim-sulfamethoxazole, Co-Trimoxazole,, TMP-SMX, Bactrim, Bactrin DS, Sulfatrim Pediatric",
+    "see": "",
+    "page_index": 390,
+    "page_number": 391,
+    "book_page": 1230
+  },
+  {
+    "name": "SULFASALAZINE",
+    "brand_names": "Azulfidine, Azulfidine EN-tabs, Salicylazosulfapyridine,, and generics",
+    "see": "",
+    "page_index": 392,
+    "page_number": 393,
+    "book_page": 1232
+  },
+  {
+    "name": "SUMATRIPTAN SUCCINATE",
+    "brand_names": "Imitrex, Imitrex STAT dose, Zembrace SymTouch,, Tosymra, Onzetra Xsail, and generics",
+    "see": "",
+    "page_index": 393,
+    "page_number": 394,
+    "book_page": 1233
+  },
+  {
+    "name": "SURFACTANT, PULMONARY/BERACTANT",
+    "brand_names": "Survanta",
+    "see": "",
+    "page_index": 394,
+    "page_number": 395,
+    "book_page": 1234
+  },
+  {
+    "name": "SURFACTANT, PULMONARY/CALFACTANT",
+    "brand_names": "Infasurf",
+    "see": "",
+    "page_index": 395,
+    "page_number": 396,
+    "book_page": 1235
+  },
+  {
+    "name": "SURFACTANT, PULMONARY/PORACTANT ALFA",
+    "brand_names": "Curosurf",
+    "see": "",
+    "page_index": 396,
+    "page_number": 397,
+    "book_page": 1236
+  },
+  {
+    "name": "SYMDEKO",
+    "brand_names": "",
+    "see": "See Tezacaftor and Ivacaftor.",
+    "page_index": 396,
+    "page_number": 397,
+    "book_page": 1236
+  },
+  {
+    "name": "TACROLIMUS",
+    "brand_names": "Prograf, Astagraf XL, Envarsus XR, FK506, and, generics; previously available as Protopic",
+    "see": "",
+    "page_index": 396,
+    "page_number": 397,
+    "book_page": 1236
+  },
+  {
+    "name": "TAZAROTENE",
+    "brand_names": "Arazlo, Fabior, Tazorac, and generics, Topical retinoic acid prodrug, keratolytic agent for",
+    "see": "",
+    "page_index": 399,
+    "page_number": 400,
+    "book_page": 1239
+  },
+  {
+    "name": "TERBINAFINE",
+    "brand_names": "Previously available as Lamisil, Lamisil AT, and, generics",
+    "see": "",
+    "page_index": 399,
+    "page_number": 400,
+    "book_page": 1239
+  },
+  {
+    "name": "TERBUTALINE",
+    "brand_names": "Various generics; previously available as Brethine, β 2 -adrenergic agonist",
+    "see": "",
+    "page_index": 401,
+    "page_number": 402,
+    "book_page": 1241
+  },
+  {
+    "name": "PRN",
+    "brand_names": ">12 yr and adult: 0.25 mg/dose Q20 min PRN × 3; max. total dose: 0.75 mg",
+    "see": "",
+    "page_index": 401,
+    "page_number": 402,
+    "book_page": 1241
+  },
+  {
+    "name": "TETRACYCLINE HCL",
+    "brand_names": "Various generics; previously available as Sumycin, Antibiotic",
+    "see": "",
+    "page_index": 401,
+    "page_number": 402,
+    "book_page": 1241
+  },
+  {
+    "name": "TEZACAFTOR AND IVACAFTOR",
+    "brand_names": "Symdeko",
+    "see": "",
+    "page_index": 402,
+    "page_number": 403,
+    "book_page": 1242
+  },
+  {
+    "name": "QAM",
+    "brand_names": "No ivacaftor",
+    "see": "",
+    "page_index": 402,
+    "page_number": 403,
+    "book_page": 1242
+  },
+  {
+    "name": "THEOPHYLLINE",
+    "brand_names": "Theo-24, Elixophyllin, and generics, Bronchodilator, methylxanthine",
+    "see": "",
+    "page_index": 404,
+    "page_number": 405,
+    "book_page": 1244
+  },
+  {
+    "name": "THIAMINE",
+    "brand_names": "Vitamin B 1 , many generic products, Water-soluble vitamin",
+    "see": "",
+    "page_index": 405,
+    "page_number": 406,
+    "book_page": 1245
+  },
+  {
+    "name": "THIORIDAZINE",
+    "brand_names": "Various generics; previously available as Mellaril, Antipsychotic, phenothiazine derivative",
+    "see": "",
+    "page_index": 406,
+    "page_number": 407,
+    "book_page": 1246
+  },
+  {
+    "name": "TIAGABINE",
+    "brand_names": "Generics; previously available as Gabitril",
+    "see": "",
+    "page_index": 406,
+    "page_number": 407,
+    "book_page": 1246
+  },
+  {
+    "name": "TIOTROPIUM",
+    "brand_names": "Spiriva HandiHaler, Spiriva Respimat, and generic, Anticholinergic agent, long-acting",
+    "see": "",
+    "page_index": 407,
+    "page_number": 408,
+    "book_page": 1247
+  },
+  {
+    "name": "TOBRAMYCIN",
+    "brand_names": "Tobrex, TOBI, TOBI Podhaler, Bethkis, Kitabis Pak, and, generics; previously available as Nebcin",
+    "see": "",
+    "page_index": 408,
+    "page_number": 409,
+    "book_page": 1248
+  },
+  {
+    "name": "TOLNAFTATE",
+    "brand_names": "Tinactin, many other brands and generics, Antifungal agent",
+    "see": "",
+    "page_index": 410,
+    "page_number": 411,
+    "book_page": 1250
+  },
+  {
+    "name": "TOPIRAMATE",
+    "brand_names": "Topamax, Topamax Sprinkle, Trokendi XR, Eprontia, and, generics",
+    "see": "",
+    "page_index": 411,
+    "page_number": 412,
+    "book_page": 1251
+  },
+  {
+    "name": "TRAZODONE",
+    "brand_names": "Raldesy and generics; previously available as Desyrel, Antidepressant, serotonin reuptake inhibitor/",
+    "see": "",
+    "page_index": 413,
+    "page_number": 414,
+    "book_page": 1253
+  },
+  {
+    "name": "TREPROSTINIL",
+    "brand_names": "Remodulin, Tyvaso, Tyvaso DPI, Orenitram, and generics, Prostaglandin I 2 analogue, vasodilator",
+    "see": "",
+    "page_index": 413,
+    "page_number": 414,
+    "book_page": 1253
+  },
+  {
+    "name": "TRETINOIN—TOPICAL PREPARATIONS",
+    "brand_names": "Retin-A, Retin-A Micro, Altreno, Atralin, Renova, and, many others",
+    "see": "",
+    "page_index": 414,
+    "page_number": 415,
+    "book_page": 1254
+  },
+  {
+    "name": "TRIMETHOBENZAMIDE HCL",
+    "brand_names": "Tigan and generics, Antiemetic",
+    "see": "",
+    "page_index": 416,
+    "page_number": 417,
+    "book_page": 1256
+  },
+  {
+    "name": "TRIAMCINOLONE",
+    "brand_names": "Nasal preparations: Nasacort Allergy 24HR, Nasal, Allergy 24 Hour, and generics",
+    "see": "",
+    "page_index": 416,
+    "page_number": 417,
+    "book_page": 1256
+  },
+  {
+    "name": "TRIAMTERENE",
+    "brand_names": "Dyrenium and generics, Diuretic, potassium sparing",
+    "see": "",
+    "page_index": 418,
+    "page_number": 419,
+    "book_page": 1258
+  },
+  {
+    "name": "TRIFLURIDINE",
+    "brand_names": "Generics; previously available as Viroptic",
+    "see": "",
+    "page_index": 418,
+    "page_number": 419,
+    "book_page": 1258
+  },
+  {
+    "name": "TRIKAFTA",
+    "brand_names": "",
+    "see": "See Elexacaftor/Tezacaftor/Ivacaftor.",
+    "page_index": 419,
+    "page_number": 420,
+    "book_page": 1259
+  },
+  {
+    "name": "TRIMETHOPRIM AND SULFAMETHOXAZOLE",
+    "brand_names": "",
+    "see": "See Sulfamethoxazole and Trimethoprim.",
+    "page_index": 419,
+    "page_number": 420,
+    "book_page": 1259
+  },
+  {
+    "name": "URSODIOL",
+    "brand_names": "Urso Forte, Reltone, and generics; previously available, as Actigall",
+    "see": "",
+    "page_index": 419,
+    "page_number": 420,
+    "book_page": 1259
+  },
+  {
+    "name": "VALACYCLOVIR",
+    "brand_names": "Valtrex and generics, Antiviral agent",
+    "see": "",
+    "page_index": 420,
+    "page_number": 421,
+    "book_page": 1260
+  },
+  {
+    "name": "VALGANCICLOVIR",
+    "brand_names": "Valcyte and generics, Antiviral agent",
+    "see": "",
+    "page_index": 421,
+    "page_number": 422,
+    "book_page": 1261
+  },
+  {
+    "name": "VALPROIC ACID/VALPROATE SODIUM",
+    "brand_names": "Generics; previously available as Depakene (PO) and",
+    "see": "",
+    "page_index": 423,
+    "page_number": 424,
+    "book_page": 1263
+  },
+  {
+    "name": "VALSARTAN",
+    "brand_names": "Diovan and generics, Angiotensin II receptor blocker, antihypertensive",
+    "see": "",
+    "page_index": 424,
+    "page_number": 425,
+    "book_page": 1264
+  },
+  {
+    "name": "VANCOMYCIN",
+    "brand_names": "Vancocin, Firvanq, and generics, Antibiotic, glycopeptide",
+    "see": "",
+    "page_index": 425,
+    "page_number": 426,
+    "book_page": 1265
+  },
+  {
+    "name": "VANZACAFTOR + TEZACAFTOR + DEUTIVACAFTOR",
+    "brand_names": "Alyftrek",
+    "see": "",
+    "page_index": 427,
+    "page_number": 428,
+    "book_page": 1267
+  },
+  {
+    "name": "VARICELLA-ZOSTER IMMUNE GLOBULIN (HUMAN)",
+    "brand_names": "VariZig, VZIG, Hyperimmune globulin, varicella-zoster",
+    "see": "",
+    "page_index": 429,
+    "page_number": 430,
+    "book_page": 1269
+  },
+  {
+    "name": "VASOPRESSIN",
+    "brand_names": "Vasostrict and generics, 8-Arginine Vasopressin;, previously available as Pitressin",
+    "see": "",
+    "page_index": 430,
+    "page_number": 431,
+    "book_page": 1270
+  },
+  {
+    "name": "VECURONIUM BROMIDE",
+    "brand_names": "Various generics; previously available as Norcuron",
+    "see": "",
+    "page_index": 431,
+    "page_number": 432,
+    "book_page": 1271
+  },
+  {
+    "name": "VIGABATRIN",
+    "brand_names": "Sabril, Vigadrone, Vigafyde, Vigpoder, and generics, Anticonvulsant",
+    "see": "",
+    "page_index": 431,
+    "page_number": 432,
+    "book_page": 1271
+  },
+  {
+    "name": "VITAMIN A",
+    "brand_names": "Aquasol A and many generics, Vitamin, fat soluble",
+    "see": "",
+    "page_index": 433,
+    "page_number": 434,
+    "book_page": 1273
+  },
+  {
+    "name": "VORICONAZOLE",
+    "brand_names": "Vfend and generics, Antifungal, triazole",
+    "see": "",
+    "page_index": 435,
+    "page_number": 436,
+    "book_page": 1275
+  },
+  {
+    "name": "WARFARIN",
+    "brand_names": "Jantoven and generics; previously available as, Coumadin",
+    "see": "",
+    "page_index": 437,
+    "page_number": 438,
+    "book_page": 1277
+  },
+  {
+    "name": "ZIDOVUDINE",
+    "brand_names": "Retrovir, AZT, and generics, Antiviral agent, nucleoside analogue reverse",
+    "see": "",
+    "page_index": 439,
+    "page_number": 440,
+    "book_page": 1279
+  },
+  {
+    "name": "ZINC SALTS, SYSTEMIC",
+    "brand_names": "Galzin, Orazinc, and generics, Trace mineral",
+    "see": "",
+    "page_index": 441,
+    "page_number": 442,
+    "book_page": 1281
+  },
+  {
+    "name": "ZOLMITRIPTAN",
+    "brand_names": "Zomig and generics previously available as Zomig ZMT, Antimigraine agent, selective serotonin agonist",
+    "see": "",
+    "page_index": 442,
+    "page_number": 443,
+    "book_page": 1282
+  },
+  {
+    "name": "ZONISAMIDE",
+    "brand_names": "Zonegran, Zonisade, and generics, Anticonvulsant",
+    "see": "",
+    "page_index": 443,
+    "page_number": 444,
+    "book_page": 1283
+  }
+]

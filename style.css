@@ -1,0 +1,454 @@
+:root {
+  --primary: #1c4b82;
+  --primary-light: #e8f0fe;
+  --primary-dark: #12345e;
+  --surface: #ffffff;
+  --background: #f8f9fa;
+  --text-main: #1f2328;
+  --text-sub: #59636e;
+  --border: #e1e4e8;
+  --badge-bg: #e3effd;
+  --badge-text: #134277;
+  --viewer-bg: #eceff1;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text-main);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* App Layout */
+#app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* Header */
+.app-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-title img {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.2rem;
+  transition: background 0.15s;
+}
+
+.icon-btn:active {
+  background: var(--primary-light);
+}
+
+/* Search Box */
+.search-box-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  height: 44px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 22px;
+  padding: 0 42px 0 42px;
+  font-size: 16px; /* Prevents auto-zoom on iOS Safari */
+  outline: none;
+  background: var(--surface);
+  color: var(--text-main);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(28, 75, 130, 0.12);
+}
+
+.search-icon-left {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary);
+  pointer-events: none;
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 1rem;
+}
+
+/* Screen Views */
+.screen-view {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  position: relative;
+}
+
+.screen-view.active {
+  display: flex;
+}
+
+/* Drug List */
+.drug-list-container {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.drug-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.drug-item:active {
+  background: #f1f5f9;
+}
+
+.drug-info {
+  flex: 1;
+  min-width: 0;
+  padding-right: 12px;
+}
+
+.drug-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.drug-details {
+  font-size: 0.82rem;
+  color: var(--text-sub);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.page-badge {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+/* Page Viewer View */
+.page-viewer-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.viewer-title-box {
+  flex: 1;
+  min-width: 0;
+  padding: 0 10px;
+}
+
+.viewer-drug-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.viewer-page-subtitle {
+  font-size: 0.76rem;
+  color: var(--text-sub);
+}
+
+.viewer-actions {
+  display: flex;
+  gap: 2px;
+}
+
+/* Canvas Area */
+.canvas-wrapper {
+  flex: 1;
+  background-color: var(--viewer-bg);
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8px;
+}
+
+#pdf-canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border-radius: 4px;
+  background: white;
+  transform-origin: top center;
+  transition: transform 0.1s ease-out;
+}
+
+/* Bottom Bar */
+.bottom-nav {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 8px 16px;
+  padding-bottom: max(8px, env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+}
+
+.nav-pill {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 7px 16px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-card {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 460px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+  animation: modalIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.modal-body {
+  padding: 16px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  user-select: text;
+  white-space: pre-wrap;
+}
+
+.modal-footer {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  background: #fafafa;
+}
+
+.btn {
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:active {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.export-option-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.export-option-card:hover, .export-option-card:active {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.export-option-card svg {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+/* Toast */
+.toast-msg {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(15, 23, 42, 0.92);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.25s ease;
+  z-index: 200;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.toast-msg.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Loading Spinner */
+.spinner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 8;
+  backdrop-filter: blur(2px);
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3.5px solid #cbd5e1;
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
