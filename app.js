@@ -69,6 +69,8 @@ const patientAgeInput = document.getElementById('patient-age');
 const patientAgeUnit = document.getElementById('patient-age-unit');
 const patientCategoryBadge = document.getElementById('patient-category-badge');
 
+const calcDrugSearch = document.getElementById('calc-drug-search');
+const calcDrugCount = document.getElementById('calc-drug-count');
 const drugSelect = document.getElementById('drug-select');
 const drugSelectGroup = document.getElementById('drug-select-group');
 const indicationSelect = document.getElementById('indication-select');
@@ -560,6 +562,12 @@ function initCalculator() {
   // 1. Populate Drug Dropdown
   populateDrugDropdown('all');
 
+  if (calcDrugSearch) {
+    calcDrugSearch.addEventListener('input', () => {
+      populateDrugDropdown(selectedCategory, calcDrugSearch.value);
+    });
+  }
+
   // 2. Unit Toggles (kg / lbs)
   unitKgBtn.addEventListener('click', () => {
     if (isWeightLbs) {
@@ -680,7 +688,7 @@ function updateAgeCategory() {
   calculateDose();
 }
 
-function populateDrugDropdown(category) {
+function populateDrugDropdown(category, query = '') {
   drugSelect.innerHTML = '';
 
   const drugs = typeof CALCULATOR_DRUGS !== 'undefined' ? CALCULATOR_DRUGS : [];
@@ -691,6 +699,7 @@ function populateDrugDropdown(category) {
     opt.value = 'custom';
     opt.textContent = '⚙️ حاسبة مخصصة لأي دواء (Custom Calculator)';
     drugSelect.appendChild(opt);
+    if (calcDrugCount) calcDrugCount.textContent = 'وضع مخصص';
     onDrugSelected();
     return;
   }
@@ -699,10 +708,34 @@ function populateDrugDropdown(category) {
     filtered = drugs.filter(d => d.category === category);
   }
 
+  const q = query.trim().toLowerCase();
+  if (q) {
+    filtered = filtered.filter(d => 
+      (d.name || '').toLowerCase().includes(q) ||
+      (d.brand_names || '').toLowerCase().includes(q) ||
+      (d.arabic_name || '').toLowerCase().includes(q) ||
+      (d.see || '').toLowerCase().includes(q)
+    );
+  }
+
+  if (calcDrugCount) {
+    calcDrugCount.textContent = `${filtered.length} / ${drugs.length} دواء`;
+  }
+
+  if (filtered.length === 0) {
+    const opt = document.createElement('option');
+    opt.value = 'custom';
+    opt.textContent = `لم يتم العثور على دواء يطابق "${query}" - اضغط للحساب المخصص`;
+    drugSelect.appendChild(opt);
+    onDrugSelected();
+    return;
+  }
+
   filtered.forEach(drug => {
     const opt = document.createElement('option');
     opt.value = drug.id;
-    opt.textContent = `${drug.name} (${drug.arabic_name})`;
+    const sub = drug.brand_names ? ` (${drug.brand_names.split(';')[0].trim()})` : '';
+    opt.textContent = `${drug.name}${sub} - ص ${drug.book_page}`;
     drugSelect.appendChild(opt);
   });
 
@@ -778,6 +811,7 @@ function selectDrugInCalculator(drugName) {
   if (matched) {
     selectedCategory = 'all';
     document.querySelectorAll('.cat-pill').forEach(p => p.classList.toggle('active', p.dataset.cat === 'all'));
+    if (calcDrugSearch) calcDrugSearch.value = '';
     populateDrugDropdown('all');
     drugSelect.value = matched.id;
     onDrugSelected();
