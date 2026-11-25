@@ -1,0 +1,86 @@
+import os
+
+app_js_path = r'C:\Users\Abusadeh\.gemini\antigravity\scratch\HarrietLanePWA\app.js'
+with open(app_js_path, 'r', encoding='utf-8') as f:
+    code = f.read()
+
+replacements = [
+    ("showToast('خطأ في تحميل البيانات: ' + err.message);", "showToast('Failed to load data: ' + err.message);"),
+    ("لم يتم العثور على أدوية مطابقة", "No matching drugs found"),
+    ("جرّب البحث باسم علمي آخر", "Try searching with another scientific generic name"),
+    ("<div class=\"page-badge\">ص ", "<div class=\"page-badge\">P. "),
+    ("navPageIndicator.textContent = `ص ${bookPage} (${currentPageIndex + 1}/${TOTAL_PAGES})`;", "navPageIndicator.textContent = `P. ${bookPage} (${currentPageIndex + 1}/${TOTAL_PAGES})`;"),
+    ("showToast('تم نسخ نص الصفحة إلى الحافظة');", "showToast('Page text copied to clipboard');"),
+    ("showToast('تم فتح نافذة النص');", "showToast('Page text opened');"),
+    ("textModalTitle.textContent = `${title} - ص ${840 + currentPageIndex}`;", "textModalTitle.textContent = `${title} - P. ${840 + currentPageIndex}`;"),
+    ("textModalBody.textContent = text || 'لا يوجد نص مستخرج لهذه الصفحة.';", "textModalBody.textContent = text || 'No extracted text available for this page.';"),
+    ("showToast('تم نسخ النص بالكامل');", "showToast('All text copied to clipboard');"),
+    ("showToast('تم تنزيل صورة الصفحة عالية الدقة');", "showToast('High-resolution page image downloaded');"),
+    ("(ص ${bookPage})", "(P. ${bookPage})"),
+    ("showToast('تم نسخ النص للمشاركة');", "showToast('Text copied for sharing');"),
+    ("alert('يرجى إدخال رقم صفحة بين 840 و 1283');", "alert('Please enter a valid page number between 840 and 1283.');"),
+    ("patientCategoryBadge.textContent = 'طفل';", "patientCategoryBadge.textContent = 'Child';"),
+    ("patientCategoryBadge.textContent = 'حديث ولادة (Neonate)';", "patientCategoryBadge.textContent = 'Neonate (< 1 mo)';"),
+    ("patientCategoryBadge.textContent = 'رضيع (Infant)';", "patientCategoryBadge.textContent = 'Infant (1-12 mo)';"),
+    ("patientCategoryBadge.textContent = 'طفل (Child)';", "patientCategoryBadge.textContent = 'Child (1-12 yr)';"),
+    ("patientCategoryBadge.textContent = 'مراهق / بالغ (Adolescent)';", "patientCategoryBadge.textContent = 'Adolescent (> 12 yr)';"),
+    ("⚙️ حاسبة مخصصة لأي دواء (Custom Calculator)", "⚙️ Custom Calculator (Any Drug)"),
+    ("وضع مخصص", "Custom Mode"),
+    ("دواء", "drugs"),
+    ("لم يتم العثور على دواء يطابق", "No drug found matching"),
+    ("اضغط للحساب المخصص", "Select for Custom Dose Calculation"),
+    ("- ص ", "- P. "),
+    ("⚙️ حاسبة مخصصة لأي دواء آخر (Custom Dose)", "⚙️ Custom Dose Calculator (Any Drug)"),
+    ("الحاسبة المخصصة تتيح لك حساب أي دواء بناءً على الجرعة والتركيز الذي تحدده يدوياً.", "The custom calculator allows entering any target dose per kg and available liquid concentration."),
+    ("📖 فتح قائمة كتاب Harriet Lane", "📖 Browse Harriet Lane Formulary"),
+    ("راجع الكتاب للتفاصيل السريرية.", "Refer to Harriet Lane Formulary for full clinical pharmacology."),
+    ("📖 فتح صفحة", "📖 Open Harriet Lane P. "),
+    (" في Harriet Lane (ص ", " (P. "),
+    ("تم اختيار", "Selected"),
+    ("في الحاسبة", "in dose calculator"),
+    ("تم فتح الحاسبة المخصصة للدواء", "Opened Custom Dose Calculator"),
+    ("-- مل", "-- mL"),
+    ("-- ملغ / اليوم", "-- mg / day"),
+    ("يرجى إدخال وزن الطفل أولاً", "Please enter patient weight"),
+    ("في الانتظار", "Pending Weight"),
+    ("ملغ/اليوم (مطبّق)", "mg/day (Ceiling Applied)"),
+    ("⚠️ تم تطبيق الحد الأقصى الآمن المحدد:", "⚠️ Dose capped at safe maximum ceiling:"),
+    ("ملغ/اليوم.", "mg/day."),
+    ("'مرة واحدة يومياً (Daily)'", "'Once daily (Daily)'"),
+    ("'مرتين يومياً (كل 12 ساعة - BID)'", "'Twice daily (q12h - BID)'"),
+    ("'ثلاث مرات يومياً (كل 8 ساعات - TID)'", "'Three times daily (q8h - TID)'"),
+    ("'أربع مرات يومياً (كل 6 ساعات - QID)'", "'Four times daily (q6h - QID)'"),
+    ("مرات باليوم", "times / day"),
+    ("حسب استشارة الطبيب", "As clinically indicated"),
+    ("⚠️ تم تطبيق الحد الأقصى الآمن للدفعة الواحدة:", "⚠️ Capped at maximum safe single bolus:"),
+    ("مل.", "mL."),
+    ("مل (mL)", "mL"),
+    ("مل للدفعة", "mL / bolus"),
+    ("حسب استجابة الدوران السريرية", "Titrate according to hemodynamic response"),
+    ("مل` : 'غير محدد'", "mL` : 'Not capped'"),
+    ("⚠️ حد أقصى", "⚠️ Max Ceiling"),
+    ("✅ آمن", "✅ Safe Range"),
+    ("ملغ (mg)", "mg"),
+    ("⚠️ تم تطبيق الحد الأقصى الآمن للجرعة الواحدة:", "⚠️ Single dose capped at maximum safe ceiling:"),
+    ("ملغ.", "mg."),
+    ("⚠️ تم تطبيق الحد الأقصى الآمن للجرعة اليومية:", "⚠️ Total daily dose capped at maximum safe ceiling:"),
+    ("ملغ/اليوم", "mg/day"),
+    ("⚠️ تم تطبيق الحد الأقصى اليومي (", "⚠️ Total daily dose capped by per-kg ceiling ("),
+    ("ملغ/كغ):", "mg/kg):"),
+    ("حسب الحالة السريرية", "As clinically indicated"),
+    ("حسب توصية Harriet Lane", "Per Harriet Lane guidelines"),
+    ("مل", "mL"),
+    ("ملغ / اليوم", "mg / day"),
+    ("تم التحقق من الأمان", "Within safe limits"),
+    ("⚠️ تم ضبط الحد الأقصى", "⚠️ Ceiling Applied"),
+    ("⚠️ تنبيه سريري", "⚠️ Clinical Notice"),
+    ("✅ ضمن الحدود الآمنة للأطفال", "✅ Within Safe Pediatric Limits"),
+]
+
+for src, dst in replacements:
+    code = code.replace(src, dst)
+
+with open(app_js_path, 'w', encoding='utf-8') as f:
+    f.write(code)
+
+print("Successfully updated app.js")

@@ -134,7 +134,7 @@ async function init() {
 
   } catch (err) {
     console.error('Initialization error:', err);
-    showToast('خطأ في تحميل البيانات: ' + err.message);
+    showToast('Failed to load data: ' + err.message);
   }
 }
 
@@ -211,7 +211,7 @@ function searchDrugs(query) {
 function renderDrugList(list) {
   drugListContainer.innerHTML = '';
   if (!list || list.length === 0) {
-    drugListContainer.innerHTML = '<div style="padding: 40px; text-align: center; color: #64748b;">لم يتم العثور على أدوية مطابقة</div>';
+    drugListContainer.innerHTML = '<div style="padding: 40px; text-align: center; color: #64748b;">No matching drugs found</div>';
     return;
   }
 
@@ -229,7 +229,7 @@ function renderDrugList(list) {
         <div class="drug-name">${escapeHtml(drug.name)}</div>
         ${sub ? `<div class="drug-details">${escapeHtml(sub)}</div>` : ''}
       </div>
-      <div class="page-badge">ص ${drug.book_page || (840 + drug.page_index)}</div>
+      <div class="page-badge">P. ${drug.book_page || (840 + drug.page_index)}</div>
     `;
 
     item.addEventListener('click', () => {
@@ -312,7 +312,7 @@ function loadPageImage(pageIdx) {
   const title = currentDrug ? currentDrug.name : `Book Page ${bookPage}`;
   viewerDrugTitle.textContent = title;
   viewerPageSubtitle.textContent = `Book P. ${bookPage} (${currentPageIndex + 1}/${TOTAL_PAGES})`;
-  navPageIndicator.textContent = `ص ${bookPage} (${currentPageIndex + 1}/${TOTAL_PAGES})`;
+  navPageIndicator.textContent = `P. ${bookPage} (${currentPageIndex + 1}/${TOTAL_PAGES})`;
 
   prevPageBtn.disabled = currentPageIndex <= 0;
   nextPageBtn.disabled = currentPageIndex >= TOTAL_PAGES - 1;
@@ -432,21 +432,21 @@ copyTextBtn.addEventListener('click', () => {
   
   if (text) {
     navigator.clipboard.writeText(text).then(() => {
-      showToast('تم نسخ نص الصفحة إلى الحافظة');
+      showToast('Page text copied to clipboard');
     }).catch(() => {
-      showToast('تم فتح نافذة النص');
+      showToast('Page text opened');
     });
   }
 
-  textModalTitle.textContent = `${title} - ص ${840 + currentPageIndex}`;
-  textModalBody.textContent = text || 'لا يوجد نص مستخرج لهذه الصفحة.';
+  textModalTitle.textContent = `${title} - P. ${840 + currentPageIndex}`;
+  textModalBody.textContent = text || 'No extracted text available for this page.';
   textModal.classList.add('active');
 });
 
 btnCopyAll.addEventListener('click', () => {
   const text = textModalBody.textContent;
   navigator.clipboard.writeText(text).then(() => {
-    showToast('تم نسخ النص بالكامل');
+    showToast('All text copied to clipboard');
     textModal.classList.remove('active');
   });
 });
@@ -486,7 +486,7 @@ exportImageBtn.addEventListener('click', () => {
       a.href = URL.createObjectURL(blob);
       a.download = `HarrietLane_P${bookPage}_${drugName}.png`;
       a.click();
-      showToast('تم تنزيل صورة الصفحة عالية الدقة');
+      showToast('High-resolution page image downloaded');
     }
   }, 'image/png', 1.0);
 });
@@ -500,7 +500,7 @@ exportTextBtn.addEventListener('click', async () => {
   if (navigator.share) {
     try {
       await navigator.share({
-        title: `Harriet Lane - ${title} (ص ${bookPage})`,
+        title: `Harriet Lane - ${title} (P. ${bookPage})`,
         text: text
       });
     } catch (err) {
@@ -508,7 +508,7 @@ exportTextBtn.addEventListener('click', async () => {
     }
   } else {
     navigator.clipboard.writeText(text);
-    showToast('تم نسخ النص للمشاركة');
+    showToast('Text copied for sharing');
   }
 });
 
@@ -529,7 +529,7 @@ btnConfirmJump.addEventListener('click', () => {
     goToPage(p - 840);
     showScreen('page');
   } else {
-    alert('يرجى إدخال رقم صفحة بين 840 و 1283');
+    alert('Please enter a valid page number between 840 and 1283.');
   }
 });
 
@@ -657,7 +657,7 @@ function updateAgeCategory() {
   const unit = patientAgeUnit.value;
 
   if (isNaN(age) || age < 0) {
-    patientCategoryBadge.textContent = 'طفل';
+    patientCategoryBadge.textContent = 'Child';
     calculateDose();
     return;
   }
@@ -668,19 +668,19 @@ function updateAgeCategory() {
   else if (unit === 'days') totalMonths = age / 30;
 
   if (totalMonths <= 1) {
-    patientCategoryBadge.textContent = 'حديث ولادة (Neonate)';
+    patientCategoryBadge.textContent = 'Neonate (< 1 mo)';
     patientCategoryBadge.style.background = '#fef3c7';
     patientCategoryBadge.style.color = '#b45309';
   } else if (totalMonths <= 12) {
-    patientCategoryBadge.textContent = 'رضيع (Infant)';
+    patientCategoryBadge.textContent = 'Infant (1-12 mo)';
     patientCategoryBadge.style.background = '#e0f2fe';
     patientCategoryBadge.style.color = '#0369a1';
   } else if (totalMonths < 144) {
-    patientCategoryBadge.textContent = 'طفل (Child)';
+    patientCategoryBadge.textContent = 'Child (1-12 yr)';
     patientCategoryBadge.style.background = '#dcfce7';
     patientCategoryBadge.style.color = '#15803d';
   } else {
-    patientCategoryBadge.textContent = 'مراهق / بالغ (Adolescent)';
+    patientCategoryBadge.textContent = 'Adolescent (> 12 yr)';
     patientCategoryBadge.style.background = '#ede9fe';
     patientCategoryBadge.style.color = '#6d28d9';
   }
@@ -697,9 +697,9 @@ function populateDrugDropdown(category, query = '') {
   if (category === 'custom') {
     const opt = document.createElement('option');
     opt.value = 'custom';
-    opt.textContent = '⚙️ حاسبة مخصصة لأي دواء (Custom Calculator)';
+    opt.textContent = '⚙️ Custom Calculator (Any Drug)';
     drugSelect.appendChild(opt);
-    if (calcDrugCount) calcDrugCount.textContent = 'وضع مخصص';
+    if (calcDrugCount) calcDrugCount.textContent = 'Custom Mode';
     onDrugSelected();
     return;
   }
@@ -719,13 +719,13 @@ function populateDrugDropdown(category, query = '') {
   }
 
   if (calcDrugCount) {
-    calcDrugCount.textContent = `${filtered.length} / ${drugs.length} دواء`;
+    calcDrugCount.textContent = `${filtered.length} / ${drugs.length} drugs`;
   }
 
   if (filtered.length === 0) {
     const opt = document.createElement('option');
     opt.value = 'custom';
-    opt.textContent = `لم يتم العثور على دواء يطابق "${query}" - اضغط للحساب المخصص`;
+    opt.textContent = `No drug found matching "${query}" - Select for Custom Dose Calculation`;
     drugSelect.appendChild(opt);
     onDrugSelected();
     return;
@@ -735,14 +735,14 @@ function populateDrugDropdown(category, query = '') {
     const opt = document.createElement('option');
     opt.value = drug.id;
     const sub = drug.brand_names ? ` (${drug.brand_names.split(';')[0].trim()})` : '';
-    opt.textContent = `${drug.name}${sub} - ص ${drug.book_page}`;
+    opt.textContent = `${drug.name}${sub} - P. ${drug.book_page}`;
     drugSelect.appendChild(opt);
   });
 
   // Always add custom option at the bottom
   const customOpt = document.createElement('option');
   customOpt.value = 'custom';
-  customOpt.textContent = '⚙️ حاسبة مخصصة لأي دواء آخر (Custom Dose)';
+  customOpt.textContent = '⚙️ Custom Calculator for any other drug';
   drugSelect.appendChild(customOpt);
 
   onDrugSelected();
@@ -756,8 +756,8 @@ function onDrugSelected() {
     indicationGroup.style.display = 'none';
     concentrationGroup.style.display = 'none';
     calcAlertBox.style.display = 'none';
-    calcNotesText.textContent = 'الحاسبة المخصصة تتيح لك حساب أي دواء بناءً على الجرعة والتركيز الذي تحدده.';
-    btnViewBookText.textContent = '📖 فتح قائمة كتاب Harriet Lane';
+    calcNotesText.textContent = 'Custom mode allows calculating any pediatric regimen based on custom dose and available formulation concentration.';
+    btnViewBookText.textContent = '📖 Browse Harriet Lane Formulary';
     btnViewInBook.dataset.page = '840';
     calculateDose();
     return;
@@ -789,8 +789,8 @@ function onDrugSelected() {
   });
 
   // Update Notes and Book Page Link
-  calcNotesText.textContent = drug.indications[0]?.notes || 'راجع الكتاب للتفاصيل السريرية.';
-  btnViewBookText.textContent = `📖 فتح صفحة ${drug.name.split(' ')[0]} في Harriet Lane (ص ${drug.book_page})`;
+  calcNotesText.textContent = drug.indications[0]?.notes || 'Refer to Harriet Lane Formulary for full clinical pharmacology.';
+  btnViewBookText.textContent = `📖 Open Harriet Lane P.  ${drug.name.split(' ')[0]} (P. ${drug.book_page})`;
   btnViewInBook.dataset.page = drug.book_page.toString();
 
   calculateDose();
@@ -815,13 +815,13 @@ function selectDrugInCalculator(drugName) {
     populateDrugDropdown('all');
     drugSelect.value = matched.id;
     onDrugSelected();
-    showToast(`تم اختيار ${matched.name} في الحاسبة`);
+    showToast(`Selected ${matched.name} in dose calculator`);
   } else {
     // Switch to custom mode with drug name
     selectedCategory = 'custom';
     document.querySelectorAll('.cat-pill').forEach(p => p.classList.toggle('active', p.dataset.cat === 'custom'));
     populateDrugDropdown('custom');
-    showToast('تم فتح الحاسبة المخصصة للدواء');
+    showToast('Opened Custom Dose Calculator');
   }
 }
 
@@ -830,11 +830,11 @@ function calculateDose() {
   let rawWeight = parseFloat(patientWeightInput.value);
   if (isNaN(rawWeight) || rawWeight <= 0) {
     heroDoseMg.textContent = '--';
-    heroVolumeMl.textContent = '-- مل';
-    bTotalDaily.textContent = '-- ملغ / اليوم';
-    bFrequency.textContent = 'يرجى إدخال وزن الطفل أولاً';
+    heroVolumeMl.textContent = '-- mL';
+    bTotalDaily.textContent = '-- mg / day';
+    bFrequency.textContent = 'Please enter patient weight';
     safetyStatusBadge.className = 'safety-badge safe';
-    safetyStatusBadge.textContent = 'في الانتظار';
+    safetyStatusBadge.textContent = 'Pending Weight';
     calcAlertBox.style.display = 'none';
     return;
   }
@@ -882,8 +882,8 @@ function calculateDose() {
       totalDailyDose = maxDose;
       singleDose = totalDailyDose / freqCount;
       isCeilingApplied = true;
-      ceilingText = `${maxDose} ملغ/اليوم (مطبّق)`;
-      alertMessages.push(`⚠️ تم تطبيق الحد الأقصى الآمن المحدد: ${maxDose} ملغ/اليوم.`);
+      ceilingText = `${maxDose} mg/day (Ceiling Applied)`;
+      alertMessages.push(`⚠️ Dose capped at safe maximum ceiling: ${maxDose} mg/day.`);
     }
 
     if (concMg > 0) {
@@ -891,13 +891,13 @@ function calculateDose() {
     }
 
     const freqMap = {
-      1: 'مرة واحدة يومياً (Daily)',
-      2: 'مرتين يومياً (كل 12 ساعة - BID)',
-      3: 'ثلاث مرات يومياً (كل 8 ساعات - TID)',
-      4: 'أربع مرات يومياً (كل 6 ساعات - QID)'
+      1: 'Once daily (Daily)',
+      2: 'Twice daily (q12h - BID)',
+      3: 'Three times daily (q8h - TID)',
+      4: 'Four times daily (q6h - QID)'
     };
-    frequencyText = freqMap[freqCount] || `${freqCount} مرات باليوم`;
-    durationText = 'حسب استشارة الطبيب';
+    frequencyText = freqMap[freqCount] || `${freqCount} times / day`;
+    durationText = 'As clinically indicated';
 
   } else {
     // Pre-configured Pediatric Drugs
@@ -923,24 +923,24 @@ function calculateDose() {
       if (indication.max_single_dose && volumeMl > indication.max_single_dose) {
         volumeMl = indication.max_single_dose;
         isCeilingApplied = true;
-        alertMessages.push(`⚠️ تم تطبيق الحد الأقصى الآمن للدفعة الواحدة: ${indication.max_single_dose} مل.`);
+        alertMessages.push(`⚠️ Capped at maximum safe single bolus: ${indication.max_single_dose} mL.`);
       }
       singleDose = volumeMl; // display in mL
-      heroDoseUnit.textContent = 'مل (mL)';
+      heroDoseUnit.textContent = 'mL';
       heroSyrupBox.style.display = 'none';
-      bTotalDaily.textContent = `${volumeMl.toFixed(0)} مل للدفعة`;
+      bTotalDaily.textContent = `${volumeMl.toFixed(0)} mL / bolus`;
       bFrequency.textContent = indication.frequency_ar;
-      bDuration.textContent = 'حسب استجابة الدوران السريرية';
-      bMaxCeiling.textContent = indication.max_single_dose ? `${indication.max_single_dose} مل` : 'غير محدد';
+      bDuration.textContent = 'Titrate according to hemodynamic response';
+      bMaxCeiling.textContent = indication.max_single_dose ? `${indication.max_single_dose} mL` : 'Not capped';
 
       heroDoseMg.textContent = volumeMl.toFixed(0);
       safetyStatusBadge.className = isCeilingApplied ? 'safety-badge warning' : 'safety-badge safe';
-      safetyStatusBadge.textContent = isCeilingApplied ? '⚠️ حد أقصى' : '✅ آمن';
+      safetyStatusBadge.textContent = isCeilingApplied ? '⚠️ Max Ceiling' : '✅ Safe Range';
       updateAlerts(alertMessages);
       return;
     }
 
-    heroDoseUnit.textContent = 'ملغ (mg)';
+    heroDoseUnit.textContent = 'mg';
     heroSyrupBox.style.display = 'inline-flex';
 
     // Weight-tiered drugs (e.g. Ondansetron)
@@ -976,14 +976,14 @@ function calculateDose() {
     if (indication.max_single_dose && singleDose > indication.max_single_dose) {
       singleDose = indication.max_single_dose;
       isCeilingApplied = true;
-      alertMessages.push(`⚠️ تم تطبيق الحد الأقصى الآمن للجرعة الواحدة: ${indication.max_single_dose} ملغ.`);
+      alertMessages.push(`⚠️ Single dose capped at maximum safe ceiling: ${indication.max_single_dose} mg.`);
     }
 
     if (indication.max_daily_dose && totalDailyDose > indication.max_daily_dose) {
       totalDailyDose = indication.max_daily_dose;
       singleDose = totalDailyDose / (indication.doses_per_day || 1);
       isCeilingApplied = true;
-      alertMessages.push(`⚠️ تم تطبيق الحد الأقصى الآمن للجرعة اليومية: ${indication.max_daily_dose} ملغ/اليوم.`);
+      alertMessages.push(`⚠️ Total daily dose capped at maximum safe ceiling: ${indication.max_daily_dose} mg/day.`);
     }
 
     if (indication.max_daily_per_kg) {
@@ -992,7 +992,7 @@ function calculateDose() {
         totalDailyDose = maxByKg;
         singleDose = totalDailyDose / (indication.doses_per_day || 1);
         isCeilingApplied = true;
-        alertMessages.push(`⚠️ تم تطبيق الحد الأقصى اليومي (${indication.max_daily_per_kg} ملغ/كغ): ${maxByKg.toFixed(0)} ملغ.`);
+        alertMessages.push(`⚠️ Total daily dose capped by per-kg ceiling (${indication.max_daily_per_kg} mg/kg): ${maxByKg.toFixed(0)} mg.`);
       }
     }
 
@@ -1002,8 +1002,8 @@ function calculateDose() {
     }
 
     frequencyText = indication.frequency_ar;
-    durationText = indication.duration || 'حسب الحالة السريرية';
-    ceilingText = indication.max_daily_dose ? `${indication.max_daily_dose} ملغ/اليوم` : 'حسب توصية Harriet Lane';
+    durationText = indication.duration || 'As clinically indicated';
+    ceilingText = indication.max_daily_dose ? `${indication.max_daily_dose} mg/day` : 'Per Harriet Lane guidelines';
 
     calcNotesText.textContent = indication.notes || drug.indications[0]?.notes || '';
   }
@@ -1013,23 +1013,23 @@ function calculateDose() {
 
   if (volumeMl !== null && volumeMl > 0) {
     heroSyrupBox.style.display = 'inline-flex';
-    heroVolumeMl.textContent = `${volumeMl.toFixed(1)} مل`;
+    heroVolumeMl.textContent = `${volumeMl.toFixed(1)} mL`;
   } else {
     heroSyrupBox.style.display = 'none';
   }
 
-  bTotalDaily.textContent = `${Math.round(totalDailyDose)} ملغ / اليوم`;
+  bTotalDaily.textContent = `${Math.round(totalDailyDose)} mg / day`;
   bFrequency.textContent = frequencyText;
   bDuration.textContent = durationText;
-  bMaxCeiling.textContent = ceilingText || 'تم التحقق من الأمان';
+  bMaxCeiling.textContent = ceilingText || 'Within safe limits';
 
   // Safety Status Badge
   if (isCeilingApplied || alertMessages.length > 0) {
     safetyStatusBadge.className = 'safety-badge warning';
-    safetyStatusBadge.textContent = isCeilingApplied ? '⚠️ تم ضبط الحد الأقصى' : '⚠️ تنبيه سريري';
+    safetyStatusBadge.textContent = isCeilingApplied ? '⚠️ Ceiling Applied' : '⚠️ Clinical Notice';
   } else {
     safetyStatusBadge.className = 'safety-badge safe';
-    safetyStatusBadge.textContent = '✅ ضمن الحدود الآمنة للأطفال';
+    safetyStatusBadge.textContent = '✅ Within Safe Pediatric Limits';
   }
 
   updateAlerts(alertMessages);
