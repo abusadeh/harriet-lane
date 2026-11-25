@@ -956,3 +956,103 @@ body {
 .drug-list-container {
   padding-bottom: 75px;
 }
+
+
+/* --- UNIFIED DESIGN SYSTEM & COMPONENT REFINEMENTS --- */
+.app-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.title-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-main {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.title-sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
+  line-height: 1.2;
+}
+
+.card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.mode-toggle-group {
+  display: flex;
+  background: #f1f5f9;
+  padding: 3px;
+  border-radius: 20px;
+  gap: 3px;
+}
+
+.mode-pill {
+  border: none;
+  background: transparent;
+  padding: 5px 12px;
+  border-radius: 16px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mode-pill.active {
+  background: #1e3a8a;
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(30, 58, 138, 0.25);
+}
+
+.route-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+.manual-conc-box {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 10px;
+}
+
+.manual-conc-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 6px;
+}
+
+.manual-conc-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.conc-divider {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+}

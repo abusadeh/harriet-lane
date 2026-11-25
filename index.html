@@ -5,7 +5,7 @@
   <title>Harriet Lane Handbook & Smart Pediatric Dose Calculator</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-  <meta name="theme-color" content="#203E7A">
+  <meta name="theme-color" content="#1c4b82">
   
   <!-- Apple iOS PWA Meta Tags -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,11 +29,14 @@
     <header class="app-header">
       <div class="header-top">
         <div class="app-title">
-          <img src="icon-192.png" alt="Cover">
-          <span>Harriet Lane Formulary</span>
+          <img src="icon-192.png" alt="Cover" class="app-logo">
+          <div class="title-text-group">
+            <span class="title-main">Harriet Lane Handbook</span>
+            <span class="title-sub">The Johns Hopkins Hospital · 24th Ed</span>
+          </div>
         </div>
         <button id="search-jump-btn" class="icon-btn" title="Jump to Page">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
         </button>
       </div>
 
@@ -61,19 +64,11 @@
     <header class="app-header">
       <div class="header-top">
         <div class="app-title">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.2">
-            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
-            <line x1="8" y1="6" x2="16" y2="6"></line>
-            <line x1="16" y1="14" x2="16" y2="18"></line>
-            <path d="M16 10h.01"></path>
-            <path d="M12 10h.01"></path>
-            <path d="M8 10h.01"></path>
-            <path d="M12 14h.01"></path>
-            <path d="M8 14h.01"></path>
-            <path d="M12 18h.01"></path>
-            <path d="M8 18h.01"></path>
-          </svg>
-          <span>Smart Dose Calculator</span>
+          <img src="icon-192.png" alt="Cover" class="app-logo">
+          <div class="title-text-group">
+            <span class="title-main">Harriet Lane Handbook</span>
+            <span class="title-sub">Smart Pediatric Dose Calculator</span>
+          </div>
         </div>
         <div class="calc-badge">Pediatrics</div>
       </div>
@@ -95,74 +90,50 @@
         </div>
 
         <div class="patient-grid">
-          <!-- Weight Input -->
+          <!-- Weight Input (kg only) -->
           <div class="field-group">
-            <div class="field-label-row">
-              <label for="patient-weight">Weight <span class="req">*</span></label>
-              <div class="unit-toggle">
-                <button type="button" class="unit-btn active" id="unit-kg-btn">kg</button>
-                <button type="button" class="unit-btn" id="unit-lbs-btn">lbs</button>
-              </div>
-            </div>
+            <label for="patient-weight">Weight (kg) <span class="req">*</span></label>
             <div class="input-with-affix">
-              <input type="number" id="patient-weight" class="calc-input" placeholder="e.g. 12" step="0.1" min="0.5" max="150" />
-              <span class="affix" id="weight-unit-label">kg</span>
+              <input type="number" id="patient-weight" class="calc-input" placeholder="e.g. 12" step="0.1" min="0.4" max="150" />
+              <span class="affix">kg</span>
             </div>
           </div>
 
-          <!-- Age Input -->
+          <!-- Age Input & Linked Gestation Tier -->
           <div class="field-group">
             <div class="field-label-row">
-              <label for="patient-age">Age</label>
+              <label for="patient-age-tier">Age & Gestational Category</label>
               <span id="patient-category-badge" class="patient-category-badge">Child</span>
             </div>
-            <div class="input-age-row">
-              <input type="number" id="patient-age" class="calc-input" placeholder="e.g. 3" min="0" max="18" step="1" />
-              <select id="patient-age-unit" class="calc-select age-select">
-                <option value="years" selected>Years</option>
-                <option value="months">Months</option>
-                <option value="days">Days (Neonate)</option>
-              </select>
-            </div>
+            <select id="patient-age-tier" class="calc-select" style="font-weight: 700;">
+              <option value="neonate_preterm">Neonate: Preterm (&lt; 32–34 wk GA)</option>
+              <option value="neonate_term">Neonate: Term (≥ 35–37 wk GA, 0–28 days)</option>
+              <option value="infant">Infant (1–12 months)</option>
+              <option value="child" selected>Child (1–12 years)</option>
+              <option value="adolescent">Adolescent / Adult (≥ 12 yr / ≥ 50 kg)</option>
+            </select>
           </div>
-        </div>
-
-        <!-- Quick Weight Chips -->
-        <div class="quick-chips-row">
-          <span class="chips-label">Quick:</span>
-          <button type="button" class="chip-btn" data-weight="3">3 kg</button>
-          <button type="button" class="chip-btn" data-weight="5">5 kg</button>
-          <button type="button" class="chip-btn" data-weight="8">8 kg</button>
-          <button type="button" class="chip-btn" data-weight="10">10 kg</button>
-          <button type="button" class="chip-btn" data-weight="12">12 kg</button>
-          <button type="button" class="chip-btn" data-weight="15">15 kg</button>
-          <button type="button" class="chip-btn" data-weight="20">20 kg</button>
-          <button type="button" class="chip-btn" data-weight="30">30 kg</button>
         </div>
       </section>
 
       <!-- 2. DRUG SELECTOR CARD -->
       <section class="calc-card">
-        <div class="card-title">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path><path d="m8.5 8.5 7 7"></path></svg>
-          <span>Drug Selection & Indication</span>
-        </div>
-
-        <!-- Category Filter Pills -->
-        <div class="category-pills" id="category-pills">
-          <button type="button" class="cat-pill active" data-cat="all">All</button>
-          <button type="button" class="cat-pill" data-cat="antipyretic">🌡️ Analgesics & Antipyretics</button>
-          <button type="button" class="cat-pill" data-cat="antibiotic">🦠 Antibiotics</button>
-          <button type="button" class="cat-pill" data-cat="respiratory">🫁 Respiratory & Allergy</button>
-          <button type="button" class="cat-pill" data-cat="gi">🤢 GI & Antiemetics</button>
-          <button type="button" class="cat-pill" data-cat="emergency">🚨 Emergency & Resuscitation</button>
-          <button type="button" class="cat-pill" data-cat="custom">⚙️ Custom Dose</button>
+        <div class="card-title-row">
+          <div class="card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path><path d="m8.5 8.5 7 7"></path></svg>
+            <span>Drug & Regimen</span>
+          </div>
+          <!-- Clean Mode Switch: Formulary vs Custom -->
+          <div class="mode-toggle-group">
+            <button type="button" class="mode-pill active" id="btn-mode-formulary">📖 Formulary (527)</button>
+            <button type="button" class="mode-pill" id="btn-mode-custom">⚙️ Custom Dose</button>
+          </div>
         </div>
 
         <!-- Drug Selection Dropdown -->
         <div class="field-group" id="drug-select-group">
           <div class="field-label-row">
-            <label for="drug-select">Drug (527 Harriet Lane Drugs):</label>
+            <label for="drug-select">Select Drug:</label>
             <span id="calc-drug-count" style="font-size: 0.72rem; color: #64748b; font-weight: 700;">527 Drugs Available</span>
           </div>
           <!-- Search box to quickly filter all 527 drugs -->
@@ -175,23 +146,42 @@
           </select>
         </div>
 
-        <!-- Indication Selector (Dynamic) -->
+        <!-- Indication Selector (Dynamic & Linked to Age/Gestational Tier) -->
         <div class="field-group" id="indication-group">
-          <label for="indication-select">Indication & Clinical Scenario</label>
+          <div class="field-label-row">
+            <label for="indication-select">Clinical Indication & Dosing Tier (Harriet Lane):</label>
+            <span id="indication-route-badge" class="route-badge">PO / IV</span>
+          </div>
           <select id="indication-select" class="calc-select">
             <!-- Populated dynamically -->
           </select>
         </div>
 
-        <!-- Concentration Selector (Dynamic) -->
+        <!-- Concentration Selector (Dynamic per Harriet Lane + Custom option) -->
         <div class="field-group" id="concentration-group">
-          <label for="concentration-select">Commercial Formulation & Concentration</label>
+          <label for="concentration-select">Commercial Formulation (Harriet Lane):</label>
           <select id="concentration-select" class="calc-select">
-            <!-- Populated dynamically -->
+            <!-- Populated dynamically with authentic book formulations + Custom option -->
           </select>
+          
+          <!-- Manual Concentration inputs (shown when user selects Custom Concentration) -->
+          <div id="manual-conc-container" class="manual-conc-box" style="display: none;">
+            <div class="manual-conc-title">Enter Available Commercial Concentration:</div>
+            <div class="manual-conc-row">
+              <div class="input-with-affix" style="flex: 1;">
+                <input type="number" id="manual-conc-mg" class="calc-input" placeholder="e.g. 250" step="0.5" value="250">
+                <span class="affix">mg</span>
+              </div>
+              <span class="conc-divider">in</span>
+              <div class="input-with-affix" style="width: 100px;">
+                <input type="number" id="manual-conc-ml" class="calc-input" placeholder="e.g. 5" step="0.5" value="5">
+                <span class="affix">mL</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Custom Drug Specific Fields (Hidden unless Custom mode selected) -->
+        <!-- Custom Drug Specific Fields (Shown in Custom mode) -->
         <div id="custom-drug-fields" style="display: none;">
           <div class="patient-grid">
             <div class="field-group">
@@ -213,19 +203,19 @@
             <div class="field-group">
               <label for="custom-freq">Dosing Schedule</label>
               <select id="custom-freq" class="calc-select">
-                <option value="1">Once Daily (Daily)</option>
+                <option value="1">Once Daily (Daily - Q24H)</option>
                 <option value="2" selected>Twice Daily (q12h - BID)</option>
                 <option value="3">Three Times Daily (q8h - TID)</option>
                 <option value="4">Four Times Daily (q6h - QID)</option>
               </select>
             </div>
             <div class="field-group">
-              <label for="custom-conc-mg">Available Liquid Concentration</label>
+              <label for="custom-conc-mg">Suspension Strength</label>
               <div style="display: flex; gap: 6px; align-items: center;">
                 <input type="number" id="custom-conc-mg" class="calc-input" placeholder="mg" style="flex: 1;" value="250" />
-                <span>in</span>
+                <span style="font-weight: 700; color: #64748b;">in</span>
                 <input type="number" id="custom-conc-ml" class="calc-input" placeholder="mL" style="width: 70px;" value="5" />
-                <span>mL</span>
+                <span style="font-weight: 700; color: #64748b;">mL</span>
               </div>
             </div>
           </div>

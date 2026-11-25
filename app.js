@@ -1,4 +1,4 @@
-// Harriet Lane Formulary & Smart Pediatric Dose Calculator Core Engine
+// Harriet Lane Formulary & Smart Pediatric Dose Calculator Core Engine (v2.3.0)
 
 const TOTAL_PAGES = 444;
 let drugsData = [];
@@ -6,6 +6,7 @@ let pagesTextData = {};
 let currentPageIndex = 0; // 0-indexed (0 = Book page 840)
 let currentDrug = null;
 let currentTab = 'book'; // 'book' or 'calc'
+let calcMode = 'formulary'; // 'formulary' or 'custom'
 
 // DOM Elements - Book & Search
 const searchScreen = document.getElementById('search-screen');
@@ -61,13 +62,11 @@ const btnConfirmJump = document.getElementById('btn-confirm-jump');
 
 // Calculator DOM Elements
 const patientWeightInput = document.getElementById('patient-weight');
-const unitKgBtn = document.getElementById('unit-kg-btn');
-const unitLbsBtn = document.getElementById('unit-lbs-btn');
-const weightUnitLabel = document.getElementById('weight-unit-label');
-
-const patientAgeInput = document.getElementById('patient-age');
-const patientAgeUnit = document.getElementById('patient-age-unit');
+const patientAgeTier = document.getElementById('patient-age-tier');
 const patientCategoryBadge = document.getElementById('patient-category-badge');
+
+const btnModeFormulary = document.getElementById('btn-mode-formulary');
+const btnModeCustom = document.getElementById('btn-mode-custom');
 
 const calcDrugSearch = document.getElementById('calc-drug-search');
 const calcDrugCount = document.getElementById('calc-drug-count');
@@ -75,8 +74,12 @@ const drugSelect = document.getElementById('drug-select');
 const drugSelectGroup = document.getElementById('drug-select-group');
 const indicationSelect = document.getElementById('indication-select');
 const indicationGroup = document.getElementById('indication-group');
+const indicationRouteBadge = document.getElementById('indication-route-badge');
 const concentrationSelect = document.getElementById('concentration-select');
 const concentrationGroup = document.getElementById('concentration-group');
+const manualConcContainer = document.getElementById('manual-conc-container');
+const manualConcMg = document.getElementById('manual-conc-mg');
+const manualConcMl = document.getElementById('manual-conc-ml');
 
 const customDrugFields = document.getElementById('custom-drug-fields');
 const customDoseVal = document.getElementById('custom-dose-val');
@@ -101,164 +104,94 @@ const calcNotesText = document.getElementById('calc-notes-text');
 const btnViewInBook = document.getElementById('btn-view-in-book');
 const btnViewBookText = document.getElementById('btn-view-book-text');
 
-let isWeightLbs = false;
-let selectedCategory = 'all';
-
 // Show Toast Notification
 function showToast(msg) {
   if (!toast) return;
   toast.textContent = msg;
   toast.classList.add('show');
-  setTimeout(() => {
-    toast.classList.remove('show');
-  }, 2200);
+  setTimeout(() => toast.classList.remove('show'), 2500);
 }
 
-// Initialize Application
-async function init() {
+// 1. Initialize App Data
+async function initApp() {
   try {
-    // 1. Load Data
-    const [drugsRes, textRes] = await Promise.all([
-      fetch('drugs_index.json').then(r => r.json()),
-      fetch('pages_text.json').then(r => r.json())
-    ]);
-    drugsData = drugsRes;
-    pagesTextData = textRes;
+    const drugsRes = await fetch('drugs_index.json');
+    drugsData = await drugsRes.json();
 
-    // Render initial drug list in book tab
+    const textRes = await fetch('pages_text.json');
+    pagesTextData = await textRes.json();
+
     renderDrugList(drugsData);
-    console.log('Indexed drugs loaded:', drugsData.length);
-
-    // 2. Initialize Calculator
     initCalculator();
 
+    // Default drug: Acetaminophen
+    selectDrugInCalculator('ACETAMINOPHEN');
   } catch (err) {
     console.error('Initialization error:', err);
     showToast('Failed to load data: ' + err.message);
   }
 }
 
-// Switch between Main Tabs
+// 2. Navigation & Screen Management
 function switchTab(tab) {
   currentTab = tab;
   if (tab === 'book') {
-    calcScreen.classList.remove('active');
-    searchScreen.classList.add('active');
-    pageScreen.classList.remove('active');
-
-    // Update Tab Styles
     navBtnBook.classList.add('active');
     navBtnCalc.classList.remove('active');
     searchSegBook.classList.add('active');
     searchSegCalc.classList.remove('active');
     calcSegBook.classList.add('active');
     calcSegCalc.classList.remove('active');
+    showScreen('search');
   } else {
-    searchScreen.classList.remove('active');
-    pageScreen.classList.remove('active');
-    calcScreen.classList.add('active');
-
-    // Update Tab Styles
     navBtnBook.classList.remove('active');
     navBtnCalc.classList.add('active');
     searchSegBook.classList.remove('active');
     searchSegCalc.classList.add('active');
     calcSegBook.classList.remove('active');
     calcSegCalc.classList.add('active');
-
-    // Re-run calculation
+    showScreen('calc');
     calculateDose();
   }
 }
 
-// Tab Click Handlers
-navBtnBook.addEventListener('click', () => switchTab('book'));
-navBtnCalc.addEventListener('click', () => switchTab('calc'));
+function showScreen(screen) {
+  [searchScreen, pageScreen, calcScreen].forEach(s => s && s.classList.remove('active'));
+  if (screen === 'search') {
+    searchScreen.classList.add('active');
+  } else if (screen === 'page') {
+    pageScreen.classList.add('active');
+  } else if (screen === 'calc') {
+    calcScreen.classList.add('active');
+  }
+}
+
+// Top Segmented Buttons
 searchSegBook.addEventListener('click', () => switchTab('book'));
 searchSegCalc.addEventListener('click', () => switchTab('calc'));
 calcSegBook.addEventListener('click', () => switchTab('book'));
 calcSegCalc.addEventListener('click', () => switchTab('calc'));
 
-// Search Algorithm for Book Formulary
-function searchDrugs(query) {
-  const q = query.trim().toLowerCase();
-  if (!q) return drugsData;
+// Bottom Bar
+navBtnBook.addEventListener('click', () => switchTab('book'));
+navBtnCalc.addEventListener('click', () => switchTab('calc'));
 
-  const scored = [];
-  for (const drug of drugsData) {
-    const name = (drug.name || '').toLowerCase();
-    const brands = (drug.brand_names || '').toLowerCase();
-    const see = (drug.see || '').toLowerCase();
+// 3. Search & Drug List in Formulary
+drugSearchInput.addEventListener('input', (e) => {
+  const query = e.target.value.trim().toLowerCase();
+  clearSearchBtn.style.display = query ? 'block' : 'none';
 
-    let score = 0;
-    if (name === q) score = 100;
-    else if (name.startsWith(q)) score = 80;
-    else if (name.includes(q)) score = 60;
-    else if (brands.startsWith(q)) score = 50;
-    else if (brands.includes(q)) score = 40;
-    else if (see.includes(q)) score = 30;
-
-    if (score > 0) {
-      scored.push({ drug, score });
-    }
-  }
-
-  scored.sort((a, b) => b.score - a.score || a.drug.name.localeCompare(b.drug.name));
-  return scored.map(s => s.drug);
-}
-
-// Render Drug List in Book Tab
-function renderDrugList(list) {
-  drugListContainer.innerHTML = '';
-  if (!list || list.length === 0) {
-    drugListContainer.innerHTML = '<div style="padding: 40px; text-align: center; color: #64748b;">No matching drugs found</div>';
+  if (!query) {
+    renderDrugList(drugsData);
     return;
   }
 
-  const fragment = document.createDocumentFragment();
-  const displayList = list.slice(0, 100);
-
-  for (const drug of displayList) {
-    const item = document.createElement('div');
-    item.className = 'drug-item';
-
-    const sub = drug.see ? drug.see : (drug.brand_names || '');
-
-    item.innerHTML = `
-      <div class="drug-info">
-        <div class="drug-name">${escapeHtml(drug.name)}</div>
-        ${sub ? `<div class="drug-details">${escapeHtml(sub)}</div>` : ''}
-      </div>
-      <div class="page-badge">P. ${drug.book_page || (840 + drug.page_index)}</div>
-    `;
-
-    item.addEventListener('click', () => {
-      openDrugPage(drug);
-    });
-
-    fragment.appendChild(item);
-  }
-
-  drugListContainer.appendChild(fragment);
-}
-
-function escapeHtml(str) {
-  if (!str) return '';
-  return str.replace(/[&<>'"]/g, tag => ({
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    "'": '&#39;',
-    '"': '&quot;'
-  }[tag] || tag));
-}
-
-// Search Input Listener
-drugSearchInput.addEventListener('input', (e) => {
-  const val = e.target.value;
-  clearSearchBtn.style.display = val ? 'block' : 'none';
-  const results = searchDrugs(val);
-  renderDrugList(results);
+  const filtered = drugsData.filter(d => 
+    (d.name || '').toLowerCase().includes(query) ||
+    (d.brand_names || '').toLowerCase().includes(query) ||
+    (d.see || '').toLowerCase().includes(query)
+  );
+  renderDrugList(filtered, query);
 });
 
 clearSearchBtn.addEventListener('click', () => {
@@ -268,234 +201,184 @@ clearSearchBtn.addEventListener('click', () => {
   drugSearchInput.focus();
 });
 
-// Navigation Functions for Book Pages
-function openDrugPage(drug) {
-  currentDrug = drug;
-  currentPageIndex = drug.page_index;
-  showScreen('page');
-  loadPageImage(currentPageIndex);
-  window.history.pushState({ screen: 'page', pageIndex: currentPageIndex }, '');
-}
-
-function goToPage(pageIdx) {
-  pageIdx = Math.max(0, Math.min(pageIdx, TOTAL_PAGES - 1));
-  currentPageIndex = pageIdx;
-
-  // Match drug for page
-  currentDrug = drugsData.find(d => d.page_index === pageIdx) || currentDrug;
-  loadPageImage(pageIdx);
-}
-
-function showScreen(screen) {
-  if (screen === 'page') {
-    searchScreen.classList.remove('active');
-    calcScreen.classList.remove('active');
-    pageScreen.classList.add('active');
-  } else if (screen === 'calc') {
-    switchTab('calc');
-  } else {
-    pageScreen.classList.remove('active');
-    calcScreen.classList.remove('active');
-    searchScreen.classList.add('active');
+function renderDrugList(drugs, query = '') {
+  drugListContainer.innerHTML = '';
+  if (drugs.length === 0) {
+    drugListContainer.innerHTML = `
+      <div style="padding: 40px; text-align: center; color: #64748b;">
+        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 6px;">No matching drugs found</p>
+        <p style="font-size: 0.85rem;">Try searching with another scientific generic name</p>
+      </div>`;
+    return;
   }
+
+  const fragment = document.createDocumentFragment();
+  drugs.forEach(drug => {
+    const item = document.createElement('div');
+    item.className = 'drug-item';
+
+    const brandPart = drug.brand_names ? `<span class="drug-brand">${drug.brand_names}</span>` : '';
+    const seePart = drug.see ? `<span class="drug-see">See: ${drug.see}</span>` : '';
+
+    item.innerHTML = `
+      <div class="drug-info">
+        <div class="drug-name">${highlightMatch(drug.name, query)}</div>
+        ${brandPart}
+        ${seePart}
+      </div>
+      <div class="page-badge">P. ${drug.book_page || (840 + drug.page_index)}</div>
+    `;
+
+    item.addEventListener('click', () => {
+      currentDrug = drug;
+      goToPage(drug.page_index);
+      showScreen('page');
+    });
+
+    fragment.appendChild(item);
+  });
+  drugListContainer.appendChild(fragment);
 }
 
-// Page Rendering Engine
-function loadPageImage(pageIdx) {
-  currentPageIndex = Math.max(0, Math.min(pageIdx, TOTAL_PAGES - 1));
+function highlightMatch(text, query) {
+  if (!query) return text;
+  const regex = new RegExp(`(${query})`, 'gi');
+  return text.replace(regex, '<mark>$1</mark>');
+}
+
+// 4. Page Viewer
+function goToPage(index) {
+  currentPageIndex = Math.max(0, Math.min(index, TOTAL_PAGES - 1));
   const bookPage = 840 + currentPageIndex;
 
-  if (!currentDrug || currentDrug.page_index !== currentPageIndex) {
-    currentDrug = drugsData.find(d => d.page_index === currentPageIndex) || null;
+  // Title
+  if (currentDrug && currentDrug.page_index === currentPageIndex) {
+    viewerDrugTitle.textContent = currentDrug.name;
+  } else {
+    const match = drugsData.find(d => d.page_index === currentPageIndex);
+    viewerDrugTitle.textContent = match ? match.name : 'Harriet Lane Formulary';
   }
 
-  const title = currentDrug ? currentDrug.name : `Book Page ${bookPage}`;
-  viewerDrugTitle.textContent = title;
   viewerPageSubtitle.textContent = `Book P. ${bookPage} (${currentPageIndex + 1}/${TOTAL_PAGES})`;
   navPageIndicator.textContent = `P. ${bookPage} (${currentPageIndex + 1}/${TOTAL_PAGES})`;
 
-  prevPageBtn.disabled = currentPageIndex <= 0;
-  nextPageBtn.disabled = currentPageIndex >= TOTAL_PAGES - 1;
-
-  resetZoom();
-  canvasWrapper.scrollTop = 0;
-  canvasWrapper.scrollLeft = 0;
-
-  // Load High-Res WebP page image
-  pageImage.src = `pages/page_${currentPageIndex}.webp`;
-
-  // Preload next and previous pages for instant responsiveness
-  if (currentPageIndex + 1 < TOTAL_PAGES) {
-    const nextImg = new Image();
-    nextImg.src = `pages/page_${currentPageIndex + 1}.webp`;
-  }
-  if (currentPageIndex - 1 >= 0) {
-    const prevImg = new Image();
-    prevImg.src = `pages/page_${currentPageIndex - 1}.webp`;
-  }
+  loadPageImage(currentPageIndex);
 }
 
-// Pinch to Zoom & Pan Engine for Image
-let zoomScale = 1.0;
-let initialDistance = 0;
+function loadPageImage(index) {
+  spinner.style.display = 'flex';
+  const imgNum = String(index).padStart(3, '0');
+  const imgUrl = `pages/page_${imgNum}.png`;
 
-function resetZoom() {
-  zoomScale = 1.0;
-  pageImage.style.transform = `scale(1.0)`;
+  pageImage.onload = () => spinner.style.display = 'none';
+  pageImage.onerror = () => {
+    spinner.style.display = 'none';
+    pageImage.alt = 'Error loading page image';
+  };
+  pageImage.src = imgUrl;
 }
 
-canvasWrapper.addEventListener('touchstart', (e) => {
-  if (e.touches.length === 2) {
-    initialDistance = Math.hypot(
-      e.touches[0].pageX - e.touches[1].pageX,
-      e.touches[0].pageY - e.touches[1].pageY
-    );
-  }
-}, { passive: true });
-
-canvasWrapper.addEventListener('touchmove', (e) => {
-  if (e.touches.length === 2 && initialDistance > 0) {
-    const currentDist = Math.hypot(
-      e.touches[0].pageX - e.touches[1].pageX,
-      e.touches[0].pageY - e.touches[1].pageY
-    );
-    const factor = currentDist / initialDistance;
-    zoomScale = Math.min(Math.max(zoomScale * factor, 1.0), 4.0);
-    pageImage.style.transform = `scale(${zoomScale})`;
-    initialDistance = currentDist;
-  }
-}, { passive: true });
-
-canvasWrapper.addEventListener('touchend', (e) => {
-  if (e.touches.length < 2) {
-    initialDistance = 0;
-  }
-});
-
-// Double tap zoom toggle
-let lastTap = 0;
-canvasWrapper.addEventListener('click', (e) => {
-  const now = Date.now();
-  if (now - lastTap < 300) {
-    zoomScale = zoomScale > 1.3 ? 1.0 : 2.2;
-    pageImage.style.transform = `scale(${zoomScale})`;
-  }
-  lastTap = now;
-});
-
-// Back Navigation (Browser / Gesture)
-window.addEventListener('popstate', (e) => {
-  if (e.state && e.state.screen === 'page') {
-    showScreen('page');
-    if (e.state.pageIndex !== undefined) {
-      loadPageImage(e.state.pageIndex);
-    }
-  } else if (e.state && e.state.screen === 'calc') {
-    switchTab('calc');
-  } else {
-    showScreen('search');
-  }
-});
-
-backToSearchBtn.addEventListener('click', () => {
-  window.history.back();
-});
-
+prevPageBtn.addEventListener('click', () => goToPage(currentPageIndex - 1));
+nextPageBtn.addEventListener('click', () => goToPage(currentPageIndex + 1));
+backToSearchBtn.addEventListener('click', () => showScreen('search'));
 directSearchBtn.addEventListener('click', () => {
-  window.history.back();
+  showScreen('search');
+  drugSearchInput.focus();
 });
 
-// Jump from Page Screen to Calculator with current drug
+// Jump from page viewer directly into calculator
 calcDrugBtn.addEventListener('click', () => {
-  if (!currentDrug) return;
+  const currentTitle = viewerDrugTitle.textContent;
+  selectDrugInCalculator(currentTitle);
   switchTab('calc');
-  selectDrugInCalculator(currentDrug.name);
 });
 
-// Previous / Next Buttons
-prevPageBtn.addEventListener('click', () => {
-  if (currentPageIndex > 0) {
-    goToPage(currentPageIndex - 1);
+// 5. Jump to Page Modal
+searchJumpBtn.addEventListener('click', () => {
+  jumpPageInput.value = 840 + currentPageIndex;
+  jumpModal.classList.add('show');
+  jumpPageInput.focus();
+});
+
+pageJumpPill.addEventListener('click', () => {
+  jumpPageInput.value = 840 + currentPageIndex;
+  jumpModal.classList.add('show');
+  jumpPageInput.focus();
+});
+
+btnConfirmJump.addEventListener('click', () => {
+  const val = parseInt(jumpPageInput.value, 10);
+  if (val >= 840 && val <= 1283) {
+    jumpModal.classList.remove('show');
+    goToPage(val - 840);
+    showScreen('page');
+  } else {
+    alert('Please enter a valid page number between 840 and 1283.');
   }
 });
 
-nextPageBtn.addEventListener('click', () => {
-  if (currentPageIndex < TOTAL_PAGES - 1) {
-    goToPage(currentPageIndex + 1);
-  }
-});
-
-// Copy Text Feature
+// 6. Copy Page Text Modal
 copyTextBtn.addEventListener('click', () => {
-  const text = pagesTextData[currentPageIndex.toString()] || '';
-  const title = viewerDrugTitle.textContent;
-  
-  if (text) {
+  const text = pagesTextData[String(currentPageIndex)] || '';
+  if (navigator.clipboard) {
     navigator.clipboard.writeText(text).then(() => {
       showToast('Page text copied to clipboard');
-    }).catch(() => {
-      showToast('Page text opened');
-    });
+    }).catch(() => openTextModal(text));
+  } else {
+    openTextModal(text);
   }
+});
 
+function openTextModal(text) {
+  const title = viewerDrugTitle.textContent;
   textModalTitle.textContent = `${title} - P. ${840 + currentPageIndex}`;
   textModalBody.textContent = text || 'No extracted text available for this page.';
-  textModal.classList.add('active');
-});
+  textModal.classList.add('show');
+}
 
 btnCopyAll.addEventListener('click', () => {
   const text = textModalBody.textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    showToast('All text copied to clipboard');
-    textModal.classList.remove('active');
-  });
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('All text copied to clipboard');
+      textModal.classList.remove('show');
+    });
+  }
 });
 
-// Export / Share Feature
+// 7. Export / Share Modal
 exportPageBtn.addEventListener('click', () => {
-  exportModal.classList.add('active');
+  exportModal.classList.add('show');
 });
 
-exportImageBtn.addEventListener('click', () => {
-  exportModal.classList.remove('active');
+exportImageBtn.addEventListener('click', async () => {
+  exportModal.classList.remove('show');
   const bookPage = 840 + currentPageIndex;
-  const drugName = (viewerDrugTitle.textContent || 'Drug').replace(/[^a-zA-Z0-9]/g, '_');
+  const title = viewerDrugTitle.textContent.replace(/[^A-Za-z0-9]/g, '_');
+  const filename = `HarrietLane_P${bookPage}_${title}.png`;
 
-  const canvas = document.createElement('canvas');
-  canvas.width = pageImage.naturalWidth || 819;
-  canvas.height = pageImage.naturalHeight || 1381;
-  const ctx = canvas.getContext('2d');
-  ctx.drawImage(pageImage, 0, 0, canvas.width, canvas.height);
-
-  canvas.toBlob(async (blob) => {
-    if (!blob) return;
-    const file = new File([blob], `HarrietLane_P${bookPage}_${drugName}.png`, { type: 'image/png' });
-
-    if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      try {
-        await navigator.share({
-          files: [file],
-          title: `Harriet Lane - Page ${bookPage}`,
-          text: `Harriet Lane Handbook - Page ${bookPage} (${drugName})`
-        });
-      } catch (err) {
-        if (err.name !== 'AbortError') console.error(err);
-      }
-    } else {
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = `HarrietLane_P${bookPage}_${drugName}.png`;
-      a.click();
-      showToast('High-resolution page image downloaded');
-    }
-  }, 'image/png', 1.0);
+  try {
+    const res = await fetch(pageImage.src);
+    const blob = await res.blob();
+    const blobUrl = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = blobUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(blobUrl);
+    showToast('High-resolution page image downloaded');
+  } catch (e) {
+    window.open(pageImage.src, '_blank');
+  }
 });
 
 exportTextBtn.addEventListener('click', async () => {
-  exportModal.classList.remove('active');
-  const text = pagesTextData[currentPageIndex.toString()] || '';
+  exportModal.classList.remove('show');
   const bookPage = 840 + currentPageIndex;
   const title = viewerDrugTitle.textContent;
+  const text = pagesTextData[String(currentPageIndex)] || '';
 
   if (navigator.share) {
     try {
@@ -503,133 +386,71 @@ exportTextBtn.addEventListener('click', async () => {
         title: `Harriet Lane - ${title} (P. ${bookPage})`,
         text: text
       });
-    } catch (err) {
-      if (err.name !== 'AbortError') console.error(err);
-    }
-  } else {
-    navigator.clipboard.writeText(text);
+      return;
+    } catch (e) {}
+  }
+
+  if (navigator.clipboard) {
+    await navigator.clipboard.writeText(text);
     showToast('Text copied for sharing');
   }
 });
 
-// Jump to Page Feature
-function openJumpModal() {
-  jumpPageInput.value = (840 + currentPageIndex).toString();
-  jumpModal.classList.add('active');
-  jumpPageInput.focus();
-}
-
-pageJumpPill.addEventListener('click', openJumpModal);
-searchJumpBtn.addEventListener('click', openJumpModal);
-
-btnConfirmJump.addEventListener('click', () => {
-  const p = parseInt(jumpPageInput.value, 10);
-  if (!isNaN(p) && p >= 840 && p <= 1283) {
-    jumpModal.classList.remove('active');
-    goToPage(p - 840);
-    showScreen('page');
-  } else {
-    alert('Please enter a valid page number between 840 and 1283.');
-  }
-});
-
-jumpPageInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
-    btnConfirmJump.click();
-  }
-});
-
-// Close Modals
+// Modal close handlers
 document.querySelectorAll('.close-modal-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+    document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('show'));
   });
 });
 
-document.querySelectorAll('.modal-overlay').forEach(modal => {
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('active');
-    }
-  });
-});
-
-// ==========================================
-// SMART PEDIATRIC DOSE CALCULATOR ENGINE
-// ==========================================
+// =========================================================================
+// 8. SMART PEDIATRIC DOSE CALCULATOR (100% ENGLISH SCIENTIFIC ENGINE)
+// =========================================================================
 
 function initCalculator() {
-  // 1. Populate Drug Dropdown
-  populateDrugDropdown('all');
+  populateDrugDropdown();
 
-  if (calcDrugSearch) {
-    calcDrugSearch.addEventListener('input', () => {
-      populateDrugDropdown(selectedCategory, calcDrugSearch.value);
-    });
-  }
+  // Mode Toggle
+  btnModeFormulary.addEventListener('click', () => setCalcMode('formulary'));
+  btnModeCustom.addEventListener('click', () => setCalcMode('custom'));
 
-  // 2. Unit Toggles (kg / lbs)
-  unitKgBtn.addEventListener('click', () => {
-    if (isWeightLbs) {
-      isWeightLbs = false;
-      unitKgBtn.classList.add('active');
-      unitLbsBtn.classList.remove('active');
-      weightUnitLabel.textContent = 'kg';
-      const val = parseFloat(patientWeightInput.value);
-      if (!isNaN(val)) {
-        patientWeightInput.value = (val / 2.20462).toFixed(1);
-      }
-      calculateDose();
-    }
+  // Weight Input (Strictly kg)
+  patientWeightInput.addEventListener('input', calculateDose);
+
+  // Age & Gestation Tier (Linked to Indications)
+  patientAgeTier.addEventListener('change', () => {
+    updateAgeTierBadge();
+    autoMatchIndicationToAge();
+    calculateDose();
   });
 
-  unitLbsBtn.addEventListener('click', () => {
-    if (!isWeightLbs) {
-      isWeightLbs = true;
-      unitLbsBtn.classList.add('active');
-      unitKgBtn.classList.remove('active');
-      weightUnitLabel.textContent = 'lbs';
-      const val = parseFloat(patientWeightInput.value);
-      if (!isNaN(val)) {
-        patientWeightInput.value = (val * 2.20462).toFixed(1);
-      }
-      calculateDose();
-    }
+  // Drug Search
+  calcDrugSearch.addEventListener('input', (e) => {
+    populateDrugDropdown(e.target.value);
   });
 
-  // 3. Quick Weight Chips
-  document.querySelectorAll('.chip-btn').forEach(chip => {
-    chip.addEventListener('click', () => {
-      const kg = parseFloat(chip.dataset.weight);
-      patientWeightInput.value = isWeightLbs ? (kg * 2.20462).toFixed(1) : kg;
-      calculateDose();
-    });
-  });
-
-  // 4. Age and Category Listener
-  patientAgeInput.addEventListener('input', updateAgeCategory);
-  patientAgeUnit.addEventListener('change', updateAgeCategory);
-
-  // 5. Category Pills Filter
-  document.querySelectorAll('.cat-pill').forEach(pill => {
-    pill.addEventListener('click', () => {
-      document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-      selectedCategory = pill.dataset.cat;
-      populateDrugDropdown(selectedCategory);
-    });
-  });
-
-  // 6. Drug Selection Change
+  // Drug Select
   drugSelect.addEventListener('change', () => {
     onDrugSelected();
   });
 
-  // 7. Indication and Concentration Listeners
-  indicationSelect.addEventListener('change', calculateDose);
-  concentrationSelect.addEventListener('change', calculateDose);
+  // Indication Select
+  indicationSelect.addEventListener('change', () => {
+    onIndicationSelected();
+    calculateDose();
+  });
 
-  // 8. Custom Drug Input Listeners
+  // Formulation Select
+  concentrationSelect.addEventListener('change', () => {
+    onFormulationSelected();
+    calculateDose();
+  });
+
+  // Manual Concentration Inputs
+  manualConcMg.addEventListener('input', calculateDose);
+  manualConcMl.addEventListener('input', calculateDose);
+
+  // Custom Drug Inputs
   customDoseVal.addEventListener('input', calculateDose);
   customDoseMode.addEventListener('change', calculateDose);
   customFreq.addEventListener('change', calculateDose);
@@ -637,9 +458,7 @@ function initCalculator() {
   customConcMl.addEventListener('input', calculateDose);
   customMaxDose.addEventListener('input', calculateDose);
 
-  patientWeightInput.addEventListener('input', calculateDose);
-
-  // 9. Jump to Book from Calculator
+  // Jump to Book
   btnViewInBook.addEventListener('click', () => {
     const page = parseInt(btnViewInBook.dataset.page || '840', 10);
     const pIdx = Math.max(0, Math.min(page - 840, TOTAL_PAGES - 1));
@@ -648,138 +467,120 @@ function initCalculator() {
     showScreen('page');
   });
 
-  // Default selection: Amoxicillin
-  onDrugSelected();
+  updateAgeTierBadge();
 }
 
-function updateAgeCategory() {
-  const age = parseFloat(patientAgeInput.value);
-  const unit = patientAgeUnit.value;
-
-  if (isNaN(age) || age < 0) {
-    patientCategoryBadge.textContent = 'Child';
-    calculateDose();
-    return;
-  }
-
-  let totalMonths = 0;
-  if (unit === 'years') totalMonths = age * 12;
-  else if (unit === 'months') totalMonths = age;
-  else if (unit === 'days') totalMonths = age / 30;
-
-  if (totalMonths <= 1) {
-    patientCategoryBadge.textContent = 'Neonate (< 1 mo)';
-    patientCategoryBadge.style.background = '#fef3c7';
-    patientCategoryBadge.style.color = '#b45309';
-  } else if (totalMonths <= 12) {
-    patientCategoryBadge.textContent = 'Infant (1-12 mo)';
-    patientCategoryBadge.style.background = '#e0f2fe';
-    patientCategoryBadge.style.color = '#0369a1';
-  } else if (totalMonths < 144) {
-    patientCategoryBadge.textContent = 'Child (1-12 yr)';
-    patientCategoryBadge.style.background = '#dcfce7';
-    patientCategoryBadge.style.color = '#15803d';
+function setCalcMode(mode) {
+  calcMode = mode;
+  if (mode === 'formulary') {
+    btnModeFormulary.classList.add('active');
+    btnModeCustom.classList.remove('active');
+    drugSelectGroup.style.display = 'block';
+    indicationGroup.style.display = 'block';
+    concentrationGroup.style.display = 'block';
+    customDrugFields.style.display = 'none';
+    onDrugSelected();
   } else {
-    patientCategoryBadge.textContent = 'Adolescent (> 12 yr)';
-    patientCategoryBadge.style.background = '#ede9fe';
-    patientCategoryBadge.style.color = '#6d28d9';
+    btnModeFormulary.classList.remove('active');
+    btnModeCustom.classList.add('active');
+    drugSelectGroup.style.display = 'none';
+    indicationGroup.style.display = 'none';
+    concentrationGroup.style.display = 'none';
+    manualConcContainer.style.display = 'none';
+    customDrugFields.style.display = 'block';
+    calcAlertBox.style.display = 'none';
+    resultDrugTitle.textContent = 'Custom Pediatric Regimen';
+    calcNotesText.textContent = 'Custom mode allows entering any target dose per kg and commercial liquid strength.';
+    btnViewBookText.textContent = '📖 Browse Harriet Lane Formulary';
+    btnViewInBook.dataset.page = '840';
+    calculateDose();
   }
-
-  calculateDose();
 }
 
-function populateDrugDropdown(category, query = '') {
-  drugSelect.innerHTML = '';
+function updateAgeTierBadge() {
+  const tier = patientAgeTier.value;
+  const badgeMap = {
+    'neonate_preterm': { label: 'Preterm (<32w)', bg: '#fef3c7', col: '#b45309' },
+    'neonate_term': { label: 'Term (0–28d)', bg: '#ffedd5', col: '#c2410c' },
+    'infant': { label: 'Infant (1–12mo)', bg: '#e0f2fe', col: '#0369a1' },
+    'child': { label: 'Child (1–12yr)', bg: '#dcfce7', col: '#15803d' },
+    'adolescent': { label: 'Adolescent (≥12yr)', bg: '#ede9fe', col: '#6d28d9' }
+  };
+  const b = badgeMap[tier] || badgeMap['child'];
+  patientCategoryBadge.textContent = b.label;
+  patientCategoryBadge.style.background = b.bg;
+  patientCategoryBadge.style.color = b.col;
+}
 
+function autoMatchIndicationToAge() {
+  const drugId = drugSelect.value;
+  const drugs = typeof CALCULATOR_DRUGS !== 'undefined' ? CALCULATOR_DRUGS : [];
+  const drug = drugs.find(d => d.id === drugId);
+  if (!drug || !drug.indications || drug.indications.length <= 1) return;
+
+  const currentTier = patientAgeTier.value;
+
+  // Try to find an indication matching currentTier
+  const matched = drug.indications.find(ind => ind.target_age === currentTier);
+  if (matched) {
+    indicationSelect.value = matched.id;
+    onIndicationSelected();
+  }
+}
+
+function populateDrugDropdown(query = '') {
+  drugSelect.innerHTML = '';
   const drugs = typeof CALCULATOR_DRUGS !== 'undefined' ? CALCULATOR_DRUGS : [];
   let filtered = drugs;
 
-  if (category === 'custom') {
-    const opt = document.createElement('option');
-    opt.value = 'custom';
-    opt.textContent = '⚙️ Custom Calculator (Any Drug)';
-    drugSelect.appendChild(opt);
-    if (calcDrugCount) calcDrugCount.textContent = 'Custom Mode';
-    onDrugSelected();
-    return;
-  }
-
-  if (category !== 'all') {
-    filtered = drugs.filter(d => d.category === category);
-  }
-
   const q = query.trim().toLowerCase();
   if (q) {
-    filtered = filtered.filter(d => 
+    filtered = filtered.filter(d =>
       (d.name || '').toLowerCase().includes(q) ||
-      (d.brand_names || '').toLowerCase().includes(q) ||
-      (d.arabic_name || '').toLowerCase().includes(q) ||
-      (d.see || '').toLowerCase().includes(q)
+      (d.brand_names || '').toLowerCase().includes(q)
     );
   }
 
-  if (calcDrugCount) {
-    calcDrugCount.textContent = `${filtered.length} / ${drugs.length} drugs`;
-  }
+  calcDrugCount.textContent = `${filtered.length} / ${drugs.length} drugs`;
 
   if (filtered.length === 0) {
     const opt = document.createElement('option');
-    opt.value = 'custom';
-    opt.textContent = `No drug found matching "${query}" - Select for Custom Dose Calculation`;
+    opt.value = '';
+    opt.textContent = `No drug found matching "${query}"`;
     drugSelect.appendChild(opt);
-    onDrugSelected();
     return;
   }
 
   filtered.forEach(drug => {
     const opt = document.createElement('option');
     opt.value = drug.id;
-    const sub = drug.brand_names ? ` (${drug.brand_names.split(';')[0].trim()})` : '';
+    const sub = drug.brand_names ? ` (${drug.brand_names.split(';')[0].split(',')[0].trim()})` : '';
     opt.textContent = `${drug.name}${sub} - P. ${drug.book_page}`;
     drugSelect.appendChild(opt);
   });
-
-  // Always add custom option at the bottom
-  const customOpt = document.createElement('option');
-  customOpt.value = 'custom';
-  customOpt.textContent = '⚙️ Custom Calculator for any other drug';
-  drugSelect.appendChild(customOpt);
 
   onDrugSelected();
 }
 
 function onDrugSelected() {
   const drugId = drugSelect.value;
-
-  if (drugId === 'custom') {
-    customDrugFields.style.display = 'block';
-    indicationGroup.style.display = 'none';
-    concentrationGroup.style.display = 'none';
-    calcAlertBox.style.display = 'none';
-    calcNotesText.textContent = 'Custom mode allows calculating any pediatric regimen based on custom dose and available formulation concentration.';
-    btnViewBookText.textContent = '📖 Browse Harriet Lane Formulary';
-    btnViewInBook.dataset.page = '840';
-    calculateDose();
-    return;
-  }
-
-  customDrugFields.style.display = 'none';
-  indicationGroup.style.display = 'block';
-  concentrationGroup.style.display = 'block';
-
-  const drug = (typeof CALCULATOR_DRUGS !== 'undefined' ? CALCULATOR_DRUGS : []).find(d => d.id === drugId);
+  const drugs = typeof CALCULATOR_DRUGS !== 'undefined' ? CALCULATOR_DRUGS : [];
+  const drug = drugs.find(d => d.id === drugId);
   if (!drug) return;
 
   // Populate Indications
   indicationSelect.innerHTML = '';
-  drug.indications.forEach((ind, idx) => {
+  drug.indications.forEach(ind => {
     const opt = document.createElement('option');
     opt.value = ind.id;
     opt.textContent = ind.name;
     indicationSelect.appendChild(opt);
   });
 
-  // Populate Concentrations
+  // Automatically match indication with active age tier
+  autoMatchIndicationToAge();
+
+  // Populate Formulations
   concentrationSelect.innerHTML = '';
   drug.concentrations.forEach((conc, idx) => {
     const opt = document.createElement('option');
@@ -788,68 +589,95 @@ function onDrugSelected() {
     concentrationSelect.appendChild(opt);
   });
 
-  // Update Notes and Book Page Link
-  calcNotesText.textContent = drug.indications[0]?.notes || 'Refer to Harriet Lane Formulary for full clinical pharmacology.';
-  btnViewBookText.textContent = `📖 Open Harriet Lane P.  ${drug.name.split(' ')[0]} (P. ${drug.book_page})`;
+  onIndicationSelected();
+  onFormulationSelected();
+
+  btnViewBookText.textContent = `📖 Open ${drug.name.split(' ')[0]} in Harriet Lane (P. ${drug.book_page})`;
   btnViewInBook.dataset.page = drug.book_page.toString();
 
   calculateDose();
 }
 
-function selectDrugInCalculator(drugName) {
-  const norm = drugName.toUpperCase();
+function onIndicationSelected() {
+  const drugId = drugSelect.value;
   const drugs = typeof CALCULATOR_DRUGS !== 'undefined' ? CALCULATOR_DRUGS : [];
-  
-  // Try exact match
-  let matched = drugs.find(d => norm.includes(d.id.toUpperCase()) || d.name.toUpperCase().includes(norm));
+  const drug = drugs.find(d => d.id === drugId);
+  if (!drug) return;
+
+  const indId = indicationSelect.value;
+  const ind = drug.indications.find(i => i.id === indId) || drug.indications[0];
+  if (!ind) return;
+
+  // Update Route Badge
+  indicationRouteBadge.textContent = ind.route || 'PO / IV';
+
+  // Update Notes
+  calcNotesText.textContent = ind.notes || 'Refer to Harriet Lane Formulary for full clinical pharmacology.';
+
+  // If indication has a specific target age, sync the age dropdown
+  if (ind.target_age && ind.target_age !== 'all' && patientAgeTier.value !== ind.target_age) {
+    if (['neonate_preterm', 'neonate_term', 'infant', 'child', 'adolescent'].includes(ind.target_age)) {
+      patientAgeTier.value = ind.target_age;
+      updateAgeTierBadge();
+    }
+  }
+}
+
+function onFormulationSelected() {
+  const drugId = drugSelect.value;
+  const drugs = typeof CALCULATOR_DRUGS !== 'undefined' ? CALCULATOR_DRUGS : [];
+  const drug = drugs.find(d => d.id === drugId);
+  if (!drug) return;
+
+  const concIdx = parseInt(concentrationSelect.value, 10);
+  const conc = drug.concentrations[concIdx];
+
+  if (conc && conc.is_custom) {
+    manualConcContainer.style.display = 'block';
+  } else {
+    manualConcContainer.style.display = 'none';
+  }
+}
+
+function selectDrugInCalculator(drugName) {
+  const norm = drugName.toUpperCase().trim();
+  const drugs = typeof CALCULATOR_DRUGS !== 'undefined' ? CALCULATOR_DRUGS : [];
+
+  let matched = drugs.find(d => d.name.toUpperCase() === norm);
   if (!matched) {
-    // Try matching words
-    const words = norm.split(' ');
-    matched = drugs.find(d => words.some(w => w.length > 3 && d.name.toUpperCase().includes(w)));
+    matched = drugs.find(d => d.name.toUpperCase().startsWith(norm) || norm.startsWith(d.name.toUpperCase()));
+  }
+  if (!matched) {
+    const first = norm.split(' ')[0];
+    matched = drugs.find(d => d.name.toUpperCase().includes(first));
   }
 
   if (matched) {
-    selectedCategory = 'all';
-    document.querySelectorAll('.cat-pill').forEach(p => p.classList.toggle('active', p.dataset.cat === 'all'));
-    if (calcDrugSearch) calcDrugSearch.value = '';
-    populateDrugDropdown('all');
+    setCalcMode('formulary');
+    calcDrugSearch.value = '';
+    populateDrugDropdown();
     drugSelect.value = matched.id;
     onDrugSelected();
-    showToast(`Selected ${matched.name} in dose calculator`);
+    showToast(`Selected ${matched.name} in calculator`);
   } else {
-    // Switch to custom mode with drug name
-    selectedCategory = 'custom';
-    document.querySelectorAll('.cat-pill').forEach(p => p.classList.toggle('active', p.dataset.cat === 'custom'));
-    populateDrugDropdown('custom');
+    setCalcMode('custom');
     showToast('Opened Custom Dose Calculator');
   }
 }
 
-// Perform Accurate Dose Calculation
+// 9. Core Accurate Pediatric Dose Calculation
 function calculateDose() {
-  let rawWeight = parseFloat(patientWeightInput.value);
-  if (isNaN(rawWeight) || rawWeight <= 0) {
+  const weightKg = parseFloat(patientWeightInput.value);
+
+  if (isNaN(weightKg) || weightKg <= 0) {
     heroDoseMg.textContent = '--';
     heroVolumeMl.textContent = '-- mL';
     bTotalDaily.textContent = '-- mg / day';
-    bFrequency.textContent = 'Please enter patient weight';
+    bFrequency.textContent = 'Please enter patient weight (kg)';
     safetyStatusBadge.className = 'safety-badge safe';
     safetyStatusBadge.textContent = 'Pending Weight';
     calcAlertBox.style.display = 'none';
     return;
-  }
-
-  const weightKg = isWeightLbs ? (rawWeight / 2.20462) : rawWeight;
-  const drugId = drugSelect.value;
-
-  // Age calculations
-  const rawAge = parseFloat(patientAgeInput.value);
-  const ageUnit = patientAgeUnit.value;
-  let ageMonths = 24; // default 2 years if unstated
-  if (!isNaN(rawAge)) {
-    if (ageUnit === 'years') ageMonths = rawAge * 12;
-    else if (ageUnit === 'months') ageMonths = rawAge;
-    else if (ageUnit === 'days') ageMonths = rawAge / 30;
   }
 
   let singleDose = 0;
@@ -861,10 +689,10 @@ function calculateDose() {
   let isCeilingApplied = false;
   let alertMessages = [];
 
-  if (drugId === 'custom') {
-    // Custom calculation mode
+  if (calcMode === 'custom') {
+    resultDrugTitle.textContent = 'Custom Pediatric Regimen';
     const doseVal = parseFloat(customDoseVal.value) || 0;
-    const mode = customDoseMode.value; // 'per_dose' or 'per_day'
+    const mode = customDoseMode.value;
     const freqCount = parseInt(customFreq.value, 10) || 1;
     const concMg = parseFloat(customConcMg.value) || 250;
     const concMl = parseFloat(customConcMl.value) || 5;
@@ -891,7 +719,7 @@ function calculateDose() {
     }
 
     const freqMap = {
-      1: 'Once daily (Daily)',
+      1: 'Once daily (Daily - Q24H)',
       2: 'Twice daily (q12h - BID)',
       3: 'Three times daily (q8h - TID)',
       4: 'Four times daily (q6h - QID)'
@@ -900,116 +728,79 @@ function calculateDose() {
     durationText = 'As clinically indicated';
 
   } else {
-    // Pre-configured Pediatric Drugs
-    const drug = (typeof CALCULATOR_DRUGS !== 'undefined' ? CALCULATOR_DRUGS : []).find(d => d.id === drugId);
+    const drugId = drugSelect.value;
+    const drugs = typeof CALCULATOR_DRUGS !== 'undefined' ? CALCULATOR_DRUGS : [];
+    const drug = drugs.find(d => d.id === drugId);
     if (!drug) return;
+
+    resultDrugTitle.textContent = `${drug.name} - Calculated Dose`;
 
     const indId = indicationSelect.value;
     const indication = drug.indications.find(i => i.id === indId) || drug.indications[0];
     const concIdx = parseInt(concentrationSelect.value, 10) || 0;
-    const concentration = drug.concentrations[concIdx] || drug.concentrations[0];
+    const conc = drug.concentrations[concIdx] || drug.concentrations[0];
 
-    // Check Age warnings
-    if (drug.min_age_months !== undefined && ageMonths < drug.min_age_months) {
-      if (drug.age_warning) {
-        alertMessages.push(drug.age_warning);
-      }
+    const dPerKg = indication.dose_per_kg;
+    const dosesPerDay = indication.doses_per_day || 2;
+
+    if (indication.dose_type === 'per_dose') {
+      singleDose = dPerKg * weightKg;
+      totalDailyDose = singleDose * dosesPerDay;
+    } else {
+      totalDailyDose = dPerKg * weightKg;
+      singleDose = totalDailyDose / dosesPerDay;
     }
 
-    // Direct Volume Fluids (Normal Saline, D10W)
-    if (indication.is_volume_direct) {
-      const volPerKg = indication.dose_per_kg;
-      volumeMl = volPerKg * weightKg;
-      if (indication.max_single_dose && volumeMl > indication.max_single_dose) {
-        volumeMl = indication.max_single_dose;
-        isCeilingApplied = true;
-        alertMessages.push(`⚠️ Capped at maximum safe single bolus: ${indication.max_single_dose} mL.`);
-      }
-      singleDose = volumeMl; // display in mL
-      heroDoseUnit.textContent = 'mL';
-      heroSyrupBox.style.display = 'none';
-      bTotalDaily.textContent = `${volumeMl.toFixed(0)} mL / bolus`;
-      bFrequency.textContent = indication.frequency_ar;
-      bDuration.textContent = 'Titrate according to hemodynamic response';
-      bMaxCeiling.textContent = indication.max_single_dose ? `${indication.max_single_dose} mL` : 'Not capped';
-
-      heroDoseMg.textContent = volumeMl.toFixed(0);
-      safetyStatusBadge.className = isCeilingApplied ? 'safety-badge warning' : 'safety-badge safe';
-      safetyStatusBadge.textContent = isCeilingApplied ? '⚠️ Max Ceiling' : '✅ Safe Range';
-      updateAlerts(alertMessages);
-      return;
-    }
-
-    heroDoseUnit.textContent = 'mg';
-    heroSyrupBox.style.display = 'inline-flex';
-
-    // Weight-tiered drugs (e.g. Ondansetron)
-    if (indication.dose_type === 'weight_tiered' && indication.weight_rules) {
-      let matchedDose = 4;
-      for (const rule of indication.weight_rules) {
-        if (rule.max_kg && weightKg <= rule.max_kg) {
-          matchedDose = rule.dose_mg;
-          break;
-        } else if (rule.min_kg && !rule.max_kg && weightKg > rule.min_kg) {
-          matchedDose = rule.dose_mg;
-          break;
-        } else if (rule.min_kg && rule.max_kg && weightKg > rule.min_kg && weightKg <= rule.max_kg) {
-          matchedDose = rule.dose_mg;
-          break;
-        }
-      }
-      singleDose = matchedDose;
-      totalDailyDose = singleDose * (indication.doses_per_day || 1);
-    } else if (indication.dose_type === 'per_dose') {
-      singleDose = indication.dose_per_kg * weightKg;
-      totalDailyDose = singleDose * (indication.doses_per_day || 1);
-    } else if (indication.dose_type === 'per_day') {
-      totalDailyDose = indication.dose_per_kg * weightKg;
-      singleDose = totalDailyDose / (indication.doses_per_day || 1);
-    } else if (indication.dose_type === 'fixed_age') {
-      // Fixed doses
-      singleDose = indication.dose_per_kg ? indication.dose_per_kg * weightKg : 2.5;
-      totalDailyDose = singleDose * (indication.doses_per_day || 1);
-    }
-
-    // Safety Limits and Ceilings
+    // Single dose ceiling check
     if (indication.max_single_dose && singleDose > indication.max_single_dose) {
       singleDose = indication.max_single_dose;
+      totalDailyDose = singleDose * dosesPerDay;
       isCeilingApplied = true;
-      alertMessages.push(`⚠️ Single dose capped at maximum safe ceiling: ${indication.max_single_dose} mg.`);
+      alertMessages.push(`⚠️ Single dose capped at safe ceiling: ${indication.max_single_dose} mg.`);
     }
 
+    // Daily dose ceiling check
     if (indication.max_daily_dose && totalDailyDose > indication.max_daily_dose) {
       totalDailyDose = indication.max_daily_dose;
-      singleDose = totalDailyDose / (indication.doses_per_day || 1);
+      singleDose = totalDailyDose / dosesPerDay;
       isCeilingApplied = true;
-      alertMessages.push(`⚠️ Total daily dose capped at maximum safe ceiling: ${indication.max_daily_dose} mg/day.`);
+      alertMessages.push(`⚠️ Daily dose capped at safe ceiling: ${indication.max_daily_dose} mg/day.`);
     }
 
+    // Per-kg ceiling check
     if (indication.max_daily_per_kg) {
       const maxByKg = indication.max_daily_per_kg * weightKg;
       if (totalDailyDose > maxByKg) {
         totalDailyDose = maxByKg;
-        singleDose = totalDailyDose / (indication.doses_per_day || 1);
+        singleDose = totalDailyDose / dosesPerDay;
         isCeilingApplied = true;
-        alertMessages.push(`⚠️ Total daily dose capped by per-kg ceiling (${indication.max_daily_per_kg} mg/kg): ${maxByKg.toFixed(0)} mg.`);
+        alertMessages.push(`⚠️ Daily dose capped by per-kg ceiling (${indication.max_daily_per_kg} mg/kg): ${Math.round(maxByKg)} mg/day.`);
       }
     }
 
-    // Calculate Volume in mL for Liquid Suspension
-    if (concentration && !concentration.is_solid && concentration.mg > 0) {
-      volumeMl = (singleDose * concentration.ml) / concentration.mg;
-    }
-
-    frequencyText = indication.frequency_ar;
+    frequencyText = indication.frequency;
     durationText = indication.duration || 'As clinically indicated';
-    ceilingText = indication.max_daily_dose ? `${indication.max_daily_dose} mg/day` : 'Per Harriet Lane guidelines';
+    ceilingText = indication.max_daily_dose ? `${indication.max_daily_dose} mg/day` : 'Within safe limits';
 
-    calcNotesText.textContent = indication.notes || drug.indications[0]?.notes || '';
+    // Volume Calculation
+    if (conc) {
+      if (conc.is_custom) {
+        const mMg = parseFloat(manualConcMg.value) || 250;
+        const mMl = parseFloat(manualConcMl.value) || 5;
+        if (mMg > 0) {
+          volumeMl = (singleDose * mMl) / mMg;
+        }
+      } else if (!conc.is_solid && conc.mg > 0) {
+        volumeMl = (singleDose * conc.ml) / conc.mg;
+      } else {
+        volumeMl = null; // Solid formulation
+      }
+    }
   }
 
   // Display Output
   heroDoseMg.textContent = singleDose >= 10 ? Math.round(singleDose) : singleDose.toFixed(1);
+  heroDoseUnit.textContent = 'mg';
 
   if (volumeMl !== null && volumeMl > 0) {
     heroSyrupBox.style.display = 'inline-flex';
@@ -1029,21 +820,21 @@ function calculateDose() {
     safetyStatusBadge.textContent = isCeilingApplied ? '⚠️ Ceiling Applied' : '⚠️ Clinical Notice';
   } else {
     safetyStatusBadge.className = 'safety-badge safe';
-    safetyStatusBadge.textContent = '✅ Within Safe Pediatric Limits';
+    safetyStatusBadge.textContent = '✅ Safe Pediatric Range';
   }
 
   updateAlerts(alertMessages);
 }
 
 function updateAlerts(messages) {
-  if (messages && messages.length > 0) {
-    calcAlertBox.style.display = 'block';
-    calcAlertBox.innerHTML = messages.map(m => `<div>${m}</div>`).join('');
-  } else {
+  if (messages.length === 0) {
     calcAlertBox.style.display = 'none';
     calcAlertBox.innerHTML = '';
+    return;
   }
+  calcAlertBox.style.display = 'block';
+  calcAlertBox.innerHTML = messages.map(m => `<div class="alert-item">${m}</div>`).join('');
 }
 
-// Start Application
-init();
+// Start application
+window.addEventListener('DOMContentLoaded', initApp);
