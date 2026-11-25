@@ -136,20 +136,12 @@ async function initApp() {
 function switchTab(tab) {
   currentTab = tab;
   if (tab === 'book') {
-    navBtnBook.classList.add('active');
-    navBtnCalc.classList.remove('active');
-    searchSegBook.classList.add('active');
-    searchSegCalc.classList.remove('active');
-    calcSegBook.classList.add('active');
-    calcSegCalc.classList.remove('active');
+    navBtnBook?.classList.add('active');
+    navBtnCalc?.classList.remove('active');
     showScreen('search');
   } else {
-    navBtnBook.classList.remove('active');
-    navBtnCalc.classList.add('active');
-    searchSegBook.classList.remove('active');
-    searchSegCalc.classList.add('active');
-    calcSegBook.classList.remove('active');
-    calcSegCalc.classList.add('active');
+    navBtnBook?.classList.remove('active');
+    navBtnCalc?.classList.add('active');
     showScreen('calc');
     calculateDose();
   }
@@ -166,15 +158,9 @@ function showScreen(screen) {
   }
 }
 
-// Top Segmented Buttons
-searchSegBook.addEventListener('click', () => switchTab('book'));
-searchSegCalc.addEventListener('click', () => switchTab('calc'));
-calcSegBook.addEventListener('click', () => switchTab('book'));
-calcSegCalc.addEventListener('click', () => switchTab('calc'));
-
-// Bottom Bar
-navBtnBook.addEventListener('click', () => switchTab('book'));
-navBtnCalc.addEventListener('click', () => switchTab('calc'));
+// Bottom Navigation Bar
+navBtnBook?.addEventListener('click', () => switchTab('book'));
+navBtnCalc?.addEventListener('click', () => switchTab('calc'));
 
 // 3. Search & Drug List in Formulary
 drugSearchInput.addEventListener('input', (e) => {
