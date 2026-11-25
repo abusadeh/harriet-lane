@@ -1,9 +1,10 @@
-const CACHE_NAME = 'harriet-lane-v1.3.0';
+const CACHE_NAME = 'harriet-lane-v2.0.0';
 const CORE_ASSETS = [
   './',
   './index.html',
   './style.css',
   './app.js',
+  './calculator_drugs.js',
   './manifest.json',
   './drugs_index.json',
   './pages_text.json',
@@ -14,7 +15,7 @@ const CORE_ASSETS = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SW] Pre-caching core assets...');
+      console.log('[SW] Pre-caching core assets v2.0.0...');
       return cache.addAll(CORE_ASSETS);
     })
   );
@@ -38,9 +39,6 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  const url = new URL(event.request.url);
-
-  // Cache-first strategy for pages and static assets
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {

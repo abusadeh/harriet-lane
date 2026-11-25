@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>Harriet Lane Handbook - Pediatric Formulary</title>
+  <title>Harriet Lane Handbook & Smart Pediatric Dose Calculator</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
   <meta name="theme-color" content="#203E7A">
@@ -24,7 +24,7 @@
 
 <div id="app-container">
 
-  <!-- SEARCH SCREEN -->
+  <!-- 1. SEARCH & BOOK FORMULARY SCREEN (TAB 1) -->
   <div id="search-screen" class="screen-view active">
     <header class="app-header">
       <div class="header-top">
@@ -35,6 +35,12 @@
         <button id="search-jump-btn" class="icon-btn" title="الانتقال لرقم الصفحة">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
         </button>
+      </div>
+
+      <!-- Segmented Top Tabs -->
+      <div class="segmented-tabs">
+        <button class="seg-btn active" id="search-seg-book">📖 الكتاب والدليل الأصلي</button>
+        <button class="seg-btn" id="search-seg-calc">🧮 حاسبة الجرعات الذكية</button>
       </div>
       
       <!-- Clean Search Box without placeholder text -->
@@ -50,7 +56,247 @@
     </main>
   </div>
 
-  <!-- PAGE VIEWER SCREEN -->
+  <!-- 2. SMART PEDIATRIC DOSE CALCULATOR SCREEN (TAB 2) -->
+  <div id="calc-screen" class="screen-view">
+    <header class="app-header">
+      <div class="header-top">
+        <div class="app-title">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2.2">
+            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+            <line x1="8" y1="6" x2="16" y2="6"></line>
+            <line x1="16" y1="14" x2="16" y2="18"></line>
+            <path d="M16 10h.01"></path>
+            <path d="M12 10h.01"></path>
+            <path d="M8 10h.01"></path>
+            <path d="M12 14h.01"></path>
+            <path d="M8 14h.01"></path>
+            <path d="M12 18h.01"></path>
+            <path d="M8 18h.01"></path>
+          </svg>
+          <span>حاسبة الجرعات الذكية</span>
+        </div>
+        <div class="calc-badge">طب الأطفال</div>
+      </div>
+
+      <!-- Segmented Top Tabs -->
+      <div class="segmented-tabs">
+        <button class="seg-btn" id="calc-seg-book">📖 الكتاب والدليل الأصلي</button>
+        <button class="seg-btn active" id="calc-seg-calc">🧮 حاسبة الجرعات الذكية</button>
+      </div>
+    </header>
+
+    <main class="calc-scroll-container">
+      
+      <!-- 1. PATIENT PARAMETERS CARD -->
+      <section class="calc-card">
+        <div class="card-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>بيانات الطفل والمريض</span>
+        </div>
+
+        <div class="patient-grid">
+          <!-- Weight Input -->
+          <div class="field-group">
+            <div class="field-label-row">
+              <label for="patient-weight">الوزن (Weight) <span class="req">*</span></label>
+              <div class="unit-toggle">
+                <button type="button" class="unit-btn active" id="unit-kg-btn">كغ (kg)</button>
+                <button type="button" class="unit-btn" id="unit-lbs-btn">رطل (lbs)</button>
+              </div>
+            </div>
+            <div class="input-with-affix">
+              <input type="number" id="patient-weight" class="calc-input" placeholder="مثال: 12" step="0.1" min="0.5" max="150" />
+              <span class="affix" id="weight-unit-label">kg</span>
+            </div>
+          </div>
+
+          <!-- Age Input -->
+          <div class="field-group">
+            <div class="field-label-row">
+              <label for="patient-age">العمر (Age)</label>
+              <span id="patient-category-badge" class="patient-category-badge">طفل</span>
+            </div>
+            <div class="input-age-row">
+              <input type="number" id="patient-age" class="calc-input" placeholder="مثال: 3" min="0" max="18" step="1" />
+              <select id="patient-age-unit" class="calc-select age-select">
+                <option value="years" selected>سنوات</option>
+                <option value="months">أشهر</option>
+                <option value="days">أيام (حديث ولادة)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Weight Chips -->
+        <div class="quick-chips-row">
+          <span class="chips-label">أوزان شائعة:</span>
+          <button type="button" class="chip-btn" data-weight="3">3 كغ</button>
+          <button type="button" class="chip-btn" data-weight="5">5 كغ</button>
+          <button type="button" class="chip-btn" data-weight="8">8 كغ</button>
+          <button type="button" class="chip-btn" data-weight="10">10 كغ</button>
+          <button type="button" class="chip-btn" data-weight="12">12 كغ</button>
+          <button type="button" class="chip-btn" data-weight="15">15 كغ</button>
+          <button type="button" class="chip-btn" data-weight="20">20 كغ</button>
+          <button type="button" class="chip-btn" data-weight="30">30 كغ</button>
+        </div>
+      </section>
+
+      <!-- 2. DRUG SELECTOR CARD -->
+      <section class="calc-card">
+        <div class="card-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path><path d="m8.5 8.5 7 7"></path></svg>
+          <span>اختيار الدواء والمؤشر السريري</span>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="category-pills" id="category-pills">
+          <button type="button" class="cat-pill active" data-cat="all">الكل</button>
+          <button type="button" class="cat-pill" data-cat="antipyretic">🌡️ مسكنات وحرارة</button>
+          <button type="button" class="cat-pill" data-cat="antibiotic">🦠 مضادات حيوية</button>
+          <button type="button" class="cat-pill" data-cat="respiratory">🫁 تنفس وحساسية</button>
+          <button type="button" class="cat-pill" data-cat="gi">🤢 قيء وجهاز هضمي</button>
+          <button type="button" class="cat-pill" data-cat="emergency">🚨 طوارئ وسوائل</button>
+          <button type="button" class="cat-pill" data-cat="custom">⚙️ حاسبة مخصصة</button>
+        </div>
+
+        <!-- Drug Selection Dropdown -->
+        <div class="field-group" id="drug-select-group">
+          <label for="drug-select">الدواء (Drug Name)</label>
+          <select id="drug-select" class="calc-select" dir="ltr">
+            <!-- Populated dynamically -->
+          </select>
+        </div>
+
+        <!-- Indication Selector (Dynamic) -->
+        <div class="field-group" id="indication-group">
+          <label for="indication-select">الحالة ودواعي الاستعمال (Indication)</label>
+          <select id="indication-select" class="calc-select">
+            <!-- Populated dynamically -->
+          </select>
+        </div>
+
+        <!-- Concentration Selector (Dynamic) -->
+        <div class="field-group" id="concentration-group">
+          <label for="concentration-select">التركيز التجاري المتوفر (Concentration / Form)</label>
+          <select id="concentration-select" class="calc-select">
+            <!-- Populated dynamically -->
+          </select>
+        </div>
+
+        <!-- Custom Drug Specific Fields (Hidden unless Custom mode selected) -->
+        <div id="custom-drug-fields" style="display: none;">
+          <div class="patient-grid">
+            <div class="field-group">
+              <label for="custom-dose-val">الجرعة المستهدفة (Dose)</label>
+              <div class="input-with-affix">
+                <input type="number" id="custom-dose-val" class="calc-input" placeholder="مثال: 15" step="0.5" value="15" />
+                <span class="affix">mg/kg</span>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="custom-dose-mode">نوع الجرعة</label>
+              <select id="custom-dose-mode" class="calc-select">
+                <option value="per_dose">لكل جرعة (Per Dose)</option>
+                <option value="per_day">لكل يوم مقسمة (Per Day)</option>
+              </select>
+            </div>
+          </div>
+          <div class="patient-grid">
+            <div class="field-group">
+              <label for="custom-freq">عدد الجرعات باليوم</label>
+              <select id="custom-freq" class="calc-select">
+                <option value="1">مرة واحدة يومياً (Daily)</option>
+                <option value="2" selected>مرتين يومياً (كل 12 ساعة - BID)</option>
+                <option value="3">ثلاث مرات يومياً (كل 8 ساعات - TID)</option>
+                <option value="4">أربع مرات يومياً (كل 6 ساعات - QID)</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="custom-conc-mg">تركيز الشراب المتوفر</label>
+              <div style="display: flex; gap: 6px; align-items: center;">
+                <input type="number" id="custom-conc-mg" class="calc-input" placeholder="ملغ" style="flex: 1;" value="250" />
+                <span>في</span>
+                <input type="number" id="custom-conc-ml" class="calc-input" placeholder="مل" style="width: 70px;" value="5" />
+                <span>مل</span>
+              </div>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="custom-max-dose">الحد الأقصى للجرعة اليومية (اختياري)</label>
+            <div class="input-with-affix">
+              <input type="number" id="custom-max-dose" class="calc-input" placeholder="مثال: 2000" />
+              <span class="affix">mg</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. CALCULATION RESULTS CARD -->
+      <section class="calc-card result-card" id="result-card">
+        <div class="result-header">
+          <div class="result-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span id="result-drug-title">نتيجة الحساب والجرعة الموصى بها</span>
+          </div>
+          <div id="safety-status-badge" class="safety-badge safe">✅ آمن</div>
+        </div>
+
+        <!-- Big Highlight Dose Display -->
+        <div class="result-hero">
+          <div class="hero-label">الجرعة الواحدة المطلوبة:</div>
+          <div class="hero-dose-row">
+            <span id="hero-dose-mg" class="hero-dose-num">--</span>
+            <span id="hero-dose-unit" class="hero-dose-unit">ملغ (mg)</span>
+          </div>
+          <div id="hero-syrup-box" class="hero-syrup-box">
+            <span class="syrup-icon">🥄</span>
+            <span>حجم الشراب الواجب إعطاؤه: </span>
+            <strong id="hero-volume-ml" class="hero-vol-num">-- مل</strong>
+          </div>
+        </div>
+
+        <!-- Detailed Breakdown Grid -->
+        <div class="breakdown-grid">
+          <div class="breakdown-item">
+            <div class="b-label">الجرعة اليومية الإجمالية:</div>
+            <div class="b-val" id="b-total-daily">-- ملغ / اليوم</div>
+          </div>
+          <div class="breakdown-item">
+            <div class="b-label">جدول ومواعيد التكرار:</div>
+            <div class="b-val" id="b-frequency">--</div>
+          </div>
+          <div class="breakdown-item">
+            <div class="b-label">المدة الموصى بها:</div>
+            <div class="b-val" id="b-duration">حسب الحالة السريرية</div>
+          </div>
+          <div class="breakdown-item">
+            <div class="b-label">الحد الأقصى المسموح:</div>
+            <div class="b-val" id="b-max-ceiling">--</div>
+          </div>
+        </div>
+
+        <!-- Warning / Alerts Box -->
+        <div id="calc-alert-box" class="calc-alert-box" style="display: none;">
+          <!-- Injected dynamically -->
+        </div>
+
+        <!-- Clinical Notes Box -->
+        <div id="calc-notes-box" class="calc-notes-box">
+          <div class="notes-header">📌 ملاحظة سريرية (Harriet Lane):</div>
+          <div id="calc-notes-text" class="notes-body">يرجى إدخال وزن الطفل لإجراء الحساب بدقة.</div>
+        </div>
+
+        <!-- Button to jump to book page -->
+        <button type="button" id="btn-view-in-book" class="btn-view-book">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          <span id="btn-view-book-text">📖 فتح صفحة هذا الدواء في Harriet Lane الأصلية</span>
+        </button>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- 3. PAGE VIEWER SCREEN -->
   <div id="page-screen" class="screen-view">
     <header class="page-viewer-header">
       <button id="back-to-search-btn" class="icon-btn" title="رجوع لقائمة البحث">
@@ -63,6 +309,20 @@
       </div>
 
       <div class="viewer-actions">
+        <!-- Calculate Dose Button -->
+        <button id="calc-drug-btn" class="icon-btn highlight-btn" title="حاسبة الجرعة الذكية لهذا الدواء">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+            <line x1="8" y1="6" x2="16" y2="6"></line>
+            <line x1="16" y1="14" x2="16" y2="18"></line>
+            <path d="M16 10h.01"></path>
+            <path d="M12 10h.01"></path>
+            <path d="M8 10h.01"></path>
+            <path d="M12 14h.01"></path>
+            <path d="M8 14h.01"></path>
+          </svg>
+        </button>
+
         <!-- Copy Text Button -->
         <button id="copy-text-btn" class="icon-btn" title="نسخ نص الصفحة">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
@@ -102,6 +362,32 @@
       </button>
     </footer>
   </div>
+
+  <!-- PERSISTENT MAIN BOTTOM TAB BAR -->
+  <nav class="main-bottom-nav" id="main-bottom-nav">
+    <button id="nav-btn-book" class="nav-tab active">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+      </svg>
+      <span>الكتاب الأصلي</span>
+    </button>
+    <button id="nav-btn-calc" class="nav-tab">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+        <line x1="8" y1="6" x2="16" y2="6"></line>
+        <line x1="16" y1="14" x2="16" y2="18"></line>
+        <path d="M16 10h.01"></path>
+        <path d="M12 10h.01"></path>
+        <path d="M8 10h.01"></path>
+        <path d="M12 14h.01"></path>
+        <path d="M8 14h.01"></path>
+        <path d="M12 18h.01"></path>
+        <path d="M8 18h.01"></path>
+      </svg>
+      <span>حاسبة الجرعات الذكية</span>
+    </button>
+  </nav>
 
 </div>
 
@@ -173,7 +459,8 @@
 <!-- TOAST -->
 <div id="toast" class="toast-msg">تم نسخ النص بنجاح</div>
 
-<!-- Application Script -->
+<!-- Scripts -->
+<script src="calculator_drugs.js"></script>
 <script src="app.js"></script>
 
 <!-- Service Worker Registration -->
