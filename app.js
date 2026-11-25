@@ -253,8 +253,7 @@ function goToPage(index) {
 
 function loadPageImage(index) {
   spinner.style.display = 'flex';
-  const imgNum = String(index).padStart(3, '0');
-  const imgUrl = `pages/page_${imgNum}.png`;
+  const imgUrl = `pages/page_${index}.webp`;
 
   pageImage.onload = () => spinner.style.display = 'none';
   pageImage.onerror = () => {
@@ -341,7 +340,7 @@ exportImageBtn.addEventListener('click', async () => {
   exportModal.classList.remove('show');
   const bookPage = 840 + currentPageIndex;
   const title = viewerDrugTitle.textContent.replace(/[^A-Za-z0-9]/g, '_');
-  const filename = `HarrietLane_P${bookPage}_${title}.png`;
+  const filename = `HarrietLane_P${bookPage}_${title}.webp`;
 
   try {
     const res = await fetch(pageImage.src);
