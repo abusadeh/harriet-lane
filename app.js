@@ -255,11 +255,30 @@ function loadPageImage(index) {
   spinner.style.display = 'flex';
   const imgUrl = `pages/page_${index}.webp`;
 
-  pageImage.onload = () => spinner.style.display = 'none';
-  pageImage.onerror = () => {
+  pageImage.onload = () => {
     spinner.style.display = 'none';
-    pageImage.alt = 'Error loading page image';
   };
+  pageImage.onerror = () => {
+    // Auto-retry with cache-busting timestamp
+    if (!pageImage.dataset.retried) {
+      pageImage.dataset.retried = '1';
+      pageImage.src = `pages/page_${index}.webp?t=${Date.now()}`;
+      return;
+    }
+    spinner.style.display = 'none';
+    pageImage.alt = 'Error loading page. Tap here to reload latest updates.';
+    pageImage.style.cursor = 'pointer';
+    pageImage.onclick = () => {
+      if ('caches' in window) {
+        caches.keys().then((names) => Promise.all(names.map((n) => caches.delete(n)))).then(() => {
+          window.location.reload(true);
+        });
+      } else {
+        window.location.reload(true);
+      }
+    };
+  };
+  pageImage.dataset.retried = '';
   pageImage.src = imgUrl;
 }
 

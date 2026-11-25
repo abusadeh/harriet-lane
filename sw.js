@@ -1,10 +1,10 @@
-const CACHE_NAME = 'harriet-lane-v2.4.2';
+const CACHE_NAME = 'harriet-lane-v2.5.0';
 const CORE_ASSETS = [
   './',
   './index.html',
-  './style.css',
-  './app.js',
-  './calculator_drugs.js',
+  './style.css?v=2.5.0',
+  './app.js?v=2.5.0',
+  './calculator_drugs.js?v=2.5.0',
   './manifest.json',
   './drugs_index.json',
   './pages_text.json',
@@ -13,13 +13,15 @@ const CORE_ASSETS = [
 ];
 
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SW] Pre-caching core assets v2.0.0...');
-      return cache.addAll(CORE_ASSETS);
+      console.log('[SW] Pre-caching core assets v2.5.0...');
+      return cache.addAll(CORE_ASSETS).catch((err) => {
+        console.warn('[SW] Core asset pre-caching partial failure:', err);
+      });
     })
   );
-  self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
@@ -28,39 +30,55 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         keys.map((key) => {
           if (key !== CACHE_NAME) {
-            console.log('[SW] Clearing old cache:', key);
+            console.log('[SW] Deleting old cache:', key);
             return caches.delete(key);
           }
         })
       );
-    })
+    }).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
+  const url = new URL(event.request.url);
+  const isImageOrMedia = url.pathname.endsWith('.webp') || 
+                         url.pathname.endsWith('.png') || 
+                         url.pathname.endsWith('.jpg') || 
+                         url.pathname.endsWith('.ico');
 
-      return fetch(event.request).then((networkResponse) => {
-        if (!networkResponse || networkResponse.status !== 200) {
-          return networkResponse;
-        }
-
-        const responseToCache = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseToCache);
+  if (isImageOrMedia) {
+    // Cache-first for images, falling back to network
+    event.respondWith(
+      caches.match(event.request).then((cached) => {
+        if (cached) return cached;
+        return fetch(event.request).then((res) => {
+          if (res && res.status === 200) {
+            const clone = res.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+          }
+          return res;
         });
-
-        return networkResponse;
-      });
-    }).catch(() => {
-      if (event.request.headers.get('accept')?.includes('text/html')) {
-        return caches.match('./index.html');
-      }
-    })
-  );
+      })
+    );
+  } else {
+    // Network-first for code assets (HTML, JS, CSS, JSON) to ensure updates are NEVER delayed
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response && response.status === 200) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+          }
+          return response;
+        })
+        .catch(() => {
+          return caches.match(event.request).then((cached) => {
+            if (cached) return cached;
+            if (event.request.headers.get('accept')?.includes('text/html')) {
+              return caches.match('./index.html');
+            }
+          });
+        })
+    );
+  }
 });

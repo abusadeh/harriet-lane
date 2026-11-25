@@ -18,7 +18,7 @@
   <link rel="manifest" href="manifest.json">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=2.4.2">
+  <link rel="stylesheet" href="style.css?v=2.5.0">
 </head>
 <body>
 
@@ -446,18 +446,47 @@
 <div id="toast" class="toast-msg">Copied successfully</div>
 
 <!-- Scripts -->
-<script src="calculator_drugs.js?v=2.4.2"></script>
-<script src="app.js?v=2.4.2"></script>
+<script src="calculator_drugs.js?v=2.5.0"></script>
+<script src="app.js?v=2.5.0"></script>
 
-<!-- Service Worker Registration -->
+<!-- Service Worker & Aggressive Cache Invalidation -->
 <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
-        .then(reg => console.log('ServiceWorker registered:', reg.scope))
-        .catch(err => console.log('ServiceWorker error:', err));
-    });
-  }
+  (function() {
+    const CURRENT_VERSION = '2.5.0';
+    const storedVersion = localStorage.getItem('harriet_lane_pwa_version');
+
+    if (storedVersion !== CURRENT_VERSION) {
+      if ('caches' in window) {
+        caches.keys().then((keys) => {
+          return Promise.all(keys.map((k) => caches.delete(k)));
+        }).then(() => {
+          localStorage.setItem('harriet_lane_pwa_version', CURRENT_VERSION);
+          console.log('[PWA] Stale caches purged for v' + CURRENT_VERSION);
+        });
+      } else {
+        localStorage.setItem('harriet_lane_pwa_version', CURRENT_VERSION);
+      }
+    }
+
+    if ('serviceWorker' in navigator) {
+      let refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (!refreshing) {
+          refreshing = true;
+          window.location.reload();
+        }
+      });
+
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js?v=' + CURRENT_VERSION)
+          .then((reg) => {
+            console.log('ServiceWorker registered:', reg.scope);
+            reg.update();
+          })
+          .catch((err) => console.log('ServiceWorker error:', err));
+      });
+    }
+  })();
 </script>
 
 </body>
