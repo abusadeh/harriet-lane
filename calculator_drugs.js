@@ -273,7 +273,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (sodium): 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Solution for inhalation or oral use: 100 mg/mL (10%) (4, 10, 30 mL) or 200 mg/mL (20%)",
@@ -589,7 +589,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection in solution (with sodium): 50 mg/mL (10, 20 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -693,7 +693,8 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 50 mg/mL (10 mL, 20 mL)",
         "mg": 50.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Capsules: 200 mg",
@@ -779,7 +780,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 3 mg/mL (2, 4, 20, 30 mL)",
         "mg": 3.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -823,7 +824,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 3 mg/mL (2, 4, 20, 30 mL)",
         "mg": 3.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -867,7 +868,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 3 mg/mL (2, 4, 20, 30 mL)",
         "mg": 3.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -911,7 +912,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5% (50 mg/mL) (50, 100, 250, 500 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 2, 4 mg",
@@ -947,7 +948,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Aloprim and generics): 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -991,7 +992,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5% (50 mg/mL) (50, 100, 250, 500 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 2, 4 mg",
@@ -1027,7 +1028,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Aloprim and generics): 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -1089,7 +1090,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Aloprim and generics): 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 6.25, 12.5 mg",
@@ -1381,7 +1382,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 250 mg/mL (2, 4 mL)",
         "mg": 250.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -1455,7 +1456,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 250 mg/mL (2, 4 mL)",
         "mg": 250.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -1529,7 +1530,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 250 mg/mL (2, 4 mL)",
         "mg": 250.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -1710,12 +1711,14 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 250 mg/mL (2 mL, 4 mL)",
         "mg": 250.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Vial for Injection: 50 mg/mL (Pediatric vial 2 mL)",
         "mg": 50.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Diluted IV Solution: 5 mg/mL (in D5W / NS)",
@@ -1866,13 +1869,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 250 mg/mL (20 mL)",
         "mg": 250.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 25 mg/mL (79% theophylline) (10, 20 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -2000,13 +2003,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 250 mg/mL (20 mL)",
         "mg": 250.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 25 mg/mL (79% theophylline) (10, 20 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (Pacerone and generics): 100, 200, 400 mg",
@@ -2024,7 +2027,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50 mg/mL (3, 9, 18 mL) (contains 20.2 mg/mL benzyl alcohol and 100 mg/mL",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -2170,7 +2173,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50 mg/mL (3, 9, 18 mL) (contains 20.2 mg/mL benzyl alcohol and 100 mg/mL",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 10, 25, 50, 75, 100, 150 mg",
@@ -3388,7 +3391,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (20 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -3522,13 +3525,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (20 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 50 mg (vials)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -3662,7 +3665,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50 mg (vials)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -3803,17 +3806,20 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 500 mg powder",
         "mg": 500.0,
-        "ml": 5.0
+        "ml": 5.0,
+        "is_solid": true
       },
       {
         "label": "Vial for Injection: 1 g powder",
         "mg": 1000.0,
-        "ml": 10.0
+        "ml": 10.0,
+        "is_solid": true
       },
       {
         "label": "Vial for Injection: 2 g powder",
         "mg": 2000.0,
-        "ml": 20.0
+        "ml": 20.0,
+        "is_solid": true
       },
       {
         "label": "Oral Suspension: 250 mg / 5 mL",
@@ -3969,7 +3975,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (pre-filled syringes with 29-gauge needles): 100 mg/0.67 mL (0.67 mL)",
         "mg": 100.0,
         "ml": 0.67,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -4109,7 +4115,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (pre-filled syringes with 29-gauge needles): 100 mg/0.67 mL (0.67 mL)",
         "mg": 100.0,
         "ml": 0.67,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -4153,7 +4159,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10% (100 mg/mL) arginine hydrochloride, contains 47.5 mEq chloride per 100 mL",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 2, 5, 10, 15, 20, 30 mg",
@@ -4221,7 +4227,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10% (100 mg/mL) arginine hydrochloride, contains 47.5 mEq chloride per 100 mL",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 2, 5, 10, 15, 20, 30 mg",
@@ -4289,7 +4295,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10% (100 mg/mL) arginine hydrochloride, contains 47.5 mEq chloride per 100 mL",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 2, 5, 10, 15, 20, 30 mg",
@@ -4387,7 +4393,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 500 mg/mL (50 mL)",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral liquid [OTC]: 500 mg/5 mL (120, 236, 473 mL)",
@@ -4473,7 +4479,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 500 mg/mL (50 mL)",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral liquid [OTC]: 500 mg/5 mL (120, 236, 473 mL)",
@@ -5075,13 +5081,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (vials): 0.4, 1 mg/mL",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection (prefilled syringe): 0.25 mg/5 mL, 0.5 mg/5 mL, 1 mg/10 mL",
         "mg": 0.25,
         "ml": 5.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Ointment: 1% (3.5 g)",
@@ -5227,13 +5233,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (vials): 0.4, 1 mg/mL",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection (prefilled syringe): 0.25 mg/5 mL, 0.5 mg/5 mL, 1 mg/10 mL",
         "mg": 0.25,
         "ml": 5.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Ointment: 1% (3.5 g)",
@@ -5263,7 +5269,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -5337,7 +5343,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -5531,7 +5537,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -5671,7 +5677,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -6249,7 +6255,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1 mg/mL (2 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 0.5, 1, 2 mg",
@@ -6341,7 +6347,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1 mg/mL (2 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 0.5, 1, 2 mg",
@@ -6359,7 +6365,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection suspension (Celestone Soluspan and generics): 6 mg/mL (3 mg/mL Na",
         "mg": 6.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Topical cream: 0.05% (15, 45 g)",
@@ -6427,7 +6433,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection suspension (Celestone Soluspan and generics): 6 mg/mL (3 mg/mL Na",
         "mg": 6.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Topical cream: 0.05% (15, 45 g)",
@@ -6513,7 +6519,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection suspension (Celestone Soluspan and generics): 6 mg/mL (3 mg/mL Na",
         "mg": 6.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Topical cream: 0.05% (15, 45 g)",
@@ -7067,13 +7073,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.25 mg/mL (4, 10 mL)",
         "mg": 0.25,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 1 mg/mL (1 mL), 2 mg/mL (1, 2 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Nasal solution: 10 mg/mL (2.5 mL)",
@@ -7201,13 +7207,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.25 mg/mL (4, 10 mL)",
         "mg": 0.25,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 1 mg/mL (1 mL), 2 mg/mL (1, 2 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Nasal solution: 10 mg/mL (2.5 mL)",
@@ -7219,13 +7225,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 20 mg/mL (3 mL)",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral liquid: 20 mg/mL (3 mL), also available as powder for compounding 10 or 20 mg/mL",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (Rocaltrol and generics): 0.25, 0.5 mCg",
@@ -7281,13 +7287,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 20 mg/mL (3 mL)",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral liquid: 20 mg/mL (3 mL), also available as powder for compounding 10 or 20 mg/mL",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (Rocaltrol and generics): 0.25, 0.5 mCg",
@@ -7367,13 +7373,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 20 mg/mL (3 mL)",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral liquid: 20 mg/mL (3 mL), also available as powder for compounding 10 or 20 mg/mL",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (Rocaltrol and generics): 0.25, 0.5 mCg",
@@ -7519,13 +7525,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (10%) (1.36 mEq Ca/mL) (10 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Prefilled syringe for injection: 100 mg/mL (10%) (1.36 mEq Ca/mL) (10 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -7635,13 +7641,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (10%) (1.36 mEq Ca/mL) (10 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Prefilled syringe for injection: 100 mg/mL (10%) (1.36 mEq Ca/mL) (10 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -7763,13 +7769,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (10%) (1.36 mEq Ca/mL) (10 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Prefilled syringe for injection: 100 mg/mL (10%) (1.36 mEq Ca/mL) (10 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs:",
@@ -7939,7 +7945,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (10%) (0.465 mEq Ca/mL) (10, 50, 100 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -8091,7 +8097,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (10%) (0.465 mEq Ca/mL) (10, 50, 100 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -8225,7 +8231,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (10%) (0.465 mEq Ca/mL) (10, 50, 100 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -8967,7 +8973,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 200 mg/mL (5 mL)",
         "mg": 200.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -9119,7 +9125,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 200 mg/mL (5 mL)",
         "mg": 200.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -9211,7 +9217,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 200 mg/mL (5 mL)",
         "mg": 200.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -9323,7 +9329,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50, 70 mg",
         "mg": 70.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -10444,12 +10450,14 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 1 g powder for reconstitution",
         "mg": 1000.0,
-        "ml": 10.0
+        "ml": 10.0,
+        "is_solid": true
       },
       {
         "label": "Vial for Injection: 2 g powder for reconstitution",
         "mg": 2000.0,
-        "ml": 20.0
+        "ml": 20.0,
+        "is_solid": true
       },
       {
         "label": "Reconstituted IV solution: 100 mg/mL",
@@ -10915,7 +10923,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 400, 600 mg",
         "mg": 600.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -11073,7 +11081,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 400, 600 mg",
         "mg": 600.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -11207,7 +11215,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 400, 600 mg",
         "mg": 600.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -11736,22 +11744,26 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 1 g powder for reconstitution",
         "mg": 1000.0,
-        "ml": 10.0
+        "ml": 10.0,
+        "is_solid": true
       },
       {
         "label": "Vial for Injection: 2 g powder for reconstitution",
         "mg": 2000.0,
-        "ml": 20.0
+        "ml": 20.0,
+        "is_solid": true
       },
       {
         "label": "Vial for Injection: 500 mg powder",
         "mg": 500.0,
-        "ml": 5.0
+        "ml": 5.0,
+        "is_solid": true
       },
       {
         "label": "Vial for Injection: 250 mg powder",
         "mg": 250.0,
-        "ml": 2.5
+        "ml": 2.5,
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -12359,7 +12371,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Quzyttir): 10 mg/mL (1 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 1 g",
@@ -12821,7 +12833,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs [OTC]: 4 mg",
@@ -12991,7 +13003,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs [OTC]: 4 mg",
@@ -13125,7 +13137,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs [OTC]: 4 mg",
@@ -13235,7 +13247,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 25 mg/mL (1, 2 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (OTC): 1000, 2000, 5000, 10,000, 50,000 IU",
@@ -13351,7 +13363,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 25 mg/mL (1, 2 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (OTC): 1000, 2000, 5000, 10,000, 50,000 IU",
@@ -13467,7 +13479,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 25 mg/mL (1, 2 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (OTC): 1000, 2000, 5000, 10,000, 50,000 IU",
@@ -13583,7 +13595,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 25 mg/mL (1, 2 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (OTC): 1000, 2000, 5000, 10,000, 50,000 IU",
@@ -13761,7 +13773,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 75 mg/mL (5 mL)",
         "mg": 75.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -13847,7 +13859,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 75 mg/mL (5 mL)",
         "mg": 75.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -13927,7 +13939,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 75 mg/mL (5 mL)",
         "mg": 75.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -14073,7 +14085,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Premixed injection: 200 mg/100 mL 5% dextrose, 400 mg/200 mL 5% dextrose (iso-osmotic",
         "mg": 200.0,
         "ml": 100.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Ophthalmic solution: 0.3% (2.5, 5, 10 mL)",
@@ -14255,7 +14267,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 150 mg/mL (2, 4, 6, 60 mL)",
         "mg": 150.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -14407,7 +14419,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 150 mg/mL (2, 4, 6, 60 mL)",
         "mg": 150.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -14553,7 +14565,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 150 mg/mL (2, 4, 6, 60 mL)",
         "mg": 150.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Solution, topical: 1% (30, 60 mL)",
@@ -15761,7 +15773,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Sandimmune): 50 mg/mL (5 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (Sandimmune and generics): 25, 100 mg",
@@ -15871,7 +15883,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Sandimmune): 50 mg/mL (5 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (Sandimmune and generics): 25, 100 mg",
@@ -15981,7 +15993,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Sandimmune): 50 mg/mL (5 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (Sandimmune and generics): 25, 100 mg",
@@ -17369,7 +17381,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (sodium phosphate salt): 4 mg/mL (1, 5, 30 mL), 10 mg/mL (1, 10 mL)",
         "mg": 4.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral elixir: 0.5 mg/5 mL (237 mL)",
@@ -17458,12 +17470,14 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 4 mg/mL (1 mL, 5 mL, 30 mL)",
         "mg": 4.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Vial for Injection: 10 mg/mL (1 mL, 10 mL)",
         "mg": 10.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Tablets: 0.5 mg, 0.75 mg, 1.5 mg, 4 mg",
@@ -17876,7 +17890,8 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 5 mg/mL (2 mL)",
         "mg": 5.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Diastat AcuDial Rectal Gel: 10 mg / 2.5 mL (4 mg/mL)",
@@ -18093,7 +18108,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 40 mg",
         "mg": 40.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -18137,7 +18152,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 40 mg",
         "mg": 40.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -18211,7 +18226,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (5, 10, 25 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -18303,7 +18318,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50 mg/mL",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral liquid/solution (OTC): 12.5 mg/5 mL",
@@ -18327,7 +18342,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50 mg/mL (1, 10 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Delayed-release tabs:",
@@ -18425,7 +18440,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50 mg/mL",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral liquid/solution (OTC): 12.5 mg/5 mL",
@@ -18449,7 +18464,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50 mg/mL (1, 10 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Delayed-release tabs:",
@@ -18511,7 +18526,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 12.5 mg/mL (20 mL)",
         "mg": 12.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (OTC): 100, 250 mg",
@@ -18597,7 +18612,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 12.5 mg/mL (20 mL)",
         "mg": 12.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (OTC): 100, 250 mg",
@@ -18713,7 +18728,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 40 mg/mL (5, 10 mL)",
         "mg": 40.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -18799,7 +18814,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 40 mg/mL (5, 10 mL)",
         "mg": 40.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -18843,7 +18858,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 40 mg/mL (5, 10 mL)",
         "mg": 40.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -18953,7 +18968,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Doxy and generics): 100 mg",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (Marinol and generics): 2.5, 5, 10 mg",
@@ -19075,7 +19090,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Doxy and generics): 100 mg",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps (Marinol and generics): 2.5, 5, 10 mg",
@@ -19221,7 +19236,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 2.5 mg/mL (1, 2 mL)",
         "mg": 2.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -19307,7 +19322,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 2.5 mg/mL (1, 2 mL)",
         "mg": 2.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs:",
@@ -19553,13 +19568,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1.25 mg/mL (1, 2 mL)",
         "mg": 1.25,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 100 mg/mL (3 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection (prefilled syringes with 27-gauge × ½-inch needle):",
@@ -19717,13 +19732,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1.25 mg/mL (1, 2 mL)",
         "mg": 1.25,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 100 mg/mL (3 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection (prefilled syringes with 27-gauge × ½-inch needle):",
@@ -19863,7 +19878,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (3 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection (prefilled syringes with 27-gauge × ½-inch needle):",
@@ -20041,7 +20056,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.5, 1.5 mg",
         "mg": 1.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -20103,7 +20118,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.5, 1.5 mg",
         "mg": 1.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -20147,7 +20162,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.5, 1.5 mg",
         "mg": 1.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps:",
@@ -20209,7 +20224,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.5, 1.5 mg",
         "mg": 1.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps:",
@@ -20271,7 +20286,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.5, 1.5 mg",
         "mg": 1.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps:",
@@ -21009,19 +21024,19 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (10 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, premixed infusion in iso-osmotic sodium chloride: 2000 mg/100 mL (100 mL),",
         "mg": 2000.0,
         "ml": 100.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, premixed infusion in iso-osmotic water for injection: 2000 mg/100 mL (100 mL),",
         "mg": 2000.0,
         "ml": 100.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -21101,19 +21116,19 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (10 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, premixed infusion in iso-osmotic sodium chloride: 2000 mg/100 mL (100 mL),",
         "mg": 2000.0,
         "ml": 100.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, premixed infusion in iso-osmotic water for injection: 2000 mg/100 mL (100 mL),",
         "mg": 2000.0,
         "ml": 100.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -21157,19 +21172,19 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (10 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, premixed infusion in iso-osmotic sodium chloride: 2000 mg/100 mL (100 mL),",
         "mg": 2000.0,
         "ml": 100.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, premixed infusion in iso-osmotic water for injection: 2000 mg/100 mL (100 mL),",
         "mg": 2000.0,
         "ml": 100.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Caps, delayed release:",
@@ -21187,7 +21202,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 40 mg",
         "mg": 40.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -21261,13 +21276,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 40 mg",
         "mg": 40.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection (single-dose vial): 25 mg (0.5 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -21365,7 +21380,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (single-dose vial): 25 mg (0.5 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -21523,7 +21538,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 2 mg/mL (10, 20 mL)",
         "mg": 2.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 125, 250, 500 mg",
@@ -21687,7 +21702,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 2 mg/mL (10, 20 mL)",
         "mg": 2.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 125, 250, 500 mg",
@@ -21827,7 +21842,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 2 mg/mL (10, 20 mL)",
         "mg": 2.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 125, 250, 500 mg",
@@ -21839,13 +21854,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (2, 4, 20 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Premixed injection: 20 mg/50 mL in iso-osmotic sodium chloride",
         "mg": 20.0,
         "ml": 50.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension: 40 mg/5 mL (50, 100, 150 mL)",
@@ -21997,7 +22012,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 2 mg/mL (10, 20 mL)",
         "mg": 2.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 125, 250, 500 mg",
@@ -22009,13 +22024,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (2, 4, 20 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Premixed injection: 20 mg/50 mL in iso-osmotic sodium chloride",
         "mg": 20.0,
         "ml": 50.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension: 40 mg/5 mL (50, 100, 150 mL)",
@@ -22167,13 +22182,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (2, 4, 20 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Premixed injection: 20 mg/50 mL in iso-osmotic sodium chloride",
         "mg": 20.0,
         "ml": 50.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension: 40 mg/5 mL (50, 100, 150 mL)",
@@ -22699,7 +22714,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 2 mg/mL (50, 100, 200 mL)",
         "mg": 2.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension: 10 mg/mL (35 mL), 40 mg/mL (35 mL)",
@@ -22845,7 +22860,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 2 mg/mL (50, 100, 200 mL)",
         "mg": 2.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension: 10 mg/mL (35 mL), 40 mg/mL (35 mL)",
@@ -23021,7 +23036,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.1 mg/mL (5, 10 mL)",
         "mg": 0.1,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -23077,7 +23092,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.1 mg/mL (5, 10 mL)",
         "mg": 0.1,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Nasal solution: 25 mCg/spray (200 sprays/bottle) (25 mL)",
@@ -23145,7 +23160,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.1 mg/mL (5, 10 mL)",
         "mg": 0.1,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Nasal solution: 25 mCg/spray (200 sprays/bottle) (25 mL)",
@@ -23627,7 +23642,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (10 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 1 g/mL (1.5 mL)",
@@ -23719,7 +23734,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (10 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 1 g/mL (1.5 mL)",
@@ -23877,7 +23892,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (10 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 1 g/mL (1.5 mL)",
@@ -23889,7 +23904,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 24 mg/mL (250 mL)",
         "mg": 24.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -24023,13 +24038,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 24 mg/mL (250 mL)",
         "mg": 24.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 50 mg phenytoin equivalent (75 mg fosphenytoin)/1 mL (2, 10 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -24163,7 +24178,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50 mg phenytoin equivalent (75 mg fosphenytoin)/1 mL (2, 10 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 20, 40, 80 mg",
@@ -24175,7 +24190,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (2, 4, 10 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral solution: 10 mg/mL (60, 120 mL), 40 mg/5 mL (500 mL)",
@@ -24272,7 +24287,8 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 10 mg/mL (2 mL, 4 mL, 10 mL)",
         "mg": 10.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Tablets: 20 mg, 40 mg, 80 mg",
@@ -24436,7 +24452,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection in solution: 500 mg/10 mL (10 mL)",
         "mg": 500.0,
         "ml": 10.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -24558,7 +24574,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection in solution: 500 mg/10 mL (10 mL)",
         "mg": 500.0,
         "ml": 10.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Ophthalmic solution: 0.5% (2.5 mL)",
@@ -24570,7 +24586,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (2 mL, preservative free), 40 mg/mL (2, 20 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -24656,7 +24672,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (2 mL, preservative free), 40 mg/mL (2, 20 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Ophthalmic drops: 0.3% (5 mL)",
@@ -24778,7 +24794,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (2 mL, preservative free), 40 mg/mL (2, 20 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Ophthalmic drops: 0.3% (5 mL)",
@@ -24955,12 +24971,14 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 40 mg/mL (2 mL)",
         "mg": 40.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Pediatric Vial for Injection: 10 mg/mL (2 mL)",
         "mg": 10.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Diluted IV Infusion: 2 mg/mL",
@@ -25093,13 +25111,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection in prefilled syringe (Gvoke PFS): 0.5 mg/0.1 mL (1- or 2-pack), 1 mg/0.2 mL (1- or",
         "mg": 0.5,
         "ml": 0.1,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection in autoinjector (Gvoke HypoPen): 0.5 mg/0.1 mL (1- or 2-pack), 1 mg/0.2 mL (1- or",
         "mg": 0.5,
         "ml": 0.1,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (Glycate, and generics): 1, 1.5, 2 mg",
@@ -25117,7 +25135,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Glyrx-PF and generics): 0.2 mg/mL (1, 2, 3, 5, 20 mL)",
         "mg": 0.2,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -25227,13 +25245,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Glyrx-PF and generics): 0.2 mg/mL (1, 2, 3, 5, 20 mL)",
         "mg": 0.2,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 1 mg/mL (1, 4 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 1 mg",
@@ -25355,13 +25373,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Glyrx-PF and generics): 0.2 mg/mL (1, 2, 3, 5, 20 mL)",
         "mg": 0.2,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 1 mg/mL (1, 4 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 1 mg",
@@ -25483,13 +25501,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Glyrx-PF and generics): 0.2 mg/mL (1, 2, 3, 5, 20 mL)",
         "mg": 0.2,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 1 mg/mL (1, 4 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 1 mg",
@@ -25563,7 +25581,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1 mg/mL (1, 4 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 1 mg",
@@ -26187,7 +26205,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 20 mg/mL (1 mL)",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral liquid: 4 mg/mL",
@@ -26351,7 +26369,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 20 mg/mL (1 mL)",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral liquid: 4 mg/mL",
@@ -26527,7 +26545,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 20 mg/mL (1 mL)",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral liquid: 4 mg/mL",
@@ -26727,7 +26745,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100, 250, 500, 1000 mg/vial",
         "mg": 1000.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Topical cream: 1% [OTC]",
@@ -26891,7 +26909,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1, 2, 4 mg/mL (1 mL), 10 mg/mL (1, 5, 50 mL)",
         "mg": 4.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral solution: 1 mg/mL",
@@ -27067,7 +27085,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection for IM use (HCl salt): 25 mg/mL (1 mL), 50 mg/mL (1, 2 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -27213,7 +27231,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection for IM use (HCl salt): 25 mg/mL (1 mL), 50 mg/mL (1, 2 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension [OTC]: 100 mg/5 mL (120, 240, 473 mL)",
@@ -27485,7 +27503,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 250, 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (HCl): 10, 25, 50 mg",
@@ -27643,7 +27661,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 250, 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (HCl): 10, 25, 50 mg",
@@ -28043,7 +28061,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1 mg",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Sustained-release caps: Start with 75 mg PO once daily, may increase to 75 mg BID",
@@ -28245,7 +28263,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 270 mg/mL, 320 mg/mL (50, 100, 150, 200 mL)",
         "mg": 270.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection:",
@@ -28301,7 +28319,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 270 mg/mL, 320 mg/mL (50, 100, 150, 200 mL)",
         "mg": 270.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection:",
@@ -28357,7 +28375,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 270 mg/mL, 320 mg/mL (50, 100, 150, 200 mL)",
         "mg": 270.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection:",
@@ -29061,7 +29079,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 372 mg (200 mg isavuconazole) (contains 96 mg mannitol and sulfuric acid for pH",
         "mg": 372.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Capsules: 74.5 mg (40 mg isavuconazole), 186 mg (100 mg isavuconazole)",
@@ -29117,7 +29135,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 372 mg (200 mg isavuconazole) (contains 96 mg mannitol and sulfuric acid for pH",
         "mg": 372.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Capsules: 74.5 mg (40 mg isavuconazole), 186 mg (100 mg isavuconazole)",
@@ -29141,7 +29159,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (10 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -29197,13 +29215,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (10 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 0.2 mg/mL (1, 5 mL)",
         "mg": 0.2,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -29247,7 +29265,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.2 mg/mL (1, 5 mL)",
         "mg": 0.2,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -29291,7 +29309,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.2 mg/mL (1, 5 mL)",
         "mg": 0.2,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -29901,7 +29919,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (20 mL), 50 mg/mL (10 mL), 100 mg/mL (5, 10 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -29945,7 +29963,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (20 mL), 50 mg/mL (10 mL), 100 mg/mL (5, 10 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 200 mg",
@@ -30013,7 +30031,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (20 mL), 50 mg/mL (10 mL), 100 mg/mL (5, 10 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 200 mg",
@@ -30141,7 +30159,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 15 mg/mL (1 mL), 30 mg/mL (1, 2 mL)",
         "mg": 15.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 10 mg",
@@ -30245,7 +30263,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 15 mg/mL (1 mL), 30 mg/mL (1, 2 mL)",
         "mg": 15.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 10 mg",
@@ -30263,13 +30281,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (4, 20, 40 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, prefilled syringe: 5 mg/mL (2 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension: 10 mg/mL",
@@ -30373,7 +30391,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 15 mg/mL (1 mL), 30 mg/mL (1, 2 mL)",
         "mg": 15.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 10 mg",
@@ -30391,13 +30409,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (4, 20, 40 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, prefilled syringe: 5 mg/mL (2 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension: 10 mg/mL",
@@ -30471,13 +30489,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (4, 20, 40 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, prefilled syringe: 5 mg/mL (2 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension: 10 mg/mL",
@@ -30629,7 +30647,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (20 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -30775,7 +30793,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (20 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -30921,7 +30939,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (20 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -31461,7 +31479,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 20 mg/mL (12, 24 mL)",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 240, 480 mg",
@@ -31511,7 +31529,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 20 mg/mL (12, 24 mL)",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 240, 480 mg",
@@ -31731,13 +31749,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (5 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Premixed injection: 500 mg/100 mL in 0.82% sodium chloride, 1000 mg/100 mL in 0.75%",
         "mg": 500.0,
         "ml": 100.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Alternative dosing with oral tablets or oral disintegrating tabs:",
@@ -31901,7 +31919,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 25 mg/mL (20 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Inhalational anthrax (postexposure) and plague:",
@@ -32077,7 +32095,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 25 mg/mL (20 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Inhalational anthrax (postexposure) and plague:",
@@ -32363,7 +32381,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.5%, 1%, 1.5%, 2%, 4% (1% sol = 10 mg/mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection with 1:100,000 epinephrine: 1%, 2% lidocaine",
@@ -32557,7 +32575,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection, premixed: 200 mg in 100 mL, 600 mg in 300 mL",
         "mg": 200.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -32703,7 +32721,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection, premixed: 200 mg in 100 mL, 600 mg in 300 mL",
         "mg": 200.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -33485,7 +33503,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 2, 4 mg/mL (1, 10 mL)",
         "mg": 4.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral solution: 2 mg/mL (30 mL)",
@@ -33649,7 +33667,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 2, 4 mg/mL (1, 10 mL)",
         "mg": 4.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral solution: 2 mg/mL (30 mL)",
@@ -34243,7 +34261,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 500 mg/mL (4 mEq/mL) (2, 10, 20, 50 mL)",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, prediluted in sterile water for injection",
@@ -34419,7 +34437,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 500 mg/mL (4 mEq/mL) (2, 10, 20, 50 mL)",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, prediluted in sterile water for injection",
@@ -34541,7 +34559,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (10%) (500 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Inhalation powder in capsules:",
@@ -34832,12 +34850,14 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 500 mg powder",
         "mg": 500.0,
-        "ml": 10.0
+        "ml": 10.0,
+        "is_solid": true
       },
       {
         "label": "Vial for Injection: 1 g powder",
         "mg": 1000.0,
-        "ml": 20.0
+        "ml": 20.0,
+        "is_solid": true
       },
       {
         "label": "Reconstituted IV Solution: 50 mg/mL",
@@ -35064,7 +35084,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (20 mL), contains 0.5% chlorobutanol",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -35126,7 +35146,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (20 mL), contains 0.5% chlorobutanol",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -35272,7 +35292,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Vials: 10 mg/mL (10 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection 0.5% (ProvayBlue and generics",
@@ -35284,7 +35304,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Vials: 5 mg/mL (2, 10 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (Ritalin and generics): 5, 10, 20 mg",
@@ -35448,7 +35468,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Vials: 10 mg/mL (10 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection 0.5% (ProvayBlue and generics",
@@ -35460,7 +35480,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Vials: 5 mg/mL (2, 10 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (Ritalin and generics): 5, 10, 20 mg",
@@ -36046,7 +36066,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection, Na succinate (Solu-Medrol and generics): 40, 125, 500, 1000, 2000 mg (IV or IM",
         "mg": 2000.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -36192,7 +36212,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection, Na succinate (Solu-Medrol and generics): 40, 125, 500, 1000, 2000 mg (IV or IM",
         "mg": 2000.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 5, 10 mg",
@@ -36210,7 +36230,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (2 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral solution: 5 mg/5 mL (473 mL)",
@@ -36368,7 +36388,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (2 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral solution: 5 mg/5 mL (473 mL)",
@@ -36544,7 +36564,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (2 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral solution: 5 mg/5 mL (473 mL)",
@@ -36726,7 +36746,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Ready-to-use injection: 5 mg/mL (100 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Gel, topical:",
@@ -36884,7 +36904,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50, 100 mg",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Cream (OTC): 2% (15, 28, 30, 42.5, 113 g)",
@@ -37054,7 +37074,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1 mg/mL (2, 5, 10 mL), 5 mg/mL (1, 2, 5, 10 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral syrup: 2 mg/mL (118 mL)",
@@ -37121,12 +37141,14 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 5 mg/mL (1 mL, 2 mL, 10 mL) [Ideal for Intranasal]",
         "mg": 5.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Vial for Injection: 1 mg/mL (2 mL, 5 mL)",
         "mg": 1.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Oral Syrup: 2 mg/mL (118 mL)",
@@ -37175,7 +37197,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1 mg/mL (10, 20, 50 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -37243,7 +37265,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Minocin): 100 mg",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Extended-release tabs:",
@@ -37329,7 +37351,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Minocin): 100 mg",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Extended-release tabs:",
@@ -38129,7 +38151,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs or caps:",
@@ -38215,7 +38237,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 500 mg",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs or caps:",
@@ -38373,7 +38395,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.4 mg/mL (1, 10 mL)",
         "mg": 0.4,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, in prefilled syringe",
@@ -38385,7 +38407,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection in single-dose Carpuject: 0.4 mg/mL (1 mL)",
         "mg": 0.4,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -38531,7 +38553,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.4 mg/mL (1, 10 mL)",
         "mg": 0.4,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, in prefilled syringe",
@@ -38543,7 +38565,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection in single-dose Carpuject: 0.4 mg/mL (1 mL)",
         "mg": 0.4,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -39057,13 +39079,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Bloxiverz and generics): 0.5, 1 mg/mL (10 mL) (as methylsulfate)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Prefilled syringe injection: 1 mg/mL (3, 5 mL) (as methylsulfate)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -39209,13 +39231,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Bloxiverz and generics): 0.5, 1 mg/mL (10 mL) (as methylsulfate)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Prefilled syringe injection: 1 mg/mL (3, 5 mL) (as methylsulfate)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 200 mg",
@@ -39379,13 +39401,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Bloxiverz and generics): 0.5, 1 mg/mL (10 mL) (as methylsulfate)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Prefilled syringe injection: 1 mg/mL (3, 5 mL) (as methylsulfate)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 200 mg",
@@ -39861,7 +39883,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (prefilled single-use syringes): 50 mg/0.5 mL, 100 mg/1 mL",
         "mg": 50.0,
         "ml": 0.5,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -39905,7 +39927,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (prefilled single-use syringes): 50 mg/0.5 mL, 100 mg/1 mL",
         "mg": 50.0,
         "ml": 0.5,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -39991,7 +40013,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (10 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Ointment, topical (Nitro-Bid): 2% (1, 30, 60 g)",
@@ -40095,7 +40117,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 5 mg/mL (10 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Ointment, topical (Nitro-Bid): 2% (1, 30, 60 g)",
@@ -40163,13 +40185,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 25 mg/mL (2 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 1 mg/mL as norepinephrine base (4 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -40219,13 +40241,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 25 mg/mL (2 mL)",
         "mg": 25.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 1 mg/mL as norepinephrine base (4 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -40299,13 +40321,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (amps and single-dose vials): 0.05, 0.1, 0.5 mg/mL (1 mL)",
         "mg": 0.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection (multidose vials): 0.2, 1 mg/mL (5 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -40379,13 +40401,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (amps and single-dose vials): 0.05, 0.1, 0.5 mg/mL (1 mL)",
         "mg": 0.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection (multidose vials): 0.2, 1 mg/mL (5 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -40435,13 +40457,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (amps and single-dose vials): 0.05, 0.1, 0.5 mg/mL (1 mL)",
         "mg": 0.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection (multidose vials): 0.2, 1 mg/mL (5 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Otic solution: 0.3% (5, 10 mL)",
@@ -40865,7 +40887,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 2 mg/mL (2, 20 mL)",
         "mg": 2.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 4, 8, 24 mg",
@@ -40973,7 +40995,8 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 2 mg/mL (2 mL, 20 mL)",
         "mg": 2.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Tablets: 4 mg, 8 mg",
@@ -41949,7 +41972,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection, solution: 100 mg/mL (0.5, 1 mL",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -42011,7 +42034,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection, solution: 100 mg/mL (0.5, 1 mL",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -42055,7 +42078,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection, solution: 100 mg/mL (0.5, 1 mL",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -42099,7 +42122,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection, solution: 100 mg/mL (0.5, 1 mL",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -42215,13 +42238,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 40 mg",
         "mg": 40.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection, pre-mixed in normal saline: 40 mg/100 mL, 80 mg/100 mL",
         "mg": 40.0,
         "ml": 100.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension: 2 mg/mL",
@@ -42939,7 +42962,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Pentam 300 and generics): 300 mg",
         "mg": 300.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Inhalation (NebuPent and generics): 300 mg",
@@ -42957,7 +42980,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50 mg/mL (20, 50 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Cream (Elimite and generics): 5% (60 g)",
@@ -43097,7 +43120,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Pentam 300 and generics): 300 mg",
         "mg": 300.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Inhalation (NebuPent and generics): 300 mg",
@@ -43115,7 +43138,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50 mg/mL (20, 50 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Cream (Elimite and generics): 5% (60 g)",
@@ -43323,7 +43346,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 65, 130 mg/mL (1 mL)",
         "mg": 130.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection: 5-mg vial",
@@ -43418,12 +43441,14 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 65 mg/mL (1 mL)",
         "mg": 65.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Vial for Injection: 130 mg/mL (1 mL)",
         "mg": 130.0,
-        "ml": 1.0
+        "ml": 1.0,
+        "is_solid": true
       },
       {
         "label": "Oral Elixir: 20 mg / 5 mL (473 mL)",
@@ -43720,7 +43745,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50 mg/mL (2, 5 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -43872,7 +43897,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 50 mg/mL (2, 5 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -44032,7 +44057,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.4 mg/mL (5 mL)",
         "mg": 0.4,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (Mephyton and generics): 5 mg",
@@ -44118,7 +44143,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 0.4 mg/mL (5 mL)",
         "mg": 0.4,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (Mephyton and generics): 5 mg",
@@ -44770,7 +44795,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 300 mg/16.7 mL (16.7 mL)",
         "mg": 300.0,
         "ml": 16.7,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension (immediate release): 40 mg/mL (105 mL)",
@@ -44868,7 +44893,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 300 mg/16.7 mL (16.7 mL)",
         "mg": 300.0,
         "ml": 16.7,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension (immediate release): 40 mg/mL (105 mL)",
@@ -44966,7 +44991,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 300 mg/16.7 mL (16.7 mL)",
         "mg": 300.0,
         "ml": 16.7,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension (immediate release): 40 mg/mL (105 mL)",
@@ -45064,7 +45089,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 300 mg/16.7 mL (16.7 mL)",
         "mg": 300.0,
         "ml": 16.7,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension (immediate release): 40 mg/mL (105 mL)",
@@ -45162,7 +45187,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 300 mg/16.7 mL (16.7 mL)",
         "mg": 300.0,
         "ml": 16.7,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Oral suspension (immediate release): 40 mg/mL (105 mL)",
@@ -45480,13 +45505,13 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Protopam): 1000 mg",
         "mg": 1000.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection for intramuscular injection in autoinjector device: 600 mg/2 mL of pralidoxime",
         "mg": 600.0,
         "ml": 2.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 5 mg",
@@ -46245,7 +46270,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (as edisylate): 5 mg/mL (2 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 12.5, 25, 50 mg",
@@ -46263,7 +46288,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 25, 50 mg/mL (1 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -46409,7 +46434,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (as edisylate): 5 mg/mL (2 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 12.5, 25, 50 mg",
@@ -46427,7 +46452,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 25, 50 mg/mL (1 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -46573,7 +46598,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 25, 50 mg/mL (1 mL)",
         "mg": 50.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 10, 20, 40, 60, 80 mg",
@@ -46591,7 +46616,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1 mg/mL (1 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -46737,7 +46762,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1 mg/mL (1 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 50 mg",
@@ -46895,7 +46920,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (5, 25 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -46975,7 +47000,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (5, 25 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (OTC): 30, 60 mg",
@@ -47067,7 +47092,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (5, 25 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (OTC): 30, 60 mg",
@@ -47537,7 +47562,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Regonol): 5 mg/mL (2 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (HCl) [OTC]: 10, 25, 50, 100, 250, 500 mg",
@@ -47713,7 +47738,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Regonol): 5 mg/mL (2 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (HCl) [OTC]: 10, 25, 50, 100, 250, 500 mg",
@@ -47871,7 +47896,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Regonol): 5 mg/mL (2 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (HCl) [OTC]: 10, 25, 50, 100, 250, 500 mg",
@@ -47895,7 +47920,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (HCl): 100 mg/mL (1 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 25 mg",
@@ -48047,7 +48072,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Regonol): 5 mg/mL (2 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (HCl) [OTC]: 10, 25, 50, 100, 250, 500 mg",
@@ -48071,7 +48096,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (HCl): 100 mg/mL (1 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 25 mg",
@@ -48463,7 +48488,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1.5, 7.5 mg",
         "mg": 7.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -48561,7 +48586,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1.5, 7.5 mg",
         "mg": 7.5,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection (WinRho-SDF): 1500 IU (1.3 mL), 2500 IU (2.2 mL), 5000 IU (4.4 mL), 15,000 IU",
@@ -49049,7 +49074,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Rifadin and generics): 600 mg",
         "mg": 600.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -49195,7 +49220,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Rifadin and generics): 600 mg",
         "mg": 600.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 200, 550 mg",
@@ -49673,7 +49698,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (5, 10 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 200, 400 mg",
@@ -49825,7 +49850,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (5, 10 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 200, 400 mg",
@@ -50761,7 +50786,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg sodium phenylacetate and 100 mg sodium benzoate per 1 mL (50 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -50811,7 +50836,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg sodium phenylacetate and 100 mg sodium benzoate per 1 mL (50 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -51761,7 +51786,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/1 mL (2, 5 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Ophthalmic solution: 10% (15 mL)",
@@ -51907,7 +51932,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/1 mL (2, 5 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Ophthalmic solution: 10% (15 mL)",
@@ -52175,7 +52200,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 16 mg TMP/mL and 80 mg SMX/mL (5, 10, 30 mL)",
         "mg": 16.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -52333,7 +52358,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 16 mg TMP/mL and 80 mg SMX/mL (5, 10, 30 mL)",
         "mg": 16.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -52743,7 +52768,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Prograf): 5 mg/mL (1 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -52889,7 +52914,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Prograf): 5 mg/mL (1 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -53035,7 +53060,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Prograf): 5 mg/mL (1 mL)",
         "mg": 5.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -53233,7 +53258,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1 mg/mL (1 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "SC injection:",
@@ -53319,7 +53344,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1 mg/mL (1 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "SC injection:",
@@ -53405,7 +53430,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 1 mg/mL (1 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "SC injection:",
@@ -53693,7 +53718,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (2 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -53767,7 +53792,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (2 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -54175,7 +54200,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (2 mL), 40 mg/mL (2, 30, 50 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Powder for injection: 1.2 g",
@@ -54309,7 +54334,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (2 mL), 40 mg/mL (2, 30, 50 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Powder for injection: 1.2 g",
@@ -54915,7 +54940,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Tigan): 100 mg/mL (2 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection preparations: Kenalog-10, Kenalog-40,",
@@ -54939,7 +54964,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection as acetonide: 10 mg/mL (Kenalog-10) (5 mL), 40 mg/mL (Kenalog-40 and generics)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Topical cream or ointment:",
@@ -54995,7 +55020,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection (Tigan): 100 mg/mL (2 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Injection preparations: Kenalog-10, Kenalog-40,",
@@ -55019,7 +55044,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection as acetonide: 10 mg/mL (Kenalog-10) (5 mL), 40 mg/mL (Kenalog-40 and generics)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Topical cream or ointment:",
@@ -56211,7 +56236,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 100 mg/mL (5 mL)",
         "mg": 100.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 40, 80, 160, 320 mg",
@@ -56498,12 +56523,14 @@ window.CALCULATOR_DRUGS = [
       {
         "label": "Vial for Injection: 500 mg powder",
         "mg": 500.0,
-        "ml": 10.0
+        "ml": 10.0,
+        "is_solid": true
       },
       {
         "label": "Vial for Injection: 1 g powder",
         "mg": 1000.0,
-        "ml": 20.0
+        "ml": 20.0,
+        "is_solid": true
       },
       {
         "label": "Diluted IV Infusion: 5 mg/mL (in D5W / NS)",
@@ -56747,7 +56774,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10, 20 mg",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (Sabril, Vigadrone, and generics): 500 mg",
@@ -56765,7 +56792,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Powder for oral solution (Sabril, Vigadrone, Vigpoder, and generics): 500 mg per packet to",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -56899,7 +56926,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10, 20 mg",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (Sabril, Vigadrone, and generics): 500 mg",
@@ -56917,7 +56944,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Powder for oral solution (Sabril, Vigadrone, Vigpoder, and generics): 500 mg per packet to",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -57051,7 +57078,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10, 20 mg",
         "mg": 20.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs (Sabril, Vigadrone, and generics): 500 mg",
@@ -57069,7 +57096,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Powder for oral solution (Sabril, Vigadrone, Vigpoder, and generics): 500 mg per packet to",
         "mg": 500.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -57277,7 +57304,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 200 mg",
         "mg": 200.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",
@@ -57551,7 +57578,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection: 10 mg/mL (20 mL)",
         "mg": 10.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "Tabs: 300 mg zidovudine + 150 mg lamivudine",
@@ -57625,7 +57652,7 @@ window.CALCULATOR_DRUGS = [
         "label": "Injection as chloride: 1 mg elemental Zn/mL (10 mL)",
         "mg": 1.0,
         "ml": 1.0,
-        "is_solid": false
+        "is_solid": true
       },
       {
         "label": "⚙️ Custom Concentration (Enter mg/mL)...",

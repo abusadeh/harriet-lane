@@ -1,10 +1,10 @@
-const CACHE_NAME = 'harriet-lane-v2.5.0';
+const CACHE_NAME = 'harriet-lane-v2.5.1';
 const CORE_ASSETS = [
   './',
   './index.html',
-  './style.css?v=2.5.0',
-  './app.js?v=2.5.0',
-  './calculator_drugs.js?v=2.5.0',
+  './style.css?v=2.5.1',
+  './app.js?v=2.5.1',
+  './calculator_drugs.js?v=2.5.1',
   './manifest.json',
   './drugs_index.json',
   './pages_text.json',
@@ -16,7 +16,7 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[SW] Pre-caching core assets v2.5.0...');
+      console.log('[SW] Pre-caching core assets v2.5.1...');
       return cache.addAll(CORE_ASSETS).catch((err) => {
         console.warn('[SW] Core asset pre-caching partial failure:', err);
       });

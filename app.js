@@ -203,16 +203,10 @@ function renderDrugList(drugs, query = '') {
     const item = document.createElement('div');
     item.className = 'drug-item';
 
-    const brandPart = drug.brand_names ? `<span class="drug-brand">${drug.brand_names}</span>` : '';
-    const seePart = drug.see ? `<span class="drug-see">See: ${drug.see}</span>` : '';
-
     item.innerHTML = `
       <div class="drug-info">
         <div class="drug-name">${highlightMatch(drug.name, query)}</div>
-        ${brandPart}
-        ${seePart}
       </div>
-      <div class="page-badge">P. ${drug.book_page || (840 + drug.page_index)}</div>
     `;
 
     item.addEventListener('click', () => {
@@ -558,8 +552,7 @@ function populateDrugDropdown(query = '') {
   filtered.forEach(drug => {
     const opt = document.createElement('option');
     opt.value = drug.id;
-    const sub = drug.brand_names ? ` (${drug.brand_names.split(';')[0].split(',')[0].trim()})` : '';
-    opt.textContent = `${drug.name}${sub} - P. ${drug.book_page}`;
+    opt.textContent = drug.name;
     drugSelect.appendChild(opt);
   });
 
@@ -787,8 +780,33 @@ function calculateDose() {
     ceilingText = indication.max_daily_dose ? `${indication.max_daily_dose} mg/day` : 'Within safe limits';
 
     // Volume Calculation
-    if (conc) {
-      if (conc.is_custom) {
+    const isOralRoute = indication.route && (
+      indication.route.toLowerCase().includes('po') ||
+      indication.route.toLowerCase().includes('oral') ||
+      indication.route.toLowerCase().includes('enteral')
+    );
+
+    const isParenteralOnly = !isOralRoute && indication.route && (
+      indication.route.toLowerCase().includes('iv') ||
+      indication.route.toLowerCase().includes('im') ||
+      indication.route.toLowerCase().includes('infusion') ||
+      indication.route.toLowerCase().includes('io') ||
+      indication.route.toLowerCase().includes('sc')
+    );
+
+    if (isParenteralOnly) {
+      volumeMl = null;
+    } else if (conc) {
+      const isParenteralForm = conc.is_solid ||
+        (conc.label && (
+          conc.label.toLowerCase().includes('powder') ||
+          conc.label.toLowerCase().includes('vial') ||
+          conc.label.toLowerCase().includes('injection')
+        ));
+
+      if (isParenteralForm) {
+        volumeMl = null;
+      } else if (conc.is_custom) {
         const mMg = parseFloat(manualConcMg.value) || 250;
         const mMl = parseFloat(manualConcMl.value) || 5;
         if (mMg > 0) {
