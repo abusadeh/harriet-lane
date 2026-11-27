@@ -1,0 +1,1090 @@
+[
+  {
+    "id": "section_a__labor_ward___resuscitation",
+    "code": "SECTION A",
+    "title": "SECTION A: Labor Ward & Resuscitation",
+    "category": "SECTION A: Labor Ward & Resuscitation",
+    "icon": "local_hospital",
+    "pageStart": 16,
+    "pageEnd": 34,
+    "topics": [
+      {
+        "id": "labor_ward_calls",
+        "title": "Labor Ward Calls",
+        "page": 17,
+        "keywords": [
+          "Labor Ward Calls",
+          "Labor Ward Call"
+        ]
+      },
+      {
+        "id": "antenatal_neonatal_counselling",
+        "title": "Antenatal Neonatal Counselling",
+        "page": 18,
+        "keywords": [
+          "Antenatal Neonatal Counselling",
+          "Antenatal Counselling"
+        ]
+      },
+      {
+        "id": "neonatal_resuscitation_program_nrp",
+        "title": "Neonatal Resuscitation Program (NRP)",
+        "page": 19,
+        "keywords": [
+          "Neonatal Resuscitation",
+          "Algorithm of NRP"
+        ]
+      },
+      {
+        "id": "early_essential_newborn_care_eenc",
+        "title": "Early Essential Newborn Care (EENC)",
+        "page": 16,
+        "keywords": [
+          "Early Essential Newborn Care",
+          "EENC"
+        ]
+      },
+      {
+        "id": "kangaroo_mother_care_kmc",
+        "title": "Kangaroo Mother Care (KMC)",
+        "page": 34,
+        "keywords": [
+          "Kangaroo Mother Care",
+          "KMC"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_b__normal_nursery___well_newborn",
+    "code": "SECTION B",
+    "title": "SECTION B: Normal Nursery & Well Newborn",
+    "category": "SECTION B: Normal Nursery & Well Newborn",
+    "icon": "local_hospital",
+    "pageStart": 1,
+    "pageEnd": 105,
+    "topics": [
+      {
+        "id": "physical_examination_of_the_newborn",
+        "title": "Physical Examination of the Newborn",
+        "page": 36,
+        "keywords": [
+          "Physical Examination of the Newborn",
+          "Routine Examination"
+        ]
+      },
+      {
+        "id": "identifying_newborn_with_danger_signs",
+        "title": "Identifying Newborn with Danger Signs",
+        "page": 31,
+        "keywords": [
+          "Identifying Newborn with Danger Signs",
+          "Danger Signs"
+        ]
+      },
+      {
+        "id": "well_baby_nursery_comprehensive_care",
+        "title": "Well Baby Nursery Comprehensive Care",
+        "page": 42,
+        "keywords": [
+          "Well Baby Nursery Comprehensive Care",
+          "Well Baby Nursery"
+        ]
+      },
+      {
+        "id": "breastfeeding_procedure_and_maternal_support",
+        "title": "Breastfeeding Procedure and Maternal Support",
+        "page": 26,
+        "keywords": [
+          "Breastfeeding Procedure",
+          "Breastfeeding"
+        ]
+      },
+      {
+        "id": "infection_control_and_prevention",
+        "title": "Infection Control and Prevention",
+        "page": 49,
+        "keywords": [
+          "Infection Control and Prevention",
+          "Infection Control"
+        ]
+      },
+      {
+        "id": "no_urine_output_in_2448_hours",
+        "title": "No Urine Output in 24-48 Hours",
+        "page": 52,
+        "keywords": [
+          "No Urine Output in 24",
+          "No Urine Output"
+        ]
+      },
+      {
+        "id": "no_stool_in_48_hours",
+        "title": "No Stool in 48 Hours",
+        "page": 53,
+        "keywords": [
+          "No Stool in 48 Hours",
+          "No Stool"
+        ]
+      },
+      {
+        "id": "newborn_blood_spot_testing_screening",
+        "title": "Newborn Blood Spot Testing (Screening)",
+        "page": 54,
+        "keywords": [
+          "Newborn Blood Spot Testing",
+          "Blood Spot Testing"
+        ]
+      },
+      {
+        "id": "newborn_hearing_screening",
+        "title": "Newborn Hearing Screening",
+        "page": 55,
+        "keywords": [
+          "Newborn Hearing Screening",
+          "Hearing Screening"
+        ]
+      },
+      {
+        "id": "sacral_dimples_evaluation",
+        "title": "Sacral Dimples Evaluation",
+        "page": 57,
+        "keywords": [
+          "Sacral Dimples"
+        ]
+      },
+      {
+        "id": "developmental_dysplasia_of_the_hip_ddh",
+        "title": "Developmental Dysplasia of the Hip (DDH)",
+        "page": 58,
+        "keywords": [
+          "Developmental Dysplasia of the Hip",
+          "DDH"
+        ]
+      },
+      {
+        "id": "early_onset_sepsis_eos",
+        "title": "Early Onset Sepsis (EOS)",
+        "page": 60,
+        "keywords": [
+          "Early Onset Sepsis",
+          "EOS"
+        ]
+      },
+      {
+        "id": "umbilical_cord_care_and_delayed_clamping",
+        "title": "Umbilical Cord Care and Delayed Clamping",
+        "page": 67,
+        "keywords": [
+          "Umbilical Cord Care",
+          "delayed clamping"
+        ]
+      },
+      {
+        "id": "neonatal_jaundice__phototherapy_guidelines",
+        "title": "Neonatal Jaundice & Phototherapy Guidelines",
+        "page": 43,
+        "keywords": [
+          "Neonatal Jaundice",
+          "Hyperbilirubinemia"
+        ]
+      },
+      {
+        "id": "neonatal_cholestasis_and_liver_disease",
+        "title": "Neonatal Cholestasis and Liver Disease",
+        "page": 80,
+        "keywords": [
+          "Neonatal Cholestasis",
+          "Cholestasis"
+        ]
+      },
+      {
+        "id": "antenatal_diagnosis_of_hydronephrosis",
+        "title": "Antenatal Diagnosis of Hydronephrosis",
+        "page": 82,
+        "keywords": [
+          "Antenatal Diagnosis of Hydronephrosis",
+          "Hydronephrosis"
+        ]
+      },
+      {
+        "id": "hypoglycemia_protocol",
+        "title": "Hypoglycemia Protocol",
+        "page": 34,
+        "keywords": [
+          "Hypoglycemia",
+          "Neonatal Hypoglycemia"
+        ]
+      },
+      {
+        "id": "newborn_falls_management",
+        "title": "Newborn Falls Management",
+        "page": 95,
+        "keywords": [
+          "Newborn Falls",
+          "Dropped Babies"
+        ]
+      },
+      {
+        "id": "developmental_care_in_normal_nursery",
+        "title": "Developmental Care in Normal Nursery",
+        "page": 1,
+        "keywords": [
+          "Developmental Care in Normal Nursery"
+        ]
+      },
+      {
+        "id": "critical_congenital_heart_disease_cchd_screening",
+        "title": "Critical Congenital Heart Disease (CCHD) Screening",
+        "page": 100,
+        "keywords": [
+          "Critical Congenital Heart Disease",
+          "CCHD"
+        ]
+      },
+      {
+        "id": "neonatal_conjunctivitis",
+        "title": "Neonatal Conjunctivitis",
+        "page": 105,
+        "keywords": [
+          "Neonatal Conjunctivitis",
+          "Ophthalmia Neonatorum"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_c__nicu___admission___referral",
+    "code": "SECTION C",
+    "title": "SECTION C: NICU - Admission & Referral",
+    "category": "SECTION C: NICU - Admission & Referral",
+    "icon": "local_hospital",
+    "pageStart": 111,
+    "pageEnd": 119,
+    "topics": [
+      {
+        "id": "referral_protocol_among_palestinian_hospitals",
+        "title": "Referral Protocol among Palestinian Hospitals",
+        "page": 111,
+        "keywords": [
+          "Referral Protocol among Palestinian Hospitals",
+          "Referral Protocol"
+        ]
+      },
+      {
+        "id": "neonatal_transport_protocol",
+        "title": "Neonatal Transport Protocol",
+        "page": 114,
+        "keywords": [
+          "Transport Protocol",
+          "Neonatal Transport"
+        ]
+      },
+      {
+        "id": "admission_criteria_to_nicu",
+        "title": "Admission Criteria to NICU",
+        "page": 118,
+        "keywords": [
+          "Admission Criteria to NICU"
+        ]
+      },
+      {
+        "id": "discharge_criteria_from_nicu",
+        "title": "Discharge Criteria from NICU",
+        "page": 119,
+        "keywords": [
+          "Discharge Criteria from NICU"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_c__nicu___prematurity_care",
+    "code": "SECTION C",
+    "title": "SECTION C: NICU - Prematurity Care",
+    "category": "SECTION C: NICU - Prematurity Care",
+    "icon": "local_hospital",
+    "pageStart": 121,
+    "pageEnd": 138,
+    "topics": [
+      {
+        "id": "babies_born_at_margins_of_viability",
+        "title": "Babies Born at Margins of Viability",
+        "page": 121,
+        "keywords": [
+          "Margins of Viability",
+          "Periviable"
+        ]
+      },
+      {
+        "id": "bundle_of_care__golden_hour_32_weeks",
+        "title": "Bundle of Care & Golden Hour (<32 Weeks)",
+        "page": 124,
+        "keywords": [
+          "Bundle of care",
+          "golden hour"
+        ]
+      },
+      {
+        "id": "pain_management_in_nicu",
+        "title": "Pain Management in NICU",
+        "page": 134,
+        "keywords": [
+          "Pain Management in NICU"
+        ]
+      },
+      {
+        "id": "developmental_care_for_premature_babies",
+        "title": "Developmental Care for Premature Babies",
+        "page": 138,
+        "keywords": [
+          "Developmental Care for Premature Babies"
+        ]
+      },
+      {
+        "id": "retinopathy_of_prematurity_rop",
+        "title": "Retinopathy of Prematurity (ROP)",
+        "page": 124,
+        "keywords": [
+          "Retinopathy of Prematurity",
+          "ROP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_c__nicu___respiratory___ventilation",
+    "code": "SECTION C",
+    "title": "SECTION C: NICU - Respiratory & Ventilation",
+    "category": "SECTION C: NICU - Respiratory & Ventilation",
+    "icon": "local_hospital",
+    "pageStart": 19,
+    "pageEnd": 199,
+    "topics": [
+      {
+        "id": "neonatal_respiratory_distress_syndrome_rds",
+        "title": "Neonatal Respiratory Distress Syndrome (RDS)",
+        "page": 114,
+        "keywords": [
+          "Respiratory Distress syndrome",
+          "RDS"
+        ]
+      },
+      {
+        "id": "meconium_aspiration_syndrome_mas",
+        "title": "Meconium Aspiration Syndrome (MAS)",
+        "page": 148,
+        "keywords": [
+          "Meconium Aspiration syndrome",
+          "MAS"
+        ]
+      },
+      {
+        "id": "mechanical_ventilation_and_oxygen_therapy",
+        "title": "Mechanical Ventilation and Oxygen Therapy",
+        "page": 156,
+        "keywords": [
+          "Mechanical Ventilation and Oxygen Therapy"
+        ]
+      },
+      {
+        "id": "continuous_positive_airway_pressure_cpap",
+        "title": "Continuous Positive Airway Pressure (CPAP)",
+        "page": 114,
+        "keywords": [
+          "Continuous Positive Airway Pressure",
+          "CPAP"
+        ]
+      },
+      {
+        "id": "high_frequency_oscillatory_ventilation_hfov",
+        "title": "High Frequency Oscillatory Ventilation (HFOV)",
+        "page": 127,
+        "keywords": [
+          "High Frequency Oscillatory Ventilation",
+          "HFOV"
+        ]
+      },
+      {
+        "id": "surfactant_replacement_therapy",
+        "title": "Surfactant Replacement Therapy",
+        "page": 125,
+        "keywords": [
+          "Surfactant Replacement Therapy",
+          "Surfactant"
+        ]
+      },
+      {
+        "id": "apnea_of_prematurity",
+        "title": "Apnea of Prematurity",
+        "page": 170,
+        "keywords": [
+          "Apnea of Prematurity"
+        ]
+      },
+      {
+        "id": "bronchopulmonary_dysplasia__chronic_lung_disease",
+        "title": "Bronchopulmonary Dysplasia / Chronic Lung Disease",
+        "page": 124,
+        "keywords": [
+          "Chronic Lung Disease",
+          "Bronchopulmonary Dysplasia"
+        ]
+      },
+      {
+        "id": "air_leak_syndromes_pneumothorax_pie",
+        "title": "Air Leak Syndromes (Pneumothorax, PIE)",
+        "page": 148,
+        "keywords": [
+          "Air Leak Syndromes",
+          "Pneumothorax"
+        ]
+      },
+      {
+        "id": "persistent_pulmonary_hypertension_pphn",
+        "title": "Persistent Pulmonary Hypertension (PPHN)",
+        "page": 148,
+        "keywords": [
+          "Persistent Pulmonary Hypertension",
+          "PPHN"
+        ]
+      },
+      {
+        "id": "congenital_diaphragmatic_hernia_cdh",
+        "title": "Congenital Diaphragmatic Hernia (CDH)",
+        "page": 148,
+        "keywords": [
+          "Congenital Diaphragmatic Hernia",
+          "CDH"
+        ]
+      },
+      {
+        "id": "congenital_chylothorax",
+        "title": "Congenital Chylothorax",
+        "page": 192,
+        "keywords": [
+          "Congenital Chylothorax",
+          "Chylothorax"
+        ]
+      },
+      {
+        "id": "hydrops_fetalis",
+        "title": "Hydrops Fetalis",
+        "page": 194,
+        "keywords": [
+          "Hydrops Fetalis"
+        ]
+      },
+      {
+        "id": "pulmonary_hemorrhage_in_premature_infants",
+        "title": "Pulmonary Hemorrhage in Premature Infants",
+        "page": 148,
+        "keywords": [
+          "Pulmonary Hemorrhage"
+        ]
+      },
+      {
+        "id": "intrauterine_growth_restriction_iugr",
+        "title": "Intrauterine Growth Restriction (IUGR)",
+        "page": 19,
+        "keywords": [
+          "Intrauterine Growth Restriction",
+          "IUGR"
+        ]
+      },
+      {
+        "id": "late_preterm_infant__care_and_management",
+        "title": "Late Preterm Infant – Care and Management",
+        "page": 199,
+        "keywords": [
+          "Late Preterm Infant"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_c__nicu___cardiovascular",
+    "code": "SECTION C",
+    "title": "SECTION C: NICU - Cardiovascular",
+    "category": "SECTION C: NICU - Cardiovascular",
+    "icon": "local_hospital",
+    "pageStart": 1,
+    "pageEnd": 218,
+    "topics": [
+      {
+        "id": "hypotension_in_neonatal_population",
+        "title": "Hypotension in Neonatal Population",
+        "page": 203,
+        "keywords": [
+          "Hypotension in Neonatal Population"
+        ]
+      },
+      {
+        "id": "ductdependent_congenital_heart_disease",
+        "title": "Duct-Dependent Congenital Heart Disease",
+        "page": 207,
+        "keywords": [
+          "Duct-Dependent Congenital Heart Disease"
+        ]
+      },
+      {
+        "id": "patent_ductus_arteriosus_pda",
+        "title": "Patent Ductus Arteriosus (PDA)",
+        "page": 130,
+        "keywords": [
+          "Patent Ductus Arteriosus",
+          "PDA"
+        ]
+      },
+      {
+        "id": "supraventricular_tachycardia_svt",
+        "title": "Supraventricular Tachycardia (SVT)",
+        "page": 218,
+        "keywords": [
+          "Supraventricular Tachycardia",
+          "SVT"
+        ]
+      },
+      {
+        "id": "shock_in_neonatal_population",
+        "title": "Shock in Neonatal Population",
+        "page": 41,
+        "keywords": [
+          "Shock",
+          "Neonatal Shock"
+        ]
+      },
+      {
+        "id": "hypertension_in_neonatal_population",
+        "title": "Hypertension in Neonatal Population",
+        "page": 1,
+        "keywords": [
+          "Hypertension in Neonatal Population"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_c__nicu___gi___nutrition",
+    "code": "SECTION C",
+    "title": "SECTION C: NICU - GI & Nutrition",
+    "category": "SECTION C: NICU - GI & Nutrition",
+    "icon": "local_hospital",
+    "pageStart": 80,
+    "pageEnd": 250,
+    "topics": [
+      {
+        "id": "total_parenteral_nutrition_tpn",
+        "title": "Total Parenteral Nutrition (TPN)",
+        "page": 80,
+        "keywords": [
+          "Total Parenteral Nutrition",
+          "TPN"
+        ]
+      },
+      {
+        "id": "feeding_protocol",
+        "title": "Feeding Protocol",
+        "page": 88,
+        "keywords": [
+          "Feeding Protocol",
+          "Enteral Feeding"
+        ]
+      },
+      {
+        "id": "breast_milk_fortification",
+        "title": "Breast Milk Fortification",
+        "page": 240,
+        "keywords": [
+          "Breast Milk Fortification",
+          "Fortifier"
+        ]
+      },
+      {
+        "id": "necrotizing_enterocolitis_nec",
+        "title": "Necrotizing Enterocolitis (NEC)",
+        "page": 135,
+        "keywords": [
+          "Necrotizing Enterocolitis",
+          "NEC"
+        ]
+      },
+      {
+        "id": "liver_dysfunction_in_neonates",
+        "title": "Liver Dysfunction in Neonates",
+        "page": 250,
+        "keywords": [
+          "Liver Dysfunction in Neonates"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_c__nicu___hematology",
+    "code": "SECTION C",
+    "title": "SECTION C: NICU - Hematology",
+    "category": "SECTION C: NICU - Hematology",
+    "icon": "local_hospital",
+    "pageStart": 67,
+    "pageEnd": 254,
+    "topics": [
+      {
+        "id": "blood_group_incompatibility_rh__abo",
+        "title": "Blood Group Incompatibility (Rh / ABO)",
+        "page": 254,
+        "keywords": [
+          "Blood Group Incompatibility"
+        ]
+      },
+      {
+        "id": "coagulopathy_in_newborns",
+        "title": "Coagulopathy in Newborns",
+        "page": 250,
+        "keywords": [
+          "Coagulopathy in Newborns",
+          "Coagulopathy"
+        ]
+      },
+      {
+        "id": "polycythemia_in_newborn",
+        "title": "Polycythemia in Newborn",
+        "page": 148,
+        "keywords": [
+          "Polycythemia in Newborn",
+          "Polycythemia"
+        ]
+      },
+      {
+        "id": "neonatal_thrombocytopenia",
+        "title": "Neonatal Thrombocytopenia",
+        "page": 214,
+        "keywords": [
+          "Neonatal Thrombocytopenia",
+          "Thrombocytopenia"
+        ]
+      },
+      {
+        "id": "blood_transfusion_guidelines_in_nicu",
+        "title": "Blood Transfusion Guidelines in NICU",
+        "page": 67,
+        "keywords": [
+          "Blood Transfusion in NICU",
+          "Blood Transfusion"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_c__nicu___infectious_diseases",
+    "code": "SECTION C",
+    "title": "SECTION C: NICU - Infectious Diseases",
+    "category": "SECTION C: NICU - Infectious Diseases",
+    "icon": "local_hospital",
+    "pageStart": 272,
+    "pageEnd": 282,
+    "topics": [
+      {
+        "id": "late_onset_neonatal_infections_72h",
+        "title": "Late Onset Neonatal Infections (>72h)",
+        "page": 272,
+        "keywords": [
+          "Late Onset Neonatal Infections",
+          "Late Onset Sepsis"
+        ]
+      },
+      {
+        "id": "maternal_varicella",
+        "title": "Maternal Varicella",
+        "page": 277,
+        "keywords": [
+          "Maternal Varicella"
+        ]
+      },
+      {
+        "id": "rsv_prophylaxis_palivizumab",
+        "title": "RSV Prophylaxis (Palivizumab)",
+        "page": 282,
+        "keywords": [
+          "RSV Prophylaxis",
+          "Palivizumab"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_c__nicu___neurology",
+    "code": "SECTION C",
+    "title": "SECTION C: NICU - Neurology",
+    "category": "SECTION C: NICU - Neurology",
+    "icon": "local_hospital",
+    "pageStart": 64,
+    "pageEnd": 302,
+    "topics": [
+      {
+        "id": "cranial_ultrasonography",
+        "title": "Cranial Ultrasonography",
+        "page": 285,
+        "keywords": [
+          "Cranial Ultrasonography",
+          "Head Ultrasound"
+        ]
+      },
+      {
+        "id": "hypoxic_ischemic_encephalopathy_hie__hypothermia",
+        "title": "Hypoxic Ischemic Encephalopathy (HIE) & Hypothermia",
+        "page": 181,
+        "keywords": [
+          "Hypoxic Ischemic Encephalopathy",
+          "HIE"
+        ]
+      },
+      {
+        "id": "intraventricular_hemorrhage_ivh",
+        "title": "Intraventricular Hemorrhage (IVH)",
+        "page": 64,
+        "keywords": [
+          "Intraventricular Hemorrhage",
+          "IVH"
+        ]
+      },
+      {
+        "id": "neonatal_seizures",
+        "title": "Neonatal Seizures",
+        "page": 286,
+        "keywords": [
+          "Neonatal Seizures"
+        ]
+      },
+      {
+        "id": "congenital_hypotonia",
+        "title": "Congenital Hypotonia",
+        "page": 302,
+        "keywords": [
+          "Congenital Hypotonia"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_c__nicu___fluids___electrolytes",
+    "code": "SECTION C",
+    "title": "SECTION C: NICU - Fluids & Electrolytes",
+    "category": "SECTION C: NICU - Fluids & Electrolytes",
+    "icon": "local_hospital",
+    "pageStart": 306,
+    "pageEnd": 320,
+    "topics": [
+      {
+        "id": "iv_fluids_principles__calculation",
+        "title": "IV Fluids Principles & Calculation",
+        "page": 306,
+        "keywords": [
+          "IV Fluids Principles",
+          "IV Fluids"
+        ]
+      },
+      {
+        "id": "hyperglycemia_in_newborn",
+        "title": "Hyperglycemia in Newborn",
+        "page": 309,
+        "keywords": [
+          "Hyperglycemia in the Newborn"
+        ]
+      },
+      {
+        "id": "sodium_imbalances_hyponatremia__hypernatremia",
+        "title": "Sodium Imbalances (Hyponatremia / Hypernatremia)",
+        "page": 311,
+        "keywords": [
+          "Sodium Imbalances"
+        ]
+      },
+      {
+        "id": "potassium_imbalances_hypokalemia__hyperkalemia",
+        "title": "Potassium Imbalances (Hypokalemia / Hyperkalemia)",
+        "page": 316,
+        "keywords": [
+          "Potassium Imbalances"
+        ]
+      },
+      {
+        "id": "approach_to_suspected_metabolic_disorder",
+        "title": "Approach to Suspected Metabolic Disorder",
+        "page": 320,
+        "keywords": [
+          "Suspected Metabolic Disorder"
+        ]
+      },
+      {
+        "id": "acute_kidney_injury_aki",
+        "title": "Acute Kidney Injury (AKI)",
+        "page": 308,
+        "keywords": [
+          "Acute Kidney Injury",
+          "AKI"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_c__nicu___surgical_problems",
+    "code": "SECTION C",
+    "title": "SECTION C: NICU - Surgical Problems",
+    "category": "SECTION C: NICU - Surgical Problems",
+    "icon": "local_hospital",
+    "pageStart": 38,
+    "pageEnd": 339,
+    "topics": [
+      {
+        "id": "esophageal_atresia_ea__tef",
+        "title": "Esophageal Atresia (EA / TEF)",
+        "page": 330,
+        "keywords": [
+          "Esophageal Atresia"
+        ]
+      },
+      {
+        "id": "omphalocele_management",
+        "title": "Omphalocele Management",
+        "page": 333,
+        "keywords": [
+          "Omphalocele"
+        ]
+      },
+      {
+        "id": "gastroschisis_management",
+        "title": "Gastroschisis Management",
+        "page": 38,
+        "keywords": [
+          "Gastroschisis"
+        ]
+      },
+      {
+        "id": "myelomeningocele_mmc",
+        "title": "Myelomeningocele (MMC)",
+        "page": 339,
+        "keywords": [
+          "Myelomeningocele",
+          "MMC"
+        ]
+      },
+      {
+        "id": "inguinal_hernia_in_newborns",
+        "title": "Inguinal Hernia in Newborns",
+        "page": 38,
+        "keywords": [
+          "Inguinal Hernia"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_d__nursing_protocols",
+    "code": "SECTION D",
+    "title": "SECTION D: Nursing Protocols",
+    "category": "SECTION D: Nursing Protocols",
+    "icon": "local_hospital",
+    "pageStart": 20,
+    "pageEnd": 413,
+    "topics": [
+      {
+        "id": "introducing_iv_access__cannulation",
+        "title": "Introducing IV Access & Cannulation",
+        "page": 345,
+        "keywords": [
+          "Introducing IV Access"
+        ]
+      },
+      {
+        "id": "arterial_puncture__sampling",
+        "title": "Arterial Puncture / Sampling",
+        "page": 349,
+        "keywords": [
+          "Arterial Puncture"
+        ]
+      },
+      {
+        "id": "arterial_line_sampling__care",
+        "title": "Arterial Line Sampling & Care",
+        "page": 352,
+        "keywords": [
+          "Arterial Line Sampling"
+        ]
+      },
+      {
+        "id": "heel_stick_capillary_blood_sampling",
+        "title": "Heel Stick Capillary Blood Sampling",
+        "page": 354,
+        "keywords": [
+          "Heel Stick Capillary"
+        ]
+      },
+      {
+        "id": "extravasation_injury_prevention__care",
+        "title": "Extravasation Injury Prevention & Care",
+        "page": 357,
+        "keywords": [
+          "Extravasation Injury"
+        ]
+      },
+      {
+        "id": "central_line_procedures_uvc_uac__picc",
+        "title": "Central Line Procedures (UVC, UAC & PICC)",
+        "page": 360,
+        "keywords": [
+          "Central Line Procedures"
+        ]
+      },
+      {
+        "id": "preparation_for_endotracheal_intubation",
+        "title": "Preparation for Endotracheal Intubation",
+        "page": 365,
+        "keywords": [
+          "Preparation for Endotracheal Intubation"
+        ]
+      },
+      {
+        "id": "care_of_mechanically_ventilated_baby",
+        "title": "Care of Mechanically Ventilated Baby",
+        "page": 369,
+        "keywords": [
+          "Care of Mechanically Ventilated Baby"
+        ]
+      },
+      {
+        "id": "airway__endotracheal_suctioning",
+        "title": "Airway & Endotracheal Suctioning",
+        "page": 20,
+        "keywords": [
+          "Suction"
+        ]
+      },
+      {
+        "id": "preparation_for_chest_tube__drains",
+        "title": "Preparation for Chest Tube & Drains",
+        "page": 374,
+        "keywords": [
+          "Preparation for Chest Tube"
+        ]
+      },
+      {
+        "id": "blood_gas_monitoring__interpretation",
+        "title": "Blood Gas Monitoring & Interpretation",
+        "page": 376,
+        "keywords": [
+          "Blood Gas Monitoring"
+        ]
+      },
+      {
+        "id": "respiratory_assessment__monitoring",
+        "title": "Respiratory Assessment & Monitoring",
+        "page": 377,
+        "keywords": [
+          "Respiratory Care: Respiratory Assessment"
+        ]
+      },
+      {
+        "id": "cooling_therapy_for_hie__nursing_perspectives",
+        "title": "Cooling Therapy for HIE – Nursing Perspectives",
+        "page": 380,
+        "keywords": [
+          "Cooling Therapy for HIE"
+        ]
+      },
+      {
+        "id": "neonatal_skin_care_guidelines",
+        "title": "Neonatal Skin Care Guidelines",
+        "page": 383,
+        "keywords": [
+          "Neonatal Skin Care"
+        ]
+      },
+      {
+        "id": "thermoregulation__neutral_thermal_environment",
+        "title": "Thermoregulation & Neutral Thermal Environment",
+        "page": 132,
+        "keywords": [
+          "Thermoregulation"
+        ]
+      },
+      {
+        "id": "incubator_humidity_guidelines",
+        "title": "Incubator Humidity Guidelines",
+        "page": 132,
+        "keywords": [
+          "Incubator Humidity"
+        ]
+      },
+      {
+        "id": "early_preparation_for_expected_sick_admission",
+        "title": "Early Preparation for Expected Sick Admission",
+        "page": 399,
+        "keywords": [
+          "Early Preparation for Expected Admission"
+        ]
+      },
+      {
+        "id": "prevention_of_ivh__nursing_perspectives",
+        "title": "Prevention of IVH – Nursing Perspectives",
+        "page": 295,
+        "keywords": [
+          "Prevention of IVH"
+        ]
+      },
+      {
+        "id": "common_medication_infusions__dosing_tables",
+        "title": "Common Medication Infusions & Dosing Tables",
+        "page": 404,
+        "keywords": [
+          "Common Medication Infusions"
+        ]
+      },
+      {
+        "id": "tips_to_avoid_medication_errors",
+        "title": "Tips to Avoid Medication Errors",
+        "page": 413,
+        "keywords": [
+          "Tips to Avoid Medications Errors"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_e__humanitarian_emergency",
+    "code": "SECTION E",
+    "title": "SECTION E: Humanitarian Emergency",
+    "category": "SECTION E: Humanitarian Emergency",
+    "icon": "local_hospital",
+    "pageStart": 417,
+    "pageEnd": 417,
+    "topics": [
+      {
+        "id": "referral_barriers_in_humanitarian_emergency",
+        "title": "Referral Barriers in Humanitarian Emergency",
+        "page": 417,
+        "keywords": [
+          "Referral barriers for maternal"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section_f__maternal_mental_health",
+    "code": "SECTION F",
+    "title": "SECTION F: Maternal Mental Health",
+    "category": "SECTION F: Maternal Mental Health",
+    "icon": "local_hospital",
+    "pageStart": 419,
+    "pageEnd": 419,
+    "topics": [
+      {
+        "id": "maternal_mental_health_protocols",
+        "title": "Maternal Mental Health Protocols",
+        "page": 419,
+        "keywords": [
+          "Maternal mental health"
+        ]
+      }
+    ]
+  }
+]
